@@ -1,0 +1,33 @@
+.header {
+     /* display: flex; */
+     justify-content: flex-start;
+     padding: 40px;
+ }
+
+ .navText {
+    font-family: 'Spartan', sans-serif;
+    color: #a4a4a4;
+    font-size: 30px;
+    letter-spacing: 4px;
+    word-spacing: 6px;
+    font-weight: lighter;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+ }
+
+ .header-name {
+     font-family: 'Barlow', sans-serif;
+     letter-spacing: 4px;
+     word-spacing: 3px;
+     font-weight: heavy;
+     color: rgba(121, 116, 116, 0.575);
+ }
+
+ .nav-links {
+    display: flex;
+    margin: 5px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+ }
