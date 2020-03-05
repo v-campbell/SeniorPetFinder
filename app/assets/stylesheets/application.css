@@ -15,42 +15,8 @@
  */
 
 
-/* .basic-link {
-     font-family: 'Barlow', sans-serif;
-     letter-spacing: 4px;
-     word-spacing: 3px;
-     font-weight: heavy;
-     font-size: 15px;
-     color: white;
- } */
-
-.errors {
-     color: red;
- }
-
- .errorBox {
-     display: block;
- }
 
 
-body {
-    background: url('dogballs.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    min-height: 100%;
-    min-width: 1024px;
-
-    /* scaling */
-    width: 100%;
-    height: auto;
-
-    /* position */
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 70px auto;
-}
 
 
  

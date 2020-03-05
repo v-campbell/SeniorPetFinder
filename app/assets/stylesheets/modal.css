@@ -21,7 +21,7 @@
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 0.5rem 0.6rem;
-  width: 34rem;
+  width: 30rem;
   /* height: 38rem; */
   border-radius: 0.5rem;
   /* font-family: 'Barlow', sans-serif; */
@@ -102,13 +102,14 @@
 
 .final-button {
   display: block;
-  width: 100%;
   border-radius: 30px;
+  width: 90%;
   background-color: #9c6b4c;
   color: white;
   text-transform: uppercase;
   font-size: 16px;
   padding: 20px 100px;
+  margin-left: 5%;
 }
 
 .final-button:hover {

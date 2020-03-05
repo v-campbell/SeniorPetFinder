@@ -1,63 +1,55 @@
-.splash-text {
-   display: inline-block;
-   width: 80rem;
-   position: fixed;
-   top: 70%;
-   left: 8%;
-
-   font-family: 'Josefin Sans', sans-serif;
-   color: white;
-   font-size: 120px;
-   letter-spacing: 4px;
-   word-spacing: 6px;
-   font-weight: lighter;
-   text-decoration: none;
-   font-style: normal;
-   /* font-variant: small-caps; */
-   /* text-transform: none; */
-   /* background-color: blue; */
-
-}
-
 .nav {
+   display: flex;
+   justify-content: space-between;
    width:100%;
    position:fixed;
    top:0px;
-   /* background-color: red; */
+   background-color: white;
    min-height: 6rem;
    width: 100%;
 }
 
 .nav-left{
-   position:fixed;
-   top: 2%;
-   right: 80%;
    margin: 15px;
-
-   color: #9b7f71;
+   /* color: blue; */
+   /* color: #9b7f71; */
    font-size: 50px;
    font-family: 'Josefin Sans', sans-serif;
 }
    
-.nav-right{
-   display: inline-block;
-   width: 80rem;
-   position: fixed;
-   top: 2%;
-   left: 80%;
+.nav-right-logged-out {
+   display: flex;
    margin: 15px;
+   align-items: center;
    flex-direction: row;
-   justify-content: space-between; 
-
+   justify-content: center; 
    font-family: 'Josefin Sans', sans-serif;
    font-size: 45px;
    color: #dfcfc6;
+}
+
+.nav-right-loggedin {
+   display: block;
+   float: right;
+   flex-direction: row;
+   margin: 15px;
+   margin-top: 10px;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 45px;
 }
 
 .nav-buttons{
    color: white;
    outline: none;
    background-color: transparent;
+}
+
+.nav-button-loggedin {
+   background-color: transparent;
+   color: black;
+   font-size: 25px;
+   font-family: 'Josefin Sans', sans-serif;
+   width: 3rem;
 }
 
 .loggedin-header {
@@ -76,8 +68,26 @@
 }
 
 .nav-icons {
-   color: white;
    display: inline-block;
    align-content: space-between;
-   padding: 15px;
+   
+   padding: 10px;
+   margin-left: 50px
+}
+
+.nav-user {
+   display: inline-block;
+   /* margin: 15px; */
+   flex-direction: row;
+   justify-content: center; 
+   align-items: center;
+   color: white;
+}
+
+.nav-name {
+   font-family: 'Josefin Sans', sans-serif;
+   text-transform: capitalize;
+   /* font-variant:small-caps;    */
+   font-size: 30px;
+   color: #a4a4a4;
 }

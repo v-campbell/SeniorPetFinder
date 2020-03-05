@@ -206,7 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
 /* harmony import */ var _nav_nav_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav/nav_container */ "./frontend/components/nav/nav_container.js");
-/* harmony import */ var _splash_splash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./splash/splash */ "./frontend/components/splash/splash.jsx");
+/* harmony import */ var _splash_splash_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./splash/splash_container */ "./frontend/components/splash/splash_container.js");
 /* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
 
 
@@ -219,11 +219,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "header-content",
-    "data-position": "fixed",
-    "data-tap-toggle": "false"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_5__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -324,15 +320,13 @@ var Nav = function Nav(_ref) {
       openModal = _ref.openModal;
 
   var nav = function nav() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-      className: "nav",
-      "data-position": "fixed",
-      "data-tap-toggle": "false"
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       className: "nav-left",
       to: "/"
     }, "SeniorPetFinderLogo"), !currentUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-      className: "nav-right"
+      className: "nav-right-logged-out"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "nav-buttons",
       onClick: function onClick() {
@@ -343,34 +337,38 @@ var Nav = function Nav(_ref) {
       onClick: function onClick() {
         return openModal('SIGN UP');
       }
-    }, "SIGNUP")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }, "SIGNUP")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      className: "nav-right-loggedin"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/",
       className: "nav-icons"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-home fa-4x"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: window.homeURL,
+      width: "58px",
+      height: "58px"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/",
       className: "nav-icons"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-dog fa-4x"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: window.oldLogoURL,
+      width: "50px",
+      height: "50px"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-user"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/",
       className: "nav-icons"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-user-circle fa-4x"
-    }))));
-  };
-
-  var greeting = function greeting() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
-      className: "loggedin-header"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "READY TO ADOPT, ", currentUser.username, "?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "basic-link",
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: window.userURL,
+      width: "50px",
+      height: "50px"
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-button-loggedin nav-icons",
       onClick: logout
-    }, "LOG OUT"));
+    }, "LOG OUT"))));
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, nav(), currentUser ? greeting(currentUser, logout) : '');
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, nav());
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
@@ -771,13 +769,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var Splash = function Splash() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "splash-text"
-  }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend.");
+var Splash = function Splash(_ref) {
+  var currentUser = _ref.currentUser;
+
+  var loggedOutHome = function loggedOutHome() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "splash-text"
+    }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "gray",
+      src: window.grayURL
+    }));
+  };
+
+  var loggedInHome = function loggedInHome() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "pirate",
+      src: window.pirateURL
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "splash-text"
+    }, "Meet Russell ;\u3015", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "splash-subtext"
+    }, "SOMETHINGSOMETHINGSOMETHING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-arrow-right"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "dogGrid"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "6"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "8"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "9"))));
+  };
+
+  console.log(currentUser);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentUser ? loggedInHome() : loggedOutHome(), ";");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
+
+/***/ }),
+
+/***/ "./frontend/components/splash/splash_container.js":
+/*!********************************************************!*\
+  !*** ./frontend/components/splash/splash_container.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _splash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./splash */ "./frontend/components/splash/splash.jsx");
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    // currentUser: Boolean(state.session.id)
+    // currentUser: state.entities.users[state.session.id]
+    currentUser: state.session.id
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps)(_splash__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 

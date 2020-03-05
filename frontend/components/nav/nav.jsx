@@ -5,47 +5,54 @@ const Nav = ({ currentUser, logout, openModal }) => {
 
     const nav = () => (
 
-        <header className='nav' data-position="fixed" data-tap-toggle="false">
+        <div className='nav'>
                 <Link className='nav-left' to='/'>
                     SeniorPetFinderLogo
                 </Link>
             {!currentUser ? 
             (
-                <nav className='nav-right'>
+                <nav className='nav-right-logged-out'>
                     <button className='nav-buttons' onClick={() => openModal('LOG IN')}>LOGIN</button>
                     |
                     <button className='nav-buttons' onClick={() => openModal('SIGN UP')}>SIGNUP</button>
                 </nav>
             ) : (
-                <div>
+                <>
+                {/* <h1 className='welcome-text'>READY TO ADOPT, {currentUser.username}?</h1> */}
+                <nav className='nav-right-loggedin'>
                     <Link to='/' className='nav-icons'>
-                        <i className="fas fa-home fa-4x"></i>
+                        {/* <i className="fas fa-home fa-3x"></i> */}
+                        <img src={window.homeURL} width='58px' height='58px'/>
                     </Link>
+                    
                     <Link to='/' className='nav-icons'>
-                        <i className="fas fa-dog fa-4x"></i>
+                        {/* <i className="fas fa-dog fa-3x"></i> */}
+                        <img src={window.oldLogoURL} width='50px' height='50px'/>
                     </Link>
 
-                    <Link to='/' className='nav-icons'>
-                        <i className="fas fa-user-circle fa-4x"></i>
-                    </Link>
-                </div>
+                    <div className='nav-user'>
+                        <Link to='/' className='nav-icons'>
+                            {/* <i className="fas fa-user-circle fa-3x" width='50px' height='50px'></i> */}
+                            <img src={window.userURL} width='50px' height='50px'/>
+                        </Link>
+                        {/* <br/>
+                        <Link to='/' className='nav-name'>
+                            {currentUser.firstName}
+                        </Link> */}
+                    </div>
+                    <div className='nav-button-loggedin nav-icons' onClick={logout}>LOG OUT</div>
+                </nav>
+                </>
+
+
             )}
-        </header>
+        </div>
 
-    );
-
-    const greeting = () => (
-
-        <hgroup className="loggedin-header">
-            <div>READY TO ADOPT, {currentUser.username}?</div>
-            <button className="basic-link" onClick={logout}>LOG OUT</button>
-        </hgroup>
     );
 
     return (
         <div>
             {nav()}
-            {currentUser ? greeting(currentUser, logout) : ''}
         </div>
     );
 }
