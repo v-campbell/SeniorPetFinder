@@ -1,78 +1,154 @@
+.modal-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  opacity:1 !important;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s
+}
+
+.modal-kid {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0.5rem 0.6rem;
+  width: 34rem;
+  /* height: 38rem; */
+  border-radius: 0.5rem;
+  /* font-family: 'Barlow', sans-serif; */
+  font-family: Nexa Bold, arial, helvetica, sans-serif;
+  color: #5a5a5a;
+  font-size: 18px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  font-weight: lighter;
+  font-style: normal;
+  text-transform: none;
+  box-sizing: border-box;
+}
+
+.input-field {
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  padding: 15px;
+}
+
+.input-text {
+  display: inline-block;
+  position: absolute;
+  top: 22px;
+  left: 28px;
+  pointer-events: none;
+}
+
 /* input[type=text], input[type=email], input[type=password]{ */
 .input {
-    box-sizing: border-box;
-    border: 2px solid #cccccc;
-    border-radius: 4px;
-    font-size: 16px;
-    height: 30px;
-    display: block;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: normal;
+/*   
+  transition-property: border-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  transition-delay: 0s; */
+
+  padding: 13px 0 0 13px;
 }
 
 /* input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{ */
 .input:focus {
-  background-color: whitesmoke;
+  background-color: rgb(223, 228, 243);
 }
 
-.modal-bg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10;
-    opacity:1 !important;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s
+.form-container {
+  padding: 50px;
 }
 
-.modal-kid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 0.5rem 0.6rem;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 0.5rem;
- 
-    font-family: 'Barlow', sans-serif;
-    color: #a4a4a4;
-    font-size: 15px;
-    letter-spacing: 2px;
-    word-spacing: 1px;
-    font-weight: lighter;
-    text-decoration: none;
-    font-style: normal;
-    /* font-variant: small-caps; */
-    text-transform: none;
+.form-header {
+  font-size: 35px;
+  /* color: rgba(40, 36, 46, 0.555); */
+  display: block;
+  text-align: center;
+
 }
 
+.bottom-modal-buttons {
+  display: block;
+  text-align: center;
+
+}
+
+.final-button {
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #9c6b4c;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 20px 100px;
+}
+
+.final-button:hover {
+  color: #dfcfc6;
+}
+
+button {
+  padding: 2px;
+  border-radius: 2px;
+  color: #9c6b4c;
+  text-decoration: underline;
+}
+
+button:hover {
+  color: #dfcfc6;
+  text-decoration: underline;
+}
 
 
 .close-x {
-    font-size: 28px;
-    font-weight: bold;
-    border: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: #aaa;
-    background-color: inherit;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    position: absolute;
-    right: 0;
-    top: 0
+  font-size: 60px;
+  font-weight: bold;
+  color:#9c6b4c;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  /* color: #aaa; */
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  top: 0
 }
 
 .close-x:hover,
 .close-x:focus {
   color: black;
-  text-decoration: none;
   cursor: pointer;
 }

@@ -24,35 +24,34 @@
      color: white;
  } */
 
- .errors {
+.errors {
      color: red;
  }
 
+ .errorBox {
+     display: block;
+ }
+
+
 body {
-    height: 100%;
-    width: 100%;
-    background: #e8e8e8;
-    background: url('old.jpg');
+    background: url('dogballs.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 700% 53%;
+    background-size: cover;
+
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* scaling */
+    width: 100%;
+    height: auto;
+
+    /* position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 70px auto;
 }
 
-.form-head {
-    size: 100px;
-}
-
-.form-container {
-    display: flex;
-    justify-content: center;
-
-}
-
-button, .final-button {
-    padding: 2px;
-    border-radius: 2px;
-    background-color: #ece5e5;
-    color: white;
-}
 
  
 

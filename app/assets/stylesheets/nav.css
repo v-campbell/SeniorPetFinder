@@ -1,33 +1,83 @@
-.header {
-     /* display: flex; */
-     justify-content: flex-start;
-     padding: 40px;
- }
+.splash-text {
+   display: inline-block;
+   width: 80rem;
+   position: fixed;
+   top: 70%;
+   left: 8%;
 
- .navText {
-    font-family: 'Spartan', sans-serif;
-    color: #a4a4a4;
-    font-size: 30px;
-    letter-spacing: 4px;
-    word-spacing: 6px;
-    font-weight: lighter;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: none;
- }
+   font-family: 'Josefin Sans', sans-serif;
+   color: white;
+   font-size: 120px;
+   letter-spacing: 4px;
+   word-spacing: 6px;
+   font-weight: lighter;
+   text-decoration: none;
+   font-style: normal;
+   /* font-variant: small-caps; */
+   /* text-transform: none; */
+   /* background-color: blue; */
 
- .header-name {
-     font-family: 'Barlow', sans-serif;
-     letter-spacing: 4px;
-     word-spacing: 3px;
-     font-weight: heavy;
-     color: rgba(121, 116, 116, 0.575);
- }
+}
 
- .nav-links {
-    display: flex;
-    margin: 5px;
-    font-family: 'Barlow', sans-serif;
-    font-size: 20px;
- }
+.nav {
+   width:100%;
+   position:fixed;
+   top:0px;
+   /* background-color: red; */
+   min-height: 6rem;
+   width: 100%;
+}
+
+.nav-left{
+   position:fixed;
+   top: 2%;
+   right: 80%;
+   margin: 15px;
+
+   color: #9b7f71;
+   font-size: 50px;
+   font-family: 'Josefin Sans', sans-serif;
+}
+   
+.nav-right{
+   display: inline-block;
+   width: 80rem;
+   position: fixed;
+   top: 2%;
+   left: 80%;
+   margin: 15px;
+   flex-direction: row;
+   justify-content: space-between; 
+
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 45px;
+   color: #dfcfc6;
+}
+
+.nav-buttons{
+   color: white;
+   outline: none;
+   background-color: transparent;
+}
+
+.loggedin-header {
+   display: flex;
+   justify-content: flex-start;
+   padding: 40px;
+   /* background-color: #a4a4a4; */
+   font-family: 'Barlow', sans-serif;
+   letter-spacing: 4px;
+   word-spacing: 3px;
+   font-weight: heavy;
+   font-size: 40px;
+   color: #a4a4a4;
+   box-sizing: border-box;
+   width: 25%;
+}
+
+.nav-icons {
+   color: white;
+   display: inline-block;
+   align-content: space-between;
+   padding: 15px;
+}

@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
 
     renderErrors() {
         return(
-            <ul>
+            <ul className="errorBox">
                 {this.props.errors.map((error, i) => (
                     <div className='errors' key={`error- ${i}`}>
                         {error}
@@ -46,66 +46,88 @@ class LoginForm extends React.Component {
         .then(() => (this.props.closeModal()))
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
+
     render() {
         return(
-            <div className='form-container'>
+            <div>
                 <div onClick={this.props.closeModal} className='close-x'>×</div>
-                {this.renderErrors()}
-                <form onSubmit={this.handleSubmit}>
-                    <div className='form-head'>{this.props.formType}</div>
+                <form onSubmit={this.handleSubmit} className='form-container'>
+                    <div className='form-header'>{this.props.formType}!</div>
 
-                    {this.props.formType === 'SIGN UP' ? 
+                    {this.props.formType === 'Sign Up' ? 
                         ( <>
                             <br/>
-                            <label>FirstName*
+                            <div className='input-label'>
+                                <div className='input-text'>
+                                    First Name*
+                                </div>
                                 <input type='text' className='input' value={this.state.firstName} autoFocus="autoFocus" onChange={this.update('first_name')} />
-                            </label>
-                            <br/>
-                            <label>LastName*
+                            </div>
+                            <div className='input-label'>
+                                <div className='input-text'>
+                                    Last Name*
+                                </div>
                                 <input type='text' className='input' value={this.state.lastName} onChange={this.update('last_name')} />
-                            </label>
-                            <br/>
-                            <label>Email*
+                            </div>
+                            <div className='input-label'>
+                                <div className='input-text'>
+                                    Email*
+                                </div>
                                 <input type='email' className='input' value={this.state.email} onChange={this.update('email')} />
-                            </label>
-                            <br />
-                            <label>Username {this.props.formType === 'SIGN UP' ? (<>*</>) : ''}
+                            </div>
+                            <div className='input-label'>
+                                <div className='input-text'>
+                                    Username*
+                                </div>
                                 <input type='text' className='input' value={this.state.username} onChange={this.update('username')} />
-                            </label>
-                            <br />
-                            <label>Password{this.props.formType === 'SIGN UP' ? (<>* - minimum 6 characters</>) : ''}
+                            </div>
+                            <div className='input-label'>
+                                <div className='input-text'>Password* - minimum 6 characters</div>
                                 <input type='password' className='input' value={this.state.password} onChange={this.update('password')} />
-                            </label>
-                            <br />
+                            </div>
                             <input type='submit' className='final-button' value={this.props.formType} />
                             <br />
-                            Already have an account?
-                            {this.props.otherForm}
+                            <div className='bottom-modal-buttons'>
+                                <br />
+                                Already have an account? {this.props.otherForm}
+                                <br />
+                            </div>
+                            <br />
+                            {this.renderErrors()}
                             </>
 
-                        ) : ( <>
+                        ) : ( <div>
                             <br />
-                            <label>Username {this.props.formType === 'SIGN UP' ? (<>*</>) : ''}
-                                <input type='text' className='input' value={this.state.username} autoFocus="autoFocus" onChange={this.update('username')} />
-                            </label>
-                            <br />
-                            <label>Password{this.props.formType === 'SIGN UP' ? (<>* - minimum 6 characters</>) : ''}
-                                <input type='password' className='input' value={this.state.password} onChange={this.update('password')} />
-                            </label>
+                            <div className='input-field'>
+                                <div className='input-label'>
+                                    <div className='input-text'>
+                                    Username
+                                    </div>
+                                    <input type='text' className='input' value={this.state.username} autoFocus="autoFocus" onChange={this.update('username')} />
+                                </div>
+                                <div className='input-label'>
+                                    <div className='input-text'>Password</div>
+                                    <input type='password' className='input' value={this.state.password} onChange={this.update('password')} />
+                                </div>
+                            </div>
                             <br />
                             <input type='submit' className='final-button' value={this.props.formType} />
                             <br />
-                            Don't have an account?
                             <br />
-                            {this.props.otherForm}
-                            <br />
-                            <div className='demo-button-container'>
-                                Don't have an account + too lazy to create one?
-                                <button className='demo-button' onClick={this.fillDemo}>
-                                    DEMO USER
-                                </button>
+                            <div className='bottom-modal-buttons'>
+                                Need an account? {this.props.otherForm}
+                                <br />
+                                <br />
+                                Too lazy to create one? <button onClick={this.fillDemo}> DEMO USER </button>
+                                <br />
                             </div>
-                        </>)
+                            
+                            <br />
+                            {this.renderErrors()}
+                        </div>)
                     }
 
                 </form>
