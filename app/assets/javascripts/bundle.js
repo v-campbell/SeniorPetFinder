@@ -119,10 +119,64 @@ var closeModal = function closeModal() {
 /*!*****************************************!*\
   !*** ./frontend/actions/pet_actions.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: RECEIVE_PETS, RECEIVE_PET, fetchPets, fetchPet, favoritePet, unfavoritePet */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/vnkc/Desktop/SeniorPetFinder/frontend/actions/pet_actions.js: Identifier 'removeFavoriteFromPet' has already been declared (25:13)\n\n\u001b[0m \u001b[90m 23 | \u001b[39m    \u001b[33m.\u001b[39mthen(pet \u001b[33m=>\u001b[39m dispatch(receivePet(pet)))\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m removeFavoriteFromPet \u001b[33m=\u001b[39m id \u001b[33m=>\u001b[39m dispatch \u001b[33m=>\u001b[39m removeFavoriteFromPet(id)\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 | \u001b[39m    \u001b[33m.\u001b[39mthen(pet \u001b[33m=>\u001b[39m dispatch(receivePet(pet)))\u001b[33m;\u001b[39m\u001b[0m\n    at Object.raise (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:7044:17)\n    at ScopeHandler.checkRedeclarationInScope (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:4270:12)\n    at ScopeHandler.declareName (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:4236:12)\n    at Object.checkLVal (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:8891:22)\n    at Object.parseVarId (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11395:10)\n    at Object.parseVar (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11370:12)\n    at Object.parseVarStatement (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11192:10)\n    at Object.parseStatementContent (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10791:21)\n    at Object.parseStatement (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseExportDeclaration (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11913:17)\n    at Object.maybeParseExportDeclaration (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11869:31)\n    at Object.parseExport (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11799:29)\n    at Object.parseStatementContent (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10828:27)\n    at Object.parseStatement (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:12264:10)\n    at parse (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:12315:38)\n    at parser (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/gensync/index.js:254:32)\n    at /Users/vnkc/Desktop/SeniorPetFinder/node_modules/gensync/index.js:266:13\n    at async.call.result.err.err (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/gensync/index.js:216:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PETS", function() { return RECEIVE_PETS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PET", function() { return RECEIVE_PET; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPets", function() { return fetchPets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPet", function() { return fetchPet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "favoritePet", function() { return favoritePet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unfavoritePet", function() { return unfavoritePet; });
+/* harmony import */ var _util_pet_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/pet_util */ "./frontend/util/pet_util.js");
+
+var RECEIVE_PETS = 'RECEIVE_PET';
+var RECEIVE_PET = 'RECEIVE_PETS';
+
+var receivePets = function receivePets(pets) {
+  return {
+    type: RECEIVE_PET,
+    pets: pets
+  };
+};
+
+var receivePet = function receivePet(pet) {
+  return {
+    type: RECEIVE_PET,
+    pet: pet
+  };
+};
+
+var fetchPets = function fetchPets() {
+  return function (dispatch) {
+    return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["getPets"])().then(function (pets) {
+      return dispatch(receivePets(pets));
+    });
+  };
+};
+var fetchPet = function fetchPet(id) {
+  return function (dispatch) {
+    return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["getPet"])(id).then(function (pet) {
+      return dispatch(receivePet(pet));
+    });
+  };
+};
+var favoritePet = function favoritePet(id) {
+  return function (dispatch) {
+    return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["addFavoriteToPet"])(id).then(function (pet) {
+      return dispatch(receivePet(pet));
+    });
+  };
+};
+var unfavoritePet = function unfavoritePet(id) {
+  return function (dispatch) {
+    return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["removeFavoriteFromPet"])(id).then(function (pet) {
+      return dispatch(receivePet(pet));
+    });
+  };
+};
 
 /***/ }),
 
@@ -218,21 +272,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
 /* harmony import */ var _nav_nav_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav/nav_container */ "./frontend/components/nav/nav_container.js");
 /* harmony import */ var _splash_splash_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./splash/splash_container */ "./frontend/components/splash/splash_container.js");
-/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
+/* harmony import */ var _pets_pet_index_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pets/pet_index_container */ "./frontend/components/pets/pet_index_container.js");
+/* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
 
 
 
 
 
- // import LoginFormContainer from './session_form/login_form_container';
-// import SignupFormContainer from './session_form/signup_form_container';
+
 
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ProtectedRoute, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_7__["ProtectedRoute"], {
     path: "/pets",
-    component: PetIndexContainer
+    component: _pets_pet_index_container__WEBPACK_IMPORTED_MODULE_6__["default"]
   }));
 };
 
@@ -425,6 +479,111 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_nav__WEBPACK_IMPORTED_MODULE_3__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/pets/pet_index.jsx":
+/*!************************************************!*\
+  !*** ./frontend/components/pets/pet_index.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _pet_index_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pet_index_item */ "./frontend/components/pets/pet_index_item.jsx");
+
+
+
+var PetIndex = function PetIndex(_ref) {
+  var pets = _ref.pets;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Wow look at all these pets from pet_index"), pets.map(function (pet) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      pet: pet,
+      key: pet.id
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PetIndex);
+
+/***/ }),
+
+/***/ "./frontend/components/pets/pet_index_container.js":
+/*!*********************************************************!*\
+  !*** ./frontend/components/pets/pet_index_container.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/pet_actions */ "./frontend/actions/pet_actions.js");
+/* harmony import */ var _pet_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pet_index */ "./frontend/components/pets/pet_index.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    pets: Object.keys(state.entities.pets).map(function (key) {
+      return state.entities.pets[key];
+    })
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    receivePets: function receivePets() {
+      return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["receivePets"])());
+    },
+    receivePet: function receivePet(id) {
+      return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["receivePet"])(id));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(_pet_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/pets/pet_index_item.jsx":
+/*!*****************************************************!*\
+  !*** ./frontend/components/pets/pet_index_item.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var pet = _ref.pet,
+      favoritePet = _ref.favoritePet,
+      unfavoritePet = _ref.unfavoritePet;
+  var favoriteButtonText = '♡';
+
+  var favoriteButtonAction = function favoriteButtonAction() {
+    return favoritePet(pet.id);
+  };
+
+  if (pet.favorited_by_current_user) {
+    favoriteButtonText = '♥';
+
+    favoriteButtonAction = function favoriteButtonAction() {
+      return unfavoritePet(pet.id);
+    };
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.size), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.about)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: favoriteButtonAction
+  }, favoriteButtonText));
+});
 
 /***/ }),
 
@@ -989,14 +1148,13 @@ function modalReducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/pet_actions */ "./frontend/actions/pet_actions.js");
-/* harmony import */ var _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  Object.freeze(state);
+  Object.freeze(oldState);
   var pets = {};
 
   switch (action.type) {
@@ -1197,6 +1355,51 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/pet_util.js":
+/*!***********************************!*\
+  !*** ./frontend/util/pet_util.js ***!
+  \***********************************/
+/*! exports provided: getPets, getPet, addFavoriteToPet, removeFavoriteFromPet */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPets", function() { return getPets; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPet", function() { return getPet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addFavoriteToPet", function() { return addFavoriteToPet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeFavoriteFromPet", function() { return removeFavoriteFromPet; });
+var getPets = function getPets() {
+  return $.ajax({
+    url: '/api/pets'
+  });
+};
+var getPet = function getPet(id) {
+  return $.ajax({
+    method: 'GET',
+    url: "/api/pets/".concat(id)
+  });
+};
+var addFavoriteToPet = function addFavoriteToPet(id) {
+  return $.ajax({
+    url: '/api/likes',
+    method: 'POST',
+    data: {
+      id: id
+    }
+  });
+};
+var removeFavoriteFromPet = function removeFavoriteFromPet(id) {
+  return $.ajax({
+    url: '/api/likes',
+    method: 'DELETE',
+    data: {
+      id: id
+    }
+  });
+};
 
 /***/ }),
 

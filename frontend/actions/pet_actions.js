@@ -22,5 +22,5 @@ export const fetchPet = id => dispatch => getPet(id)
 export const favoritePet = id => dispatch => addFavoriteToPet(id)
     .then(pet => dispatch(receivePet(pet)));
 
-export const removeFavoriteFromPet = id => dispatch => removeFavoriteFromPet(id)
+export const unfavoritePet = id => dispatch => removeFavoriteFromPet(id)
     .then(pet => dispatch(receivePet(pet)));

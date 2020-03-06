@@ -1,7 +1,7 @@
 import { RECEIVE_PETS, RECEIVE_PET } from '../actions/pet_actions';
 
 export default  (oldState = {}, action) => {
-    Object.freeze(state);
+    Object.freeze(oldState);
     const pets = {};
     switch (action.type) {
         case RECEIVE_PETS:

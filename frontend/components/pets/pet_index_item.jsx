@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default ({ pet, addFavoriteToPet, removeFavoriteFromPet }) => {
+export default ({ pet, favoritePet, unfavoritePet }) => {
     let favoriteButtonText = '♡';
-    let favoriteButtonAction = () => addFavoriteToPet(pet.id);
+    let favoriteButtonAction = () => favoritePet(pet.id);
     if (pet.favorited_by_current_user) {
         favoriteButtonText = '♥';
-        favoriteButtonAction = () => removeFavoriteFromPet(pet.id);
+        favoriteButtonAction = () => unfavoritePet(pet.id);
     }
-    
+
     return (
         <div>
             <div>{pet.name}</div>
@@ -17,9 +17,9 @@ export default ({ pet, addFavoriteToPet, removeFavoriteFromPet }) => {
                 <li>{pet.sex}</li>
                 <li>{pet.size}</li>
                 <li>{pet.about}</li>
-             
             </ul>
+            <button onClick={favoriteButtonAction}>{favoriteButtonText}</button>
         </div>
-    )
+    );
 }
 
