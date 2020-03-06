@@ -115,6 +115,17 @@ var closeModal = function closeModal() {
 
 /***/ }),
 
+/***/ "./frontend/actions/pet_actions.js":
+/*!*****************************************!*\
+  !*** ./frontend/actions/pet_actions.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/vnkc/Desktop/SeniorPetFinder/frontend/actions/pet_actions.js: Identifier 'removeFavoriteFromPet' has already been declared (25:13)\n\n\u001b[0m \u001b[90m 23 | \u001b[39m    \u001b[33m.\u001b[39mthen(pet \u001b[33m=>\u001b[39m dispatch(receivePet(pet)))\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m removeFavoriteFromPet \u001b[33m=\u001b[39m id \u001b[33m=>\u001b[39m dispatch \u001b[33m=>\u001b[39m removeFavoriteFromPet(id)\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 | \u001b[39m    \u001b[33m.\u001b[39mthen(pet \u001b[33m=>\u001b[39m dispatch(receivePet(pet)))\u001b[33m;\u001b[39m\u001b[0m\n    at Object.raise (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:7044:17)\n    at ScopeHandler.checkRedeclarationInScope (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:4270:12)\n    at ScopeHandler.declareName (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:4236:12)\n    at Object.checkLVal (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:8891:22)\n    at Object.parseVarId (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11395:10)\n    at Object.parseVar (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11370:12)\n    at Object.parseVarStatement (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11192:10)\n    at Object.parseStatementContent (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10791:21)\n    at Object.parseStatement (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseExportDeclaration (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11913:17)\n    at Object.maybeParseExportDeclaration (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11869:31)\n    at Object.parseExport (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11799:29)\n    at Object.parseStatementContent (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10828:27)\n    at Object.parseStatement (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseTopLevel (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:10655:10)\n    at Object.parse (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:12264:10)\n    at parse (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/parser/lib/index.js:12315:38)\n    at parser (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/gensync/index.js:254:32)\n    at /Users/vnkc/Desktop/SeniorPetFinder/node_modules/gensync/index.js:266:13\n    at async.call.result.err.err (/Users/vnkc/Desktop/SeniorPetFinder/node_modules/gensync/index.js:216:11)");
+
+/***/ }),
+
 /***/ "./frontend/actions/session_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
@@ -219,7 +230,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_splash_splash_container__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ProtectedRoute, {
+    path: "/pets",
+    component: PetIndexContainer
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -577,7 +591,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "errorBox"
       }, this.props.errors.map(function (error, i) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "errors",
           key: "error- ".concat(i)
         }, error);
@@ -612,7 +626,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "form-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-header"
-      }, this.props.formType, "!"), this.props.formType === 'Sign Up' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.props.formType, "!"), this.props.formType === 'Sign Up' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-label"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-text"
@@ -658,13 +672,13 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "input",
         value: this.state.password,
         onChange: this.update('password')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         className: "final-button",
         value: this.props.formType
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bottom-modal-buttons"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Already have an account? ", this.props.otherForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors()) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Already have an account? ", this.props.otherForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-label"
@@ -693,7 +707,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         className: "bottom-modal-buttons"
       }, "Need an account? ", this.props.otherForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Too lazy to create one? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.fillDemo
-      }, " DEMO USER "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors())));
+      }, " DEMO USER "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))));
     }
   }]);
 
@@ -791,7 +805,7 @@ var Splash = function Splash(_ref) {
       className: "splash-text"
     }, "Meet Russell ;P", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-subtext"
-    }, "SOMETHINGSOMETHINGSOMETHING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    }, "SOMETHINGSOMETHINGSOMETHING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-arrow-right"
     }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-display"
@@ -903,10 +917,13 @@ document.addEventListener("DOMContentLoaded", function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+/* harmony import */ var _pets_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pets_reducer */ "./frontend/reducers/pets_reducer.js");
+
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  pets: _pets_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -959,6 +976,42 @@ function modalReducer() {
       return oldState;
   }
 }
+
+/***/ }),
+
+/***/ "./frontend/reducers/pets_reducer.js":
+/*!*******************************************!*\
+  !*** ./frontend/reducers/pets_reducer.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/pet_actions */ "./frontend/actions/pet_actions.js");
+/* harmony import */ var _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+  var pets = {};
+
+  switch (action.type) {
+    case _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PETS"]:
+      action.pets.forEach(function (pet) {
+        pets[pet.id] = pet;
+      });
+
+    case _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PET"]:
+      return Object.assign({}, oldState, _defineProperty({}, action.pet.id, action.pet));
+
+    default:
+      return oldState;
+  }
+});
 
 /***/ }),
 

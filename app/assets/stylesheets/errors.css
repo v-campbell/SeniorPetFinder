@@ -1,7 +1,13 @@
-.errors {
-     color: red;
- }
+.errorBox {
+    /* display: block; */
+    color: rgb(202, 62, 62);
+    text-align: center;
+}
 
- .errorBox {
-     display: block;
- }
+.errors {
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 12px;
+    line-height: 1.3;
+}

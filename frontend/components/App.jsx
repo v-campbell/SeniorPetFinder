@@ -14,6 +14,7 @@ const App = () => (
         <Modal />
         <NavContainer />
         <Splash />
+        <ProtectedRoute path="/pets" component={PetIndexContainer} />
 
         {/* <header className='header-content' data-position="fixed" data-tap-toggle="false" > */}
         {/* <Link to='/'>

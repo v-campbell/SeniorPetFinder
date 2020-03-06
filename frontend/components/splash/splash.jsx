@@ -24,7 +24,6 @@ const Splash = ({ currentUser }) => {
                         SOMETHINGSOMETHINGSOMETHING
                     </div>  
                     {/* make into a link to Russell's show page */}
-                    <br/>
                     <i className="fas fa-arrow-right"></i> 
                 </div>
             </div>

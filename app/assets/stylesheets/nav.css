@@ -1,6 +1,7 @@
 .nav {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    width:100%;
    position:fixed;
    top:0px;
@@ -16,6 +17,10 @@
    font-size: 50px;
    font-family: 'Josefin Sans', sans-serif;
    color: black;
+}
+
+.nav-left:hover {
+   color: #dfcfc6;
 }
    
 .nav-right-logged-out {
@@ -74,6 +79,10 @@
    
    padding: 10px;
    margin-left: 50px
+}
+.nav-icons:hover {
+   color: #dfcfc6;
+   cursor: pointer;
 }
 
 .nav-user {

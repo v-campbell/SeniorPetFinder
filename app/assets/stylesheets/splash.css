@@ -8,7 +8,8 @@
 }
 
 .splash-greeting {
-    /* position: absolute; */
+    /* position: relative; */
+    /* height: 900px; */
 }
 
 .splash-text {
@@ -18,13 +19,14 @@
    height: 500px;
    width: 100%;
    height: 100%;
-   top: 57%;
+   top: 500px;
    left: 50px;
 
 
    font-family: 'Josefin Sans', sans-serif;
    color: white;
-   font-size: 100px;
+   /* color: red; */
+   font-size: 90px;
    letter-spacing: 4px;
    word-spacing: 6px;
    font-weight: lighter;

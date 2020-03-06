@@ -32,9 +32,9 @@ class LoginForm extends React.Component {
         return(
             <ul className="errorBox">
                 {this.props.errors.map((error, i) => (
-                    <div className='errors' key={`error- ${i}`}>
+                    <li className='errors' key={`error- ${i}`}>
                         {error}
-                    </div>
+                    </li>
                 ))}
             </ul>
         );
@@ -59,6 +59,8 @@ class LoginForm extends React.Component {
 
                     {this.props.formType === 'Sign Up' ? 
                         ( <>
+                            <br />
+                            {this.renderErrors()}
                             <br/>
                             <div className='input-label'>
                                 <div className='input-text'>
@@ -88,6 +90,7 @@ class LoginForm extends React.Component {
                                 <div className='input-text'>Password* - minimum 6 characters</div>
                                 <input type='password' className='input' value={this.state.password} onChange={this.update('password')} />
                             </div>
+                            <br/>
                             <input type='submit' className='final-button' value={this.props.formType} />
                             <br />
                             <div className='bottom-modal-buttons'>
@@ -96,11 +99,11 @@ class LoginForm extends React.Component {
                                 <br />
                             </div>
                             <br />
-                            {this.renderErrors()}
                             </>
 
                         ) : ( <div>
                             <br />
+                            {this.renderErrors()}
                             <div className='input-field'>
                                 <div className='input-label'>
                                     <div className='input-text'>
@@ -124,9 +127,6 @@ class LoginForm extends React.Component {
                                 Too lazy to create one? <button onClick={this.fillDemo}> DEMO USER </button>
                                 <br />
                             </div>
-                            
-                            <br />
-                            {this.renderErrors()}
                         </div>)
                     }
 
