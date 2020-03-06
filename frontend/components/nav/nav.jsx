@@ -7,7 +7,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
 
         <div className='nav'>
                 <Link className='nav-left' to='/'>
-                    SeniorPetFinderLogo
+                    〄
                 </Link>
             {!currentUser ? 
             (

@@ -16,28 +16,31 @@ const Splash = ({ currentUser }) => {
 
     const loggedInHome = () => (
         <div>
-            <img className='pirate' src={window.pirateURL} />
-            <div className='splash-text'>
-                Meet Russell ;〕
-                <div className='splash-subtext'>
-                    SOMETHINGSOMETHINGSOMETHING
-                </div>  
-                {/* make into a link to Russell's show page */}
-                <i className="fas fa-arrow-right"></i> 
+            <div className='splash-greeting'>
+                <img className='pirate' src={window.pirateURL} />
+                <div className='splash-text'>
+                    Meet Russell ;P
+                    <div className='splash-subtext'>
+                        SOMETHINGSOMETHINGSOMETHING
+                    </div>  
+                    {/* make into a link to Russell's show page */}
+                    <br/>
+                    <i className="fas fa-arrow-right"></i> 
+                </div>
             </div>
        
-            <div>
+            <div className='splash-display'>
                 <h1>CHECK THESE BABIES OUT</h1>
                 <div className='dogGrid'>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
+                    <div>dog1</div>
+                    <div>dog2</div>
+                    <div>dog3</div>
+                    <div>dog4</div>
+                    <div>dog5</div>
+                    <div>dog6</div>
+                    <div>dog7</div>
+                    <div>dog8</div>
+                    <div>dog9</div>
                 </div>
             </div>
         </div>

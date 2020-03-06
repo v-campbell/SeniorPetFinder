@@ -325,7 +325,7 @@ var Nav = function Nav(_ref) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       className: "nav-left",
       to: "/"
-    }, "SeniorPetFinderLogo"), !currentUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    }, "\u3004"), !currentUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-right-logged-out"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "nav-buttons",
@@ -782,18 +782,22 @@ var Splash = function Splash(_ref) {
   };
 
   var loggedInHome = function loggedInHome() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "splash-greeting"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "pirate",
       src: window.pirateURL
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-text"
-    }, "Meet Russell ;\u3015", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Meet Russell ;P", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-subtext"
-    }, "SOMETHINGSOMETHINGSOMETHING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    }, "SOMETHINGSOMETHINGSOMETHING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-arrow-right"
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "splash-display"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "dogGrid"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "6"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "8"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "9"))));
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog6"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog8"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "dog9"))));
   };
 
   console.log(currentUser);

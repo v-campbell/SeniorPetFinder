@@ -125,7 +125,7 @@ button {
 
 button:hover {
   color: #dfcfc6;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 

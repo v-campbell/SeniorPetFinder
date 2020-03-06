@@ -15,6 +15,7 @@
    /* color: #9b7f71; */
    font-size: 50px;
    font-family: 'Josefin Sans', sans-serif;
+   color: black;
 }
    
 .nav-right-logged-out {
@@ -39,7 +40,7 @@
 }
 
 .nav-buttons{
-   color: white;
+   color: black;
    outline: none;
    background-color: transparent;
 }
