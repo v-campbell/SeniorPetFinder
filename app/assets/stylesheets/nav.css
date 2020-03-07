@@ -8,6 +8,7 @@
    background-color: white;
    min-height: 6rem;
    width: 100%;
+   z-index: 1;
 }
 
 .nav-left{
@@ -25,10 +26,8 @@
    
 .nav-right-logged-out {
    display: flex;
-   margin: 15px;
    align-items: center;
-   flex-direction: row;
-   justify-content: center; 
+   margin: 10px;
    font-family: 'Josefin Sans', sans-serif;
    font-size: 45px;
    color: #dfcfc6;
@@ -48,6 +47,7 @@
    color: black;
    outline: none;
    background-color: transparent;
+   padding: 8px;
 }
 
 .nav-button-loggedin {

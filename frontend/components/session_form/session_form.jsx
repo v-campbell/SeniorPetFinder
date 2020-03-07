@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
                     <div className='form-header'>{this.props.formType}!</div>
 
                     {this.props.formType === 'Sign Up' ? 
-                        ( <>
+                        ( <div className='signUpForm'>
                             <br />
                             {this.renderErrors()}
                             <br/>
@@ -99,7 +99,7 @@ class LoginForm extends React.Component {
                                 <br />
                             </div>
                             <br />
-                            </>
+                            </div>
 
                         ) : ( <div>
                             <br />

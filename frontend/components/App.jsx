@@ -6,6 +6,7 @@ import Modal from './modal/modal';
 import NavContainer from './nav/nav_container';
 import Splash from './splash/splash_container';
 import PetIndexContainer from './pets/pet_index_container';
+import PetShowContainer from './pets/pet_show_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -14,7 +15,11 @@ const App = () => (
         <Modal />
         <NavContainer />
         <Splash />
-        <ProtectedRoute path="/pets" component={PetIndexContainer} />
+        {/* <PetIndexContainer /> */}
+        {/* <PetShowContainer /> */}
+        {/* <ProtectedRoute path="/pets/:id" component={PetShowContainer} /> */}
+
+        {/* <Route path="/pets" component={PetIndexContainer} /> */}
     </div>
 );
 

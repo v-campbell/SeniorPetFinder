@@ -1,10 +1,10 @@
-import { getPets, getPet, addFavoriteToPet, removeFavoriteFromPet } from '../util/pet_util';
+import { fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet } from '../util/pet_util';
 
 export const RECEIVE_PETS = 'RECEIVE_PET';
 export const RECEIVE_PET = 'RECEIVE_PETS';
 
 const receivePets = pets => ({
-    type: RECEIVE_PET,
+    type: RECEIVE_PETS,
     pets
 })
 
@@ -13,10 +13,10 @@ const receivePet = pet => ({
     pet
 })
 
-export const fetchPets = () => dispatch => getPets()
+export const getPets = () => dispatch => fetchPets()
     .then(pets => dispatch(receivePets(pets)));
 
-export const fetchPet = id => dispatch => getPet(id)
+export const getPet = id => dispatch => fetchPet(id)
     .then(pet => dispatch(receivePet(pet)));
 
 export const favoritePet = id => dispatch => addFavoriteToPet(id)
@@ -24,3 +24,5 @@ export const favoritePet = id => dispatch => addFavoriteToPet(id)
 
 export const unfavoritePet = id => dispatch => removeFavoriteFromPet(id)
     .then(pet => dispatch(receivePet(pet)));
+
+window.getPet = getPet;

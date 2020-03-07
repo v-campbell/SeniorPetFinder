@@ -1,3 +1,3 @@
 class Pet < ApplicationRecord
-    validates :name, :type, :breed, :age, :sex, :size, :about, presence: true
+    validates :name, :breed, :age, :sex, :size, :about, presence: true
 end

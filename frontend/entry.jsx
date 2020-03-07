@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { signup, login, logout } from './actions/session_actions';
+import { getPets } from './actions/pet_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     window.user9 = { username: 'g', password: 'password' };
@@ -27,7 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     window.dispatch = store.dispatch;
-    window.getState = store.dispatch;
+    window.getState = store.getState;
+    window.getPets = getPets;
+    
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);

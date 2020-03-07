@@ -14,12 +14,11 @@
 
 .splash-text {
    display: inline-block;
-   position: fixed;
+   position: absolute;
    /* position: sticky; */
-   height: 500px;
    width: 100%;
    height: 100%;
-   top: 500px;
+   top: 450px;
    left: 50px;
 
 
@@ -32,11 +31,18 @@
    font-weight: lighter;
    text-decoration: none;
    font-style: normal;
+}
 
+.splash-text-logged-out {
+    display: inline-block;
+    /* position: fixed; */
+    height: 50px;
+    top: 400px;
+    left: 50px;
 }
 
 .splash-subtext {
-    color: #dfcfc6;
+    color: #dab6a1;
     font-size: 30px;
 }
 
@@ -67,22 +73,30 @@
     margin: 50px;
 }
 
-.dogGrid {
+.petGrid {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 3px;
-    background-color: red;
+    /* background-color: red; */
     padding: 3px;
 }
 
-.dogGrid > div {
+.pet-index-item {
+    position: relative;
     background-color: white;
     text-align: center;
-    padding: 100px 0px 20px 0px;
+    padding: 10px 10px 10px 10px;
     font-size: 30px;
 }
 
-.dogGrid > div:first-child {
+.petGrid div:first-child {
   grid-row-start: 1;
   grid-column-start: 1;
+}
+
+.pet-index-item-text {
+    position: absolute;
+    color: white;
+    top: 50px;
+    left: 25px;
 }
