@@ -22,12 +22,12 @@ const Nav = ({ currentUser, logout, openModal }) => {
                 <nav className='nav-right-loggedin'>
                     <Link to='/' className='nav-icons'>
                         {/* <i className="fas fa-home fa-3x"></i> */}
-                        <img src={window.homeURL} width='58px' height='58px'/>
+                        <img src={window.homeURL} width='50px' height='50px'/>
                     </Link>
                     
                     <Link to='/' className='nav-icons'>
                         {/* <i className="fas fa-dog fa-3x"></i> */}
-                        <img src={window.oldLogoURL} width='50px' height='50px'/>
+                        <img src={window.smugURL} width='70px' height='50px'/>
                     </Link>
 
                     <div className='nav-user'>

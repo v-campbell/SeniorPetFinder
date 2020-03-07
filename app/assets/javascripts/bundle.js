@@ -414,14 +414,14 @@ var Nav = function Nav(_ref) {
       className: "nav-icons"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: window.homeURL,
-      width: "58px",
-      height: "58px"
+      width: "50px",
+      height: "50px"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/",
       className: "nav-icons"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: window.oldLogoURL,
-      width: "50px",
+      src: window.smugURL,
+      width: "70px",
       height: "50px"
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav-user"
@@ -627,7 +627,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "pet-index-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pet-index-item-text"
-  }, "Meet ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, pet.name, ", ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/pets/".concat(pet.id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.tennisURL,
@@ -1103,9 +1103,7 @@ var Splash = function Splash(_ref) {
     }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "gray",
       src: window.grayURL
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "splash-display"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+    }));
   };
 
   var loggedInHome = function loggedInHome() {
@@ -1120,12 +1118,46 @@ var Splash = function Splash(_ref) {
       className: "splash-subtext"
     }, "He only has eye for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-arrow-right"
-    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "splash-display"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+    }))));
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentUser ? loggedInHome() : loggedOutHome());
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentUser ? loggedInHome() : loggedOutHome(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-display"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-services-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "HOW IT WORKS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-services"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "services-pets"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-dog fa-3x"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Browse pets from ages 7+"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "services-favorites"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: window.pawHeartURL,
+    width: "50px",
+    height: "50px"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Log in to add good girls and boys to your favorites list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "services-brain"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-lightbulb fa-3x"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Stay awake thinking about the fact that your parents are getting old and that happiness is temporary, just like everything else"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "services-adopt"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: window.handHoldURL,
+    width: "50px",
+    height: "50px"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Adopt a senior pet(s) and welcome them into their forever home!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/victoria-khym-campbell/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fab fa-linkedin fa-2x"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/v-campbell/SeniorPetFinder/wiki"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fab fa-github-square fa-2x"
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);

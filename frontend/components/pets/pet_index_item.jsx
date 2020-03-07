@@ -11,7 +11,7 @@ export default ({ pet, favoritePet, unfavoritePet }) => {
 
     return (
         <div className='pet-index-item'>
-            <div className='pet-index-item-text'>Meet {pet.name}</div>
+            <div className='pet-index-item-text'>{pet.name}, {pet.age}</div>
             <Link to={`/pets/${pet.id}`}>
                 <img src={window.tennisURL} width='100%' height='100%' />
             </Link>

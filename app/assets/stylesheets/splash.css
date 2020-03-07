@@ -3,22 +3,17 @@
     height: 100%;
 }
 
+.splash-greeting {
+    position: relative;
+}
+
 .pirate {
     width: 100%;
 }
 
-.splash-greeting {
-    /* position: relative; */
-    /* height: 900px; */
-}
-
 .splash-text {
-   display: inline-block;
    position: absolute;
-   /* position: sticky; */
-   width: 100%;
-   height: 100%;
-   top: 450px;
+   top: 400px;
    left: 50px;
 
 
@@ -76,16 +71,13 @@
 .petGrid {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 3px;
-    /* background-color: red; */
-    padding: 3px;
 }
 
 .pet-index-item {
     position: relative;
     background-color: white;
     text-align: center;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
     font-size: 30px;
 }
 
@@ -96,7 +88,72 @@
 
 .pet-index-item-text {
     position: absolute;
-    color: white;
-    top: 50px;
-    left: 25px;
+    color: red;
+    text-transform: uppercase;
 }
+
+.splash-services-box {
+    text-align: center;
+    background-color: #dfcfc6;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    padding: 20px;
+    /* margin: auto; */
+}
+
+.splash-services-box h1{
+    align-content: center;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 28px;
+    /* color:rgb(143, 123, 111); */
+    color: white;
+}
+
+.splash-services-box hr{
+    border-top: 2px solid white;
+    margin-bottom: 40px;
+    margin-left: 310px;
+}
+
+.splash-services-box hr{
+    text-align: center;
+    width: 50%;
+    color: red;
+}
+
+.splash-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.splash-services > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    /* color: black; */
+    /* color: rgb(65, 49, 33); */
+   color: white;
+}
+
+.splash-footer {
+    display: flex;
+    background-color: white;
+    justify-content: flex-end; 
+}
+
+.fa-linkedin, .fa-github-square {
+    color: #a18371;
+    padding: 10px; 
+    margin-right: 5px;
+}
+
+.fa-linkedin:hover, .fa-github-square:hover {
+    color: #dfcfc6;
+}
+
