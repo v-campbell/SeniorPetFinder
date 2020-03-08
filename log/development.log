@@ -38278,3 +38278,2661 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2020-03-07 19:15:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (2.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 681ms (Views: 672.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:17:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 486ms (Views: 483.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:17:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:18:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 105ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:18:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1018ms (Views: 1015.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/13" for ::1 at 2020-03-07 19:18:20 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (2.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/_pet.json.jbuilder (0.9ms)
+  Rendered api/pets/show.json.jbuilder (3.2ms)
+Completed 200 OK in 22ms (Views: 10.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:25:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 618ms (Views: 610.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/pets/13" for ::1 at 2020-03-07 19:25:30 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (1.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/_pet.json.jbuilder (1.5ms)
+  Rendered api/pets/show.json.jbuilder (7.1ms)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:25:32 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (2.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/_pet.json.jbuilder (0.8ms)
+  Rendered api/pets/_pet.json.jbuilder (0.1ms)
+  Rendered api/pets/_pet.json.jbuilder (0.9ms)
+  Rendered api/pets/_pet.json.jbuilder (0.3ms)
+  Rendered api/pets/_pet.json.jbuilder (0.3ms)
+  Rendered api/pets/_pet.json.jbuilder (0.2ms)
+  Rendered api/pets/_pet.json.jbuilder (0.3ms)
+  Rendered api/pets/_pet.json.jbuilder (0.1ms)
+  Rendered api/pets/_pet.json.jbuilder (0.2ms)
+  Rendered api/pets/index.json.jbuilder (34.3ms)
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/pets/14" for ::1 at 2020-03-07 19:26:37 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/_pet.json.jbuilder (0.6ms)
+  Rendered api/pets/show.json.jbuilder (3.8ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:26:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 457ms (Views: 452.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/14" for ::1 at 2020-03-07 19:26:56 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/_pet.json.jbuilder (0.9ms)
+  Rendered api/pets/show.json.jbuilder (3.1ms)
+Completed 200 OK in 19ms (Views: 13.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:35:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (2.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 291ms (Views: 275.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/pets/14" for ::1 at 2020-03-07 19:35:42 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.6ms)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:39:52 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  Rendered api/pets/index.json.jbuilder (3.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/pets/index.json.jbuilder:12:in `'
+
+Started GET "/api/pets/undefined" for ::1 at 2020-03-07 19:39:57 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPet Load (1.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+Completed 404 Not Found in 8ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Pet with 'id'=undefined:
+  app/controllers/api/pets_controller.rb:11:in `show'
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:40:00 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  Rendered api/pets/index.json.jbuilder (3.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/pets/index.json.jbuilder:12:in `'
+
+Started GET "/api/pets/13" for ::1 at 2020-03-07 19:40:07 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.3ms)
+Completed 200 OK in 24ms (Views: 14.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:40:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 115ms (Views: 111.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/13" for ::1 at 2020-03-07 19:40:39 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:41:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 599ms (Views: 595.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/13" for ::1 at 2020-03-07 19:41:01 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.3ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:41:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 665ms (Views: 661.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/13" for ::1 at 2020-03-07 19:44:32 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (2.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (38.0ms)
+Completed 200 OK in 71ms (Views: 53.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:44:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 533ms (Views: 529.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:45:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 74ms (Views: 71.6ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pets" WHERE "pets"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "definitelynotadog"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "notadawg@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Human First Name"], ["last_name", "Human Last Name"], ["username", "definitelynotadog"], ["email", "notadawg@gmail.com"], ["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["password_digest", "$2a$12$IU8mSaOJDxYf9SG01KYZzeKK/7azqNTS1UG0bCgjHvg4dpd3AvpZq"], ["created_at", "2020-03-08 03:46:03.347122"], ["updated_at", "2020-03-08 03:46:03.347122"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPet Create (0.5ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "adopted_by", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jim"], ["breed", "Labrador Retreiver"], ["age", 11], ["sex", "M"], ["size", "L"], ["about", "Loves lady dogs named Pam"], ["adopted_by", 1], ["created_at", "2020-03-08 03:46:03.351009"], ["updated_at", "2020-03-08 03:46:03.351009"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mPet Create (1.7ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pam"], ["breed", "Cocker Spaniel"], ["age", 10], ["sex", "F"], ["size", "M"], ["about", "I don't care what they say about me. I just want to eat."], ["created_at", "2020-03-08 03:46:03.353246"], ["updated_at", "2020-03-08 03:46:03.353246"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mPet Create (2.0ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dwight"], ["breed", "Mastiff"], ["age", 11], ["sex", "M"], ["size", "L"], ["about", "I am fast. To give you a reference point, I am somewhere between a snake and a mongoose… And a panther."], ["created_at", "2020-03-08 03:46:03.356986"], ["updated_at", "2020-03-08 03:46:03.356986"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "adopted_by", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Angela"], ["breed", "Sphynx"], ["age", 9], ["sex", "F"], ["size", "XS"], ["about", "If you pray enough, you can change yourself into a cat person."], ["adopted_by", 1], ["created_at", "2020-03-08 03:46:03.361514"], ["updated_at", "2020-03-08 03:46:03.361514"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Michael"], ["breed", "Jack Russell"], ["age", 14], ["sex", "M"], ["size", "S"], ["about", "I'm an early bird and a night owl, so I'm wise and have worms."], ["created_at", "2020-03-08 03:46:03.363509"], ["updated_at", "2020-03-08 03:46:03.363509"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mPet Create (0.5ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Stanley"], ["breed", "Shar Pei"], ["age", 13], ["sex", "M"], ["size", "L"], ["about", "I have varicose veins. I have swollen ankles. I’m constantly hungry."], ["created_at", "2020-03-08 03:46:03.365734"], ["updated_at", "2020-03-08 03:46:03.365734"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Kevin"], ["breed", "Bulldog"], ["age", 12], ["sex", "M"], ["size", "M"], ["about", "I just want to sit on the beach and eat hot dogs."], ["created_at", "2020-03-08 03:46:03.368438"], ["updated_at", "2020-03-08 03:46:03.368438"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mPet Create (0.4ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Phyllis"], ["breed", "Afghan Hound"], ["age", 14], ["sex", "F"], ["size", "L"], ["about", "I have an ice cream cake in the car."], ["created_at", "2020-03-08 03:46:03.370825"], ["updated_at", "2020-03-08 03:46:03.370825"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mPet Create (0.6ms)[0m  [1m[32mINSERT INTO "pets" ("name", "breed", "age", "sex", "size", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Creed"], ["breed", "Mutt"], ["age", 296], ["sex", "M"], ["size", "M"], ["about", "I've never owned a refridgerator before."], ["created_at", "2020-03-08 03:46:03.373503"], ["updated_at", "2020-03-08 03:46:03.373503"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+Started GET "/api/pets" for ::1 at 2020-03-07 19:46:13 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  Rendered api/pets/index.json.jbuilder (1.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/pets/index.json.jbuilder:12:in `'
+
+Started GET "/" for ::1 at 2020-03-07 19:46:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAx2Sl8wthFlwinR9zxngA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 90ms (Views: 87.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:46:19 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  Rendered api/pets/index.json.jbuilder (4.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/pets/index.json.jbuilder:12:in `'
+
+Started POST "/api/session" for ::1 at 2020-03-07 19:47:32 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"definitelynotadog", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "definitelynotadog"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:27
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "definitelynotadog"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/user.rb:27
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "notadawg@gmail.com"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/user.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:27
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 300ms (Views: 8.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:49:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 130ms (Views: 127.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:49:40 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  Rendered api/pets/index.json.jbuilder (1.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/pets/index.json.jbuilder:12:in `'
+
+Started GET "/" for ::1 at 2020-03-07 19:50:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 438ms (Views: 434.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:50:44 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  Rendered api/pets/index.json.jbuilder (1.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/pets/index.json.jbuilder:12:in `'
+
+Started GET "/" for ::1 at 2020-03-07 19:51:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 119ms (Views: 115.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:51:57 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (48.6ms)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 19:52:10 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (3.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (4.6ms)
+Completed 200 OK in 35ms (Views: 14.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:52:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 93ms (Views: 90.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 19:52:48 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (2.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:52:52 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.5ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:52:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 70ms (Views: 66.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:52:54 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.4ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 19:53:50 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.9ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:53:52 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.8ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:53:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 482ms (Views: 479.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:53:54 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (7.8ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/26" for ::1 at 2020-03-07 19:54:50 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"26"}
+  [1m[36mPet Load (1.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 19ms (Views: 12.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 19:54:53 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (8.3ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 19:56:38 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (3.1ms)
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:56:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 95ms (Views: 91.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 19:57:08 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (3.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.5ms)
+Completed 200 OK in 18ms (Views: 10.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 19:57:51 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 99ms (Views: 96.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:01:17 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (41.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (20.7ms)
+Completed 200 OK in 100ms (Views: 28.4ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:01:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 552ms (Views: 547.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:01:22 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (2.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 21ms (Views: 11.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:05:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 79ms (Views: 77.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:05:21 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.4ms)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:05:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 97ms (Views: 94.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:06:01 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.8ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:09:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 577ms (Views: 573.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:09:50 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (9.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.9ms)
+Completed 200 OK in 68ms (Views: 46.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:10:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:10:39 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (9.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.6ms)
+Completed 200 OK in 21ms (Views: 9.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:14:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 534ms (Views: 529.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:14:15 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:16:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 149ms (Views: 145.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:16:08 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.5ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:17:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 497ms (Views: 493.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:17:58 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.9ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:19:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 98ms (Views: 92.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:19:02 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.8ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:26:22 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (9.9ms)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/pets/26" for ::1 at 2020-03-07 20:26:52 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"26"}
+  [1m[36mPet Load (3.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.8ms)
+Completed 200 OK in 27ms (Views: 10.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:26:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 703ms (Views: 698.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/pets/26" for ::1 at 2020-03-07 20:27:00 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"26"}
+  [1m[36mPet Load (1.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.1ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:27:01 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (15.3ms)
+Completed 200 OK in 31ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/25" for ::1 at 2020-03-07 20:27:03 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.2ms)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:27:06 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (3.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (12.7ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 20:27:08 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:27:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 731ms (Views: 729.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 20:27:31 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:27:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (2.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 507ms (Views: 504.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 20:27:56 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (3.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (4.5ms)
+Completed 200 OK in 111ms (Views: 16.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:28:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 463ms (Views: 459.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 20:28:53 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (1.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 131ms (Views: 124.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:28:57 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (6.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (11.5ms)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:28:59 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:29:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 429ms (Views: 426.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 20:29:16 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.3ms)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:31:03 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.2ms)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:31:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 463ms (Views: 459.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:31:13 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.7ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/22" for ::1 at 2020-03-07 20:31:40 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"22"}
+  [1m[36mPet Load (6.9ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.6ms)
+Completed 200 OK in 17ms (Views: 5.9ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:31:43 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.4ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:31:45 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:33:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 474ms (Views: 470.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:33:55 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (1.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (7.9ms)
+Completed 200 OK in 44ms (Views: 37.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:34:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 84ms (Views: 81.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:34:22 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.6ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:34:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:34:42 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (21.3ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:35:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 771ms (Views: 766.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:35:02 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:35:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 480ms (Views: 476.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:35:33 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.3ms)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:36:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 87ms (Views: 85.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:36:08 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.8ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:36:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 76ms (Views: 74.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:36:32 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:37:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 20:37:10 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 20:37:14 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (6.5ms)
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 20:37:19 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.9ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:39:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 143ms (Views: 139.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 20:39:50 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 20:39:51 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (2.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 106ms (Views: 103.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 20:39:51 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:26:51 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (28.7ms)
+Completed 200 OK in 78ms (Views: 67.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:27:01 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.1ms)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:27:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 175ms (Views: 167.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:27:13 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.4ms)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:27:15 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (5.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (25.3ms)
+Completed 200 OK in 39ms (Views: 28.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/pets/27" for ::1 at 2020-03-07 21:27:20 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"27"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.3ms)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:29:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 514ms (Views: 510.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/27" for ::1 at 2020-03-07 21:29:15 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"27"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.8ms)
+Completed 200 OK in 87ms (Views: 81.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:29:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 478ms (Views: 475.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/27" for ::1 at 2020-03-07 21:29:30 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"27"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:30:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/27" for ::1 at 2020-03-07 21:30:20 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"27"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:32:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 570ms (Views: 564.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/pets/27" for ::1 at 2020-03-07 21:32:59 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"27"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:34:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 277ms (Views: 274.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/pets/27" for ::1 at 2020-03-07 21:34:10 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"27"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:34:11 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.3ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:34:15 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.6ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:34:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:34:36 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (2.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:34:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:34:44 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.6ms)
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:35:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:35:32 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:35:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:35:40 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.3ms)
+Completed 200 OK in 36ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:35:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:35:52 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:36:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:36:01 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.7ms)
+Completed 200 OK in 26ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:36:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 93ms (Views: 90.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:36:39 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (1.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:36:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:36:53 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:37:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:37:24 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.3ms)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:37:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 117ms (Views: 114.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:37:35 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:37:45 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.1ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:37:48 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.9ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:38:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 119ms (Views: 115.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:38:23 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:38:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:38:26 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.2ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:39:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 92ms (Views: 89.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:39:22 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (3.1ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:39:26 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:39:34 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.5ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:40:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:40:32 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:41:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:41:09 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (10.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 27ms (Views: 11.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:41:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 144ms (Views: 141.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/24" for ::1 at 2020-03-07 21:41:19 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (3.2ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:41:21 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.3ms)
+Completed 200 OK in 18ms (Views: 8.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:41:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 75ms (Views: 69.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:41:35 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.8ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:41:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:41:48 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (6.9ms)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:42:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 92ms (Views: 89.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:42:02 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (6.5ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/pets/29" for ::1 at 2020-03-07 21:42:11 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.7ms)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:42:18 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.5ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:42:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:42:26 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 21:42:31 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:42:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 631ms (Views: 627.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 21:42:48 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:42:50 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (3.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (6.6ms)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:42:54 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (3.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.8ms)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:43:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 106ms (Views: 102.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:43:37 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:43:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 112ms (Views: 109.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:43:49 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:43:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:43:51 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:43:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:43:58 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.6ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:44:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 78ms (Views: 75.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:44:05 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:44:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:44:11 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:44:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 113ms (Views: 109.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:44:19 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.1ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:44:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 21:44:33 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.6ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:44:35 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 21ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:44:51 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 74ms (Views: 71.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:44:52 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.4ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 21:45:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:45:05 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (6.4ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/29" for ::1 at 2020-03-07 21:45:08 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mPet Load (6.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (3.0ms)
+Completed 200 OK in 19ms (Views: 7.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:49:57 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (8.8ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 21:50:01 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.2ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:50:04 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (7.2ms)
+Completed 200 OK in 23ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/25" for ::1 at 2020-03-07 21:50:05 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"25"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.8ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:50:06 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.2ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/29" for ::1 at 2020-03-07 21:50:10 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.8ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:50:57 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (6.5ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/pets/23" for ::1 at 2020-03-07 21:51:01 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"23"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:51:06 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.6ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 21:51:10 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (6.2ms)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/pets/27" for ::1 at 2020-03-07 21:51:13 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"27"}
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (3.1ms)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:05:22 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 22:05:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 210ms (Views: 204.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:05:54 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.6ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 22:06:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZAwgSEPFfxqBAZ-HWu5wYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 440ms (Views: 437.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:02 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:02 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.9ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:04 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.2ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:08 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (2.4ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 22:06:18 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.8ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:21 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (5.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (11.6ms)
+Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 22:06:25 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (8.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.9ms)
+Completed 200 OK in 17ms (Views: 6.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:27 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (2.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (11.2ms)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 22:06:29 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.6ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:31 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.2ms)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/pets/30" for ::1 at 2020-03-07 22:06:32 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mPet Load (2.0ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.0ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:33 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (2.9ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (7.0ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:39 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.6ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:43 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:46 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (2.5ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:06:49 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (3.9ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/26" for ::1 at 2020-03-07 22:06:51 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"26"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (0.7ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 22:08:19 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (1.0ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (4.5ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/pets/26" for ::1 at 2020-03-07 22:22:23 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"26"}
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (5.8ms)
+Completed 200 OK in 77ms (Views: 14.6ms | ActiveRecord: 1.8ms)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6974518700469712665)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateActiveStorageTables (20200308062310)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (56.9ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200308062310_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/migrate/20200308062310_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20200308062310_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/migrate/20200308062310_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20200308062310_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200308062310"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6974518700469712665)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/api/pets" for ::1 at 2020-03-07 22:26:32 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/vnkc/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (26.1ms)
+Completed 200 OK in 42ms (Views: 22.9ms | ActiveRecord: 9.3ms)
+
+
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (2.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Pet"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (2.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Pet"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Pet"], ["name", "photo"], ["LIMIT", 1]]
+[36m  S3 Storage (490.7ms) [0m[32mUploaded file to key: RaehRJGVEZQVQVPhvT9n6yGr (checksum: TpCJMbWiTHLQs3E4z8hksQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (10.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "RaehRJGVEZQVQVPhvT9n6yGr"], ["filename", "defaultdog.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 216944], ["checksum", "TpCJMbWiTHLQs3E4z8hksQ=="], ["created_at", "2020-03-08 07:29:08.767100"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Create (18.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo"], ["record_type", "Pet"], ["record_id", 22], ["blob_id", 1], ["created_at", "2020-03-08 07:29:08.810240"]]
+  [1m[36mPet Update (2.8ms)[0m  [1m[33mUPDATE "pets" SET "updated_at" = $1 WHERE "pets"."id" = $2[0m  [["updated_at", "2020-03-08 07:29:08.832284"], ["id", 22]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: dab5ffe1-14b6-4c32-9498-090c769b8db7) to Async(default) with arguments: #<GlobalID:0x00007ff02c69af40 @uri=#<URI::GID gid://senior-pet-finder/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dab5ffe1-14b6-4c32-9498-090c769b8db7] Performing ActiveStorage::AnalyzeJob (Job ID: dab5ffe1-14b6-4c32-9498-090c769b8db7) from Async(default) with arguments: #<GlobalID:0x00007ff02c4c7240 @uri=#<URI::GID gid://senior-pet-finder/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dab5ffe1-14b6-4c32-9498-090c769b8db7] [36m  S3 Storage (239.8ms) [0m[34mDownloaded file from key: RaehRJGVEZQVQVPhvT9n6yGr[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dab5ffe1-14b6-4c32-9498-090c769b8db7] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dab5ffe1-14b6-4c32-9498-090c769b8db7]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dab5ffe1-14b6-4c32-9498-090c769b8db7]   [1m[36mActiveStorage::Blob Update (2.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dab5ffe1-14b6-4c32-9498-090c769b8db7]   [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dab5ffe1-14b6-4c32-9498-090c769b8db7] Performed ActiveStorage::AnalyzeJob (Job ID: dab5ffe1-14b6-4c32-9498-090c769b8db7) from Async(default) in 359.69ms
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Pet"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/api/pets/26" for ::1 at 2020-03-07 23:54:29 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"26"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (2.3ms)
+Completed 200 OK in 180ms (Views: 10.7ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/api/pets" for ::1 at 2020-03-07 23:54:33 -0800
+Processing by Api::PetsController#index as JSON
+  Rendering api/pets/index.json.jbuilder
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/api/pets/index.json.jbuilder:5
+  Rendered api/pets/index.json.jbuilder (7.9ms)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/pets/28" for ::1 at 2020-03-07 23:54:34 -0800
+Processing by Api::PetsController#show as JSON
+  Parameters: {"id"=>"28"}
+  [1m[36mPet Load (1.1ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/api/pets_controller.rb:11
+  Rendering api/pets/show.json.jbuilder
+  Rendered api/pets/show.json.jbuilder (1.2ms)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 1.1ms)
+
+

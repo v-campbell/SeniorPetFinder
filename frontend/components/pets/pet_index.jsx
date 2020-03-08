@@ -14,17 +14,15 @@ class PetIndex extends React.Component {
         // const {pets} = this.props;
         return (
             <div className='petGrid'>
-                {this.props.pets.map(pet => (
-                        <PetIndexItem
-                            key={`pet${pet.id}`}
-                            pet={pet}
-                            id={pet.id}
-                            // favoritePet={this.props.favoritePet}
-                            // unfavoritePet={this.props.unfavoritePet} 
-                        />
-                        )
-                    )
-                }
+                {this.props.pets.map(pet =>
+                    <PetIndexItem
+                        key={`pet${pet.id}`}
+                        pet={pet}
+                        id={pet.id}
+                        // favoritePet={this.props.favoritePet}
+                        // unfavoritePet={this.props.unfavoritePet} 
+                    />
+                )}
             </div>
         )
     }

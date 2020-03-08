@@ -4,16 +4,11 @@ class Api::PetsController < ApplicationController
 
     def index
         @pets = Pet.all
-        # render :index
     end
 
     def show
-        @pet = Pet.find(params[:id])
-        # if @pet
-        #     render :show
-        # else
-        #     render json: @pet.errors.full_messages, status: 418
-        # end
+        # to avoid N+1 queries from Active Storage
+        @pet = Pet.with_attached_photos.find(params[:id])
     end
 
 end

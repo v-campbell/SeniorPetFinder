@@ -1,4 +1,11 @@
 .petShow {
+    display: flex;
+    position: relative;
+    top: 500px;
     color: black;
     background-color: cornflowerblue;
+}
+
+.petShow > div {
+    color: red;
 }

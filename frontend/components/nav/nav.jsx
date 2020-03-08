@@ -25,7 +25,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
                         <img src={window.homeURL} width='50px' height='50px'/>
                     </Link>
                     
-                    <Link to='/' className='nav-icons'>
+                    <Link to='/pets' className='nav-icons'>
                         {/* <i className="fas fa-dog fa-3x"></i> */}
                         <img src={window.smugURL} width='70px' height='50px'/>
                     </Link>

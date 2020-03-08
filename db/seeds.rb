@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 User.destroy_all
 Pet.destroy_all
@@ -21,3 +22,23 @@ pet7 = Pet.create({name: 'Kevin', breed: 'Bulldog', age: 12, sex: 'M', size: 'M'
 pet8 = Pet.create({name: 'Phyllis', breed: 'Afghan Hound', age: 14, sex: 'F', size: 'L', about: 'I have an ice cream cake in the car.'})
 pet9 = Pet.create({name: 'Creed', breed: 'Mutt', age: 296, sex: 'M', size: 'M', about: "I've never owned a refridgerator before."})
 
+
+pet1.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet2.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet3.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet4.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet5.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet6.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet7.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet8.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+pet9.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/oldhappy.jpg', filename: "oldhappy.jpg")
+
+pet1.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet2.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet3.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet4.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet5.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet6.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet7.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet8.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")
+pet9.photos.attach(io: open('http://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/doublehappy.jpg', filename: "oldhappy.jpg")

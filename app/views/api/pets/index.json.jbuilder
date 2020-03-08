@@ -4,6 +4,6 @@
 
 @pets.each do |pet|
     json.set! pet.id do
-        json.partial! "pet", pet: pet
+        json.extract! pet, :id, :name, :breed, :age, :sex, :size, :about, :adopted_by
     end
 end
