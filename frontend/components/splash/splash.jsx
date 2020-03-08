@@ -60,7 +60,7 @@ const Splash = ({ currentUser }) => {
                             <i className="fas fa-lightbulb fa-3x"></i>
                             <br />
                             <br />
-                            Stay awake thinking about the fact that your parents are getting old and that happiness is temporary, just like everything else
+                            Stay awake thinking about the fact that your parents are getting older and happiness is temporary, just like everything else
                         </div>
                         <div className='services-adopt'>
                             <img src={window.handHoldURL} width='50px' height='50px' />
@@ -70,14 +70,6 @@ const Splash = ({ currentUser }) => {
                         </div>
                     </div>
 
-                </div>
-                <div className='splash-footer'>
-                    <a href='https://www.linkedin.com/in/victoria-khym-campbell/'>
-                        <i className="fab fa-linkedin fa-2x"></i>
-                    </a>
-                    <a href='https://github.com/v-campbell/SeniorPetFinder/wiki'>
-                        <i class="fab fa-github-square fa-2x"></i>
-                    </a>
                 </div>
         </div>
     )

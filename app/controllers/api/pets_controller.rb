@@ -4,16 +4,16 @@ class Api::PetsController < ApplicationController
 
     def index
         @pets = Pet.all
-        render :index
+        # render :index
     end
 
     def show
         @pet = Pet.find(params[:id])
-        if @pet
-            render :show
-        else
-            render json: @pet.errors.full_messages, status: 418
-        end
+        # if @pet
+        #     render :show
+        # else
+        #     render json: @pet.errors.full_messages, status: 418
+        # end
     end
 
 end

@@ -101,3 +101,24 @@
    font-size: 30px;
    color: #a4a4a4;
 }
+
+.splash-footer {
+   display: flex;
+   background-color: white;
+   justify-content: flex-end; 
+   bottom: 0;
+   width: 100%;
+   height: 2.5rem; 
+   z-index: 1;
+}
+
+.fa-linkedin, .fa-github-square {
+    color: #a18371;
+    padding: 10px; 
+    margin-right: 5px;
+}
+
+.fa-linkedin:hover, .fa-github-square:hover {
+    color: #dfcfc6;
+}
+
