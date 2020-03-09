@@ -15,96 +15,79 @@
 .pet-show-top {
     display: flex;
     position: relative;
+    flex-direction: column;
     /* width: 50%; */
-    height: 400px;
+    /* height: 400px; */
     color: black;
     font-family: 'Josefin Sans', sans-serif;
     letter-spacing: 1px;
-    /* padding-left: 30px; */
-    padding-left: 10px;
+    /* padding-left: 10px; */
     /* padding-top: 90px; */
 }
 
 .pet-show-links {
-    position: absolute;
-    text-align: center;
-    padding: 12px;
-    top: 8px;
-    left: px;
-    /* left: 10; */
+    display: flex;
+    justify-content: space-between;
+    max-width: 99%
+}
+
+.pet-show-back-link {
+    /* display: block; */
+    position: relative;
+    /* text-align: center; */
+    padding: 10px 5px 10px 5px;
+    top: 12px;
+    left: 3px;
+
+    width: 60px;
+    height: 15px;
+    
     border: 2px solid black;
-    font-size: 8px;
+    font-size: 10px;
     color: black;
 }
 
-.pet-show-links:hover {
-    color: #504945;
-    border: 4px solid #504945;
+.pet-show-button:hover {
+    color: #afa6a0;
+    border: 2px solid #504945;
     cursor: pointer;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
-.pet-show-header {
-    display: flex;
-    align-content: space-around;
-    flex-direction: column;
-    justify-content: space-around;
-    /* padding-left: 60px; */
-}
-
-.pet-show-header-desc {
-    color: white;
-    font-size: 40px;
-    font-weight: bolder;
-    letter-spacing: 5px;
-    padding-top: 6px;
-}
-
-.fa-grip-lines {
-    color: rgb(247, 239, 236);
-}
-
-/* pet.name */
-.pet-show-header-desc > div:first-child {
-    color: rgb(66, 63, 63);
-    font-size: 90px;
-    padding: 0;
-}
-
-/* pet.about section */
-.pet-show-header-desc > div:last-child {
-    color: white;
-    font-size: 28px;
-    font-weight: lighter;
-    letter-spacing: 0px;
-    padding-bottom: 10px;
-    padding-left: 60px;
-
-}
-
-/* About */
-/* .pet-show-header-desc > div:last-child > div:first-child {
-    font-size: 20px;
-    letter-spacing: 5px;
-} */
 
 .pet-show-list {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
-
-    top: 50px;
-    left: 540px;
-    /* overflow: hidden; */
-
+    margin-top: 15px;
     padding: 15px;
-    min-width: 200px;
-    max-height: 150px;
+
 
     font-family: 'Barlow', sans-serif;
     background-color:  rgb(192, 152, 140);
     color: rgb(240, 227, 223);
     font-size: 15px;
   /* left: calc(-50vw + 50%); */
+}
+
+.pet-show-name {
+    padding: 30px 0 0 30px;
+    color: rgb(66, 63, 63);
+    font-size: 90px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.fa-grip-lines {
+    color: rgb(247, 239, 236);
+    padding: 0 0 0 60px;
+}
+.pet-show-about {
+    width: 90%;
+    padding: 15px 0 30px 30px;
+
+    font-size: 28px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    color: white;
 }
 
 /* .pet-show-list:after {
@@ -117,23 +100,26 @@
   transform-origin: bottom right;
 } */
 
-.pet-show-bottom {
-}
+/* .pet-show-bottom {
+} */
 
 .pet-show-grid {
     display: grid;
     grid-template-columns: auto auto;
+    margin-right: 2px;
+    /* border: 3px solid red; */
 }
 
 .pet-show-grid-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: space-evenly; */
+    /* position: relative; */
     background-color: rgb(234, 224, 215);
     padding: 5px 5px;
     font-size: 12px;
     /* border: 1px solid rgb(192, 152, 140); */
+    /* border: 3px solid blue; */
 }
 
 
@@ -151,7 +137,7 @@
 }
 
 .hours {
-    display: flex;
+    /* display: flex; */
     /* flex-direction: column; */
 }
 
@@ -159,11 +145,16 @@
     width: 110px;
 }
 
-.location > a {
+.pet-show-grid-item > div > a {
     color: black;
 }
 
-.fees li:last-child {
+.pet-show-grid-item > div > a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.fees li:last-child, .contact li:last-child {
     color: rgb(78, 77, 77);
 }
 /* 
@@ -178,5 +169,4 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    
 }

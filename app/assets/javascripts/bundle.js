@@ -729,10 +729,10 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // let favoriteButtonText = '♡';
+      // let favoriteButtonText = <i class="far fa-star"></i>;
       // let favoriteButtonAction = () => favoritePet(pet.id);
       // if (pet.favorited_by_current_user) {
-      //     favoriteButtonText = '♥';
+      //     favoriteButtonText = <i class="fas fa-star"></i>;
       //     favoriteButtonAction = () => unfavoritePet(pet.id);
       // }
       var pet = this.props.pet; // const {favoritePet} = this.props;
@@ -745,18 +745,26 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-top"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/pets",
-        className: "pet-show-links"
-      }, "BACK TO ALL PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-header-desc"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, pet.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-grip-lines fa-3x"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-back-link"
+      }, "BACK TO ALL PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/pets",
+        className: "pet-show-back-link"
+      }, "MAYBE ANOTHER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/pets",
+        className: "pet-show-back-link"
+      }, "OR ANOTHER")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-list"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 BREED: ", pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 AGE: ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SEX: ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SIZE: ", pet.size))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 BREED: ", pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 AGE: ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SEX: ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SIZE: ", pet.size)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-name"
+      }, pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-grip-lines fa-4x"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-about"
+      }, pet.about)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-bottom"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid"
@@ -765,8 +773,24 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }, "ADOPTION CENTER", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "INFO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "name"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "NAME"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-link"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.sfspca.org/"
+      }, "  San Francisco SPCA"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hours"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "OPERATING HOURS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "MON TUES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "CLOSED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WED THUR FRI"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "1PM - 6PM"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "SAT SUN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "10AM - 5PM")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fees"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "FEES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-dog"
+      }), " $175* for adult dogs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-cat"
+      }), " No fee for senior cats!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "The Life of Riley Fund encourages people over 65 to easily adopt animals from the SF SPCA by underwriting adoption fees for seniors."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "location"
@@ -777,12 +801,14 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }, "  250 Florida Street, San Francisco, CA 94103"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fees"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "FEES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-dog"
-      }), " $175* for adult dogs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-cat"
-      }), " No fee for senior cats!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "The Life of Riley Fund encourages people over 65 to easily adopt animals from the SF SPCA by underwriting adoption fees for seniors."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "*Additional $23 San Francisco License Fee for SF Residents")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "contact"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "CONTACT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-mobile-alt"
+      }), "  415.522.3500", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "far fa-envelope"
+      }), "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20".concat(pet.name, "&body=Hello!%20I%20am%20interested%20in%20adopting%20").concat(pet.name, ".%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0AYour%20Name%20Here")
+      }, "adoptions@sfspca.org"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "*Additional $23 San Francisco License Fee for SF Residents")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "show-img-1",
@@ -790,7 +816,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         width: "100%"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "show-img-2",
-        src: window.tennisURL,
+        src: pet.photoUrls,
         width: "100%"
       })));
     }
