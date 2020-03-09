@@ -97,7 +97,8 @@
     background-color: #dfcfc6;
     font-family: 'Josefin Sans', sans-serif;
     width: 100%;
-    padding: 20px;
+    padding-bottom: 75px;
+    padding-top: 20px;
     /* margin: auto; */
 }
 

@@ -6,7 +6,7 @@
    position: fixed;
    top: 0px;
    background-color: white;
-   min-height: 6rem;
+   /* min-height: 6rem; */
    width: 100%;
    z-index: 1;
 }
@@ -108,19 +108,19 @@
    justify-content: flex-end;
    align-items: center;
    width: 100%;
-   /* position: fixed; */
+   position: fixed;
    /* position: absolute; */
    bottom: 0;
    left: 0;
-   min-height: 1.5rem;
+   /* min-height: 1rem; */
    background-color: white;
    z-index: 1;
 }
 
 .fa-linkedin, .fa-github-square {
     color: #a18371;
-    padding: 10px; 
-    margin-right: 5px;
+    padding: 5px; 
+    margin-right: 8px;
 }
 
 .fa-linkedin:hover, .fa-github-square:hover {

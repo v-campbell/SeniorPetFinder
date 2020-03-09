@@ -661,15 +661,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PetIndexItem = function PetIndexItem(_ref) {
-  var pet = _ref.pet,
-      favoritePet = _ref.favoritePet,
-      unfavoritePet = _ref.unfavoritePet;
-  // let favoriteButtonText = '♡';
-  // let favoriteButtonAction = () => favoritePet(pet.id);
-  // if (pet.favorited_by_current_user) {
-  //     favoriteButtonText = '♥';
-  //     favoriteButtonAction = () => unfavoritePet(pet.id);
-  // }
+  var pet = _ref.pet;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pet-index-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -737,17 +729,70 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var pet = this.props.pet;
+      // let favoriteButtonText = '♡';
+      // let favoriteButtonAction = () => favoritePet(pet.id);
+      // if (pet.favorited_by_current_user) {
+      //     favoriteButtonText = '♥';
+      //     favoriteButtonAction = () => unfavoritePet(pet.id);
+      // }
+      var pet = this.props.pet; // const {favoritePet} = this.props;
+      // const {unfavoritePet} = this.props;
+
       if (!pet) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "petShow"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/pets"
-      }, "VIEW ALL PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "pet-show"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-top"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/pets",
+        className: "pet-show-links"
+      }, "BACK TO ALL PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-header-desc"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, pet.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-grip-lines fa-3x"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-list"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 BREED: ", pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 AGE: ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SEX: ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SIZE: ", pet.size))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-bottom"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
+      }, "ADOPTION CENTER", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "INFO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hours"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "OPERATING HOURS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "MON TUES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "CLOSED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WED THUR FRI"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "1PM - 6PM"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "SAT SUN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "10AM - 5PM")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "location"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LOCATION"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-link"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.google.ca/maps/place/San+Francisco+SPCA+Mission+Adoption+Center/@37.7663229,-122.4140744,17z/data=!4m13!1m7!3m6!1s0x808f7e2f94fa547d:0x27106e681320893a!2s250+Florida+St,+San+Francisco,+CA+94103!3b1!8m2!3d37.7663229!4d-122.4118857!3m4!1s0x808f7e2feb2eb90d:0x563b21c0032c4942!8m2!3d37.7663229!4d-122.4118856"
+      }, "  250 Florida Street, San Francisco, CA 94103"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fees"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "FEES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-dog"
+      }), " $175* for adult dogs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-cat"
+      }), " No fee for senior cats!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "The Life of Riley Fund encourages people over 65 to easily adopt animals from the SF SPCA by underwriting adoption fees for seniors."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "*Additional $23 San Francisco License Fee for SF Residents")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-images"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "show-img-1",
         src: window.tennisURL,
-        width: "50%",
-        height: "50%"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pet.size)));
+        width: "100%"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "show-img-2",
+        src: window.tennisURL,
+        width: "100%"
+      })));
     }
   }]);
 
