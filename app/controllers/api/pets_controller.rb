@@ -11,4 +11,15 @@ class Api::PetsController < ApplicationController
         @pet = Pet.with_attached_photos.find(params[:id])
     end
 
+    def adopt
+        @pet = Pet.find(params[:id])
+        # if no owner
+        if !@pet.adopted_by 
+            @pet.adopted_by = current_user.id
+            render '/api/pets/show'
+        else
+            render json: ["Sorry, I'm already adopted"], status: 418
+        end
+    end
+
 end

@@ -1,4 +1,4 @@
-import { fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet } from '../util/pet_util';
+import { fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet, addAdoptToPet } from '../util/pet_util';
 
 export const RECEIVE_PETS = 'RECEIVE_PET';
 export const RECEIVE_PET = 'RECEIVE_PETS';
@@ -25,4 +25,7 @@ export const favoritePet = id => dispatch => addFavoriteToPet(id)
 export const unfavoritePet = id => dispatch => removeFavoriteFromPet(id)
     .then(pet => dispatch(receivePet(pet)));
 
-window.getPet = getPet;
+export const adoptPet = id => dispatch => addAdoptToPet(id)
+    .then(pet => dispatch(receivePet(pet)));
+
+// window.getPet = getPet;

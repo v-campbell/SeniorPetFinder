@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :pets, only: [:index, :show]
+    patch 'pets/adopt/:id', :to => '/api/pets#adopt'
   end
+  
   
 
 end

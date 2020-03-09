@@ -14,7 +14,13 @@ export const addFavoriteToPet = id => $.ajax({
 });
 
 export const removeFavoriteFromPet = id => $.ajax({
-    url: '/api/favorites',
+    url: `/api/favorites`,
     method: 'DELETE',
+    data: { id }
+});
+
+export const addAdoptToPet = id => $.ajax({
+    url: `/api/pets/adopt/${id}`,
+    method: 'PATCH',
     data: { id }
 });

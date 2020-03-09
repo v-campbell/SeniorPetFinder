@@ -119,7 +119,7 @@ var closeModal = function closeModal() {
 /*!*****************************************!*\
   !*** ./frontend/actions/pet_actions.js ***!
   \*****************************************/
-/*! exports provided: RECEIVE_PETS, RECEIVE_PET, getPets, getPet, favoritePet, unfavoritePet */
+/*! exports provided: RECEIVE_PETS, RECEIVE_PET, getPets, getPet, favoritePet, unfavoritePet, adoptPet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -130,6 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPet", function() { return getPet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "favoritePet", function() { return favoritePet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unfavoritePet", function() { return unfavoritePet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adoptPet", function() { return adoptPet; });
 /* harmony import */ var _util_pet_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/pet_util */ "./frontend/util/pet_util.js");
 
 var RECEIVE_PETS = 'RECEIVE_PET';
@@ -177,7 +178,13 @@ var unfavoritePet = function unfavoritePet(id) {
     });
   };
 };
-window.getPet = getPet;
+var adoptPet = function adoptPet(id) {
+  return function (dispatch) {
+    return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["addAdoptToPet"])(id).then(function (pet) {
+      return dispatch(receivePet(pet));
+    });
+  };
+}; // window.getPet = getPet;
 
 /***/ }),
 
@@ -306,6 +313,114 @@ var App = function App() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./frontend/components/display/display.jsx":
+/*!*************************************************!*\
+  !*** ./frontend/components/display/display.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Display; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Mini = /*#__PURE__*/function (_React$Component) {
+  _inherits(Mini, _React$Component);
+
+  function Mini() {
+    _classCallCheck(this, Mini);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Mini).apply(this, arguments));
+  }
+
+  _createClass(Mini, [{
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "photo-thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.photos.map(function (photoUrl, i) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          key: i,
+          src: photoUrl,
+          onClick: function onClick() {
+            return _this.props.selectTab(i);
+          }
+        });
+      })));
+    }
+  }]);
+
+  return Mini;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+var Display = /*#__PURE__*/function (_React$Component2) {
+  _inherits(Display, _React$Component2);
+
+  function Display(props) {
+    var _this2;
+
+    _classCallCheck(this, Display);
+
+    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(Display).call(this, props));
+    _this2.state = {
+      selectedPhoto: 0
+    };
+    _this2.selectTab = _this2.selectTab.bind(_assertThisInitialized(_this2));
+    return _this2;
+  }
+
+  _createClass(Display, [{
+    key: "selectTab",
+    value: function selectTab(i) {
+      this.setState({
+        selectedPhoto: i
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "display"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.props.photoUrls[this.state.selectedPhoto]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Mini, {
+        selectedPhoto: this.state.selectedPhoto,
+        selectTab: this.selectTab,
+        photos: this.props.photoUrls
+      }));
+    }
+  }]);
+
+  return Display;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 
@@ -576,12 +691,15 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.getPets();
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
     value: function render() {
       // const {pets} = this.props;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-index-header"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "petGrid"
       }, this.props.pets.map(function (pet) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -591,7 +709,7 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
           // unfavoritePet={this.props.unfavoritePet} 
 
         });
-      }));
+      })));
     }
   }]);
 
@@ -690,7 +808,8 @@ var PetIndexItem = function PetIndexItem(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _display_display__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../display/display */ "./frontend/components/display/display.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -710,6 +829,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
+
  // import { ProtectedRoute } from '../../util/route_util';
 
 var PetShow = /*#__PURE__*/function (_React$Component) {
@@ -725,10 +845,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.getPet(this.props.match.params.id);
+      window.scrollTo(0, 0);
     }
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       // let favoriteButtonText = <i class="far fa-star"></i>;
       // let favoriteButtonAction = () => favoritePet(pet.id);
       // if (pet.favorited_by_current_user) {
@@ -739,6 +862,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       // const {unfavoritePet} = this.props;
 
       if (!pet) return null;
+      if (!pet.photoUrls) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -747,16 +871,11 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-links"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/pets",
-        className: "pet-show-back-link"
-      }, "BACK TO ALL PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/pets",
-        className: "pet-show-back-link"
-      }, "MAYBE ANOTHER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/pets",
-        className: "pet-show-back-link"
-      }, "OR ANOTHER")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this.props.adoptPet(pet.id);
+        }
+      }, "adopt")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 BREED: ", pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 AGE: ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SEX: ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SIZE: ", pet.size)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-name"
@@ -772,17 +891,21 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-grid-item"
       }, "ADOPTION CENTER", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "INFO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "name"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "NAME"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-link"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.sfspca.org/"
-      }, "  San Francisco SPCA"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-grid-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "hours"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "OPERATING HOURS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "MON TUES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "CLOSED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WED THUR FRI"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "1PM - 6PM"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "SAT SUN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "10AM - 5PM")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "  San Francisco SPCA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "location"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LOCATION"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-link"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.google.ca/maps/place/San+Francisco+SPCA+Mission+Adoption+Center/@37.7663229,-122.4140744,17z/data=!4m13!1m7!3m6!1s0x808f7e2f94fa547d:0x27106e681320893a!2s250+Florida+St,+San+Francisco,+CA+94103!3b1!8m2!3d37.7663229!4d-122.4118857!3m4!1s0x808f7e2feb2eb90d:0x563b21c0032c4942!8m2!3d37.7663229!4d-122.4118856"
+      }, "  250 Florida Street, San Francisco, CA 94103"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "fees"
@@ -792,13 +915,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "fas fa-cat"
       }), " No fee for senior cats!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "The Life of Riley Fund encourages people over 65 to easily adopt animals from the SF SPCA by underwriting adoption fees for seniors."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "location"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LOCATION"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-link"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://www.google.ca/maps/place/San+Francisco+SPCA+Mission+Adoption+Center/@37.7663229,-122.4140744,17z/data=!4m13!1m7!3m6!1s0x808f7e2f94fa547d:0x27106e681320893a!2s250+Florida+St,+San+Francisco,+CA+94103!3b1!8m2!3d37.7663229!4d-122.4118857!3m4!1s0x808f7e2feb2eb90d:0x563b21c0032c4942!8m2!3d37.7663229!4d-122.4118856"
-      }, "  250 Florida Street, San Francisco, CA 94103"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hours"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "OPERATING HOURS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "MON TUES"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "CLOSED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "WED THUR FRI"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "1PM - 6PM"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "SAT SUN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "10AM - 5PM")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "contact"
@@ -810,14 +933,8 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         href: "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20".concat(pet.name, "&body=Hello!%20I%20am%20interested%20in%20adopting%20").concat(pet.name, ".%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0AYour%20Name%20Here")
       }, "adoptions@sfspca.org"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "*Additional $23 San Francisco License Fee for SF Residents")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "show-img-1",
-        src: window.tennisURL,
-        width: "100%"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "show-img-2",
-        src: pet.photoUrls,
-        width: "100%"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        photoUrls: pet.photoUrls
       })));
     }
   }]);
@@ -856,6 +973,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     getPet: function getPet(id) {
       return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_1__["getPet"])(id));
+    },
+    adoptPet: function adoptPet(id) {
+      return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_1__["adoptPet"])(id));
     }
   };
 };
@@ -1664,7 +1784,7 @@ var configureStore = function configureStore() {
 /*!***********************************!*\
   !*** ./frontend/util/pet_util.js ***!
   \***********************************/
-/*! exports provided: fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet */
+/*! exports provided: fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet, addAdoptToPet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1673,6 +1793,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPet", function() { return fetchPet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addFavoriteToPet", function() { return addFavoriteToPet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeFavoriteFromPet", function() { return removeFavoriteFromPet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addAdoptToPet", function() { return addAdoptToPet; });
 var fetchPets = function fetchPets() {
   return $.ajax({
     url: '/api/pets'
@@ -1695,8 +1816,17 @@ var addFavoriteToPet = function addFavoriteToPet(id) {
 };
 var removeFavoriteFromPet = function removeFavoriteFromPet(id) {
   return $.ajax({
-    url: '/api/favorites',
+    url: "/api/favorites",
     method: 'DELETE',
+    data: {
+      id: id
+    }
+  });
+};
+var addAdoptToPet = function addAdoptToPet(id) {
+  return $.ajax({
+    url: "/api/pets/adopt/".concat(id),
+    method: 'PATCH',
     data: {
       id: id
     }
