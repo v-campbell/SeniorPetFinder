@@ -364,15 +364,16 @@ var Mini = /*#__PURE__*/function (_React$Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "photo-thumbnail"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.photos.map(function (photoUrl, i) {
+      }, this.props.photos.map(function (photoUrl, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           key: i,
           src: photoUrl,
           onClick: function onClick() {
             return _this.props.selectTab(i);
-          }
+          },
+          className: _this.props.selected === i ? "" : "not-selected-photo"
         });
-      })));
+      }));
     }
   }]);
 
@@ -407,10 +408,12 @@ var Display = /*#__PURE__*/function (_React$Component2) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "display"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "main-image-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.props.photoUrls[this.state.selectedPhoto]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Mini, {
-        selectedPhoto: this.state.selectedPhoto,
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Mini, {
+        selected: this.state.selectedPhoto,
         selectTab: this.selectTab,
         photos: this.props.photoUrls
       }));
@@ -850,8 +853,6 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this = this;
-
       // let favoriteButtonText = <i class="far fa-star"></i>;
       // let favoriteButtonAction = () => favoritePet(pet.id);
       // if (pet.favorited_by_current_user) {
@@ -866,24 +867,24 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-left"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-banner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 NAME: ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 BREED: ", pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 AGE: ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SEX: ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SIZE: ", pet.size)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-links"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return _this.props.adoptPet(pet.id);
-        }
-      }, "adopt")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-list"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 BREED: ", pet.breed), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 AGE: ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SEX: ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "\u22B7 SIZE: ", pet.size)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-name"
-      }, pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-grip-lines fa-4x"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-top-left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-name"
+      }, "Hi, I'm ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-about"
-      }, pet.about)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, pet.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-grip-lines fa-4x"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-images"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        photoUrls: pet.photoUrls
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-bottom"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid"
@@ -931,11 +932,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "far fa-envelope"
       }), "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20".concat(pet.name, "&body=Hello!%20I%20am%20interested%20in%20adopting%20").concat(pet.name, ".%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0AYour%20Name%20Here")
-      }, "adoptions@sfspca.org"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "*Additional $23 San Francisco License Fee for SF Residents")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-images"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        photoUrls: pet.photoUrls
-      })));
+      }, "adoptions@sfspca.org"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "*Additional $23 San Francisco License Fee for SF Residents"))))));
     }
   }]);
 
