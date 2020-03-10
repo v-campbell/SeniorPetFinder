@@ -6,13 +6,13 @@
    position: fixed;
    top: 0px;
    background-color: white;
-   /* min-height: 6rem; */
-   width: 100%;
+   max-height: 70px;
    z-index: 1;
 }
 
 .nav-left{
    margin: 15px;
+   margin-top: 25px;
    /* color: blue; */
    /* color: #9b7f71; */
    font-size: 50px;
@@ -53,7 +53,7 @@
 .nav-button-loggedin {
    background-color: transparent;
    color: black;
-   font-size: 25px;
+   font-size: 16px;
    font-family: 'Josefin Sans', sans-serif;
    width: 3rem;
 }
@@ -66,8 +66,8 @@
    font-family: 'Barlow', sans-serif;
    letter-spacing: 4px;
    word-spacing: 3px;
-   font-weight: heavy;
-   font-size: 40px;
+   /* font-weight: heavy; */
+   font-size: 30px;
    color: #a4a4a4;
    box-sizing: border-box;
    width: 25%;
@@ -78,7 +78,7 @@
    align-content: space-between;
    
    padding: 6px;
-   margin-left: 50px
+   margin-left: 30px
 }
 .nav-icons:hover {
    color: #dfcfc6;

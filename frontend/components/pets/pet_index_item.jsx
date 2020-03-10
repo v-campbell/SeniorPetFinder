@@ -1,18 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PetIndexItem = ({ pet }) => {
+export default class PetIndexItem extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-    return (
-        <div className='pet-index-item'>
-            <div className='pet-index-item-text'>{pet.name}, {pet.age}</div>
-            <Link to={`/pets/${pet.id}`}>
-                <img src={window.tennisURL} width='100%' height='100%'/>
-            </Link>
-           
-        </div>
-    );
+    // hoverText() {
+    //     return(
+    //         <div className='hover-text'>
+    //             hover over
+    //             <div>HOVERED</div>
+    //         </div>
+    //     )
+    // }
+
+    render() {
+        // debugger
+        const {pet} = this.props;
+        if (!pet.photoUrls) return null;
+        return (
+            
+            <div className='pet-index-item'>
+                <Link to={`/pets/${pet.id}`} className='pet-index-item-link'>
+                    <div className='pet-index-image-container'>
+                        <img src={this.props.pet.photoUrls[0]} className='pet-index-image'/>
+                    </div>
+                </Link>
+                <div className='pet-index-item-text-1'>
+                    <div className='pet-index-item-text-2'>
+                        {pet.name}, {pet.age}
+                    </div>
+                    {/* <i className="fas fa-heart fa-3x"></i> */}
+                    <i className="far fa-heart fa-2x"></i>
+                </div>
+
+            </div>
+        )
+    }
 }
-
-export default PetIndexItem;
 

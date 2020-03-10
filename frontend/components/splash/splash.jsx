@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PetIndexContainer from '../pets/pet_index_container'
 
 const Splash = ({ currentUser }) => {
@@ -34,11 +33,6 @@ const Splash = ({ currentUser }) => {
         <div>
             {currentUser ? loggedInHome() : loggedOutHome()}
 
-                <div className='splash-display'>
-                    <h1>CHECK THESE BABIES OUT</h1>
-                    <PetIndexContainer />
-                </div>
-
                 <div className='splash-services-box'>
                     <h1>HOW IT WORKS</h1>
                     <hr/>
@@ -69,7 +63,21 @@ const Splash = ({ currentUser }) => {
                             Adopt a senior pet(s) and welcome them into their forever home!
                         </div>
                     </div>
+                </div>
 
+                <div className='splash-display'>
+                        <h1>CHECK THESE BABIES OUT</h1>
+                        <PetIndexContainer />
+                            {/* {this.props.pets.slice(6).map(pet =>
+                            <PetIndexItem
+                                key={`pet${pet.id}`}
+                                pet={pet}
+                                id={pet.id}
+                                photoUrls={pet.photoUrls}
+                            // favoritePet={this.props.favoritePet}
+                            // unfavoritePet={this.props.unfavoritePet} 
+                            />
+                            )} */}
                 </div>
         </div>
     )

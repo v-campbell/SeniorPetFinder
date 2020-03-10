@@ -3,6 +3,8 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import AdoptContainer from '../pets/adopt_container';
+import UnadoptContainer from '../pets/unadopt_container';
 
 function Modal({modal, closeModal}) {
     if (!modal) {
@@ -17,6 +19,12 @@ function Modal({modal, closeModal}) {
             break;
         case 'SIGN UP':
             component = <SignupFormContainer />;
+            break;
+        case 'ADOPT':
+            component=<AdoptContainer />;
+            break;
+        case 'UNADOPT':
+            component=<UnadoptContainer />;
             break;
         default:
             return null;

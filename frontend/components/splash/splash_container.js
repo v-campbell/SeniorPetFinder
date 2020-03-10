@@ -4,6 +4,7 @@ import Splash from './splash';
 const mapStateToProps = (state) => ({
     // currentUser: Boolean(state.session.id)
     // currentUser: state.entities.users[state.session.id]
+    // pets: Object.values(state.entities.pets),
     currentUser: state.session.id
 });
 

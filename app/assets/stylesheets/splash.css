@@ -68,30 +68,6 @@
     margin: 50px;
 }
 
-.petGrid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-.pet-index-item {
-    position: relative;
-    background-color: white;
-    text-align: center;
-    padding: 5px 5px 5px 5px;
-    font-size: 30px;
-}
-
-.petGrid div:first-child {
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
-
-.pet-index-item-text {
-    position: absolute;
-    color: red;
-    text-transform: uppercase;
-}
-
 .splash-services-box {
     text-align: center;
     background-color: #dfcfc6;
@@ -99,7 +75,6 @@
     width: 100%;
     padding-bottom: 75px;
     padding-top: 20px;
-    /* margin: auto; */
 }
 
 .splash-services-box h1{

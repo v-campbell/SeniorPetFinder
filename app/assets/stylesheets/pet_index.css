@@ -1,0 +1,85 @@
+.pet-index {
+    /* display: flex;
+    justify-content: center; */
+}
+
+.pet-index-header {
+    padding: 80px 10px 0px 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.pet-index-subheader {
+    padding: 0px 0px 20px 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: rgb(192, 152, 140);
+}
+
+.petGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'PT Sans', sans-serif;
+    margin: 0 20px 0 20px;
+
+}
+
+.pet-index-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 520px;
+    width: 360px;
+    background-color: rgb(240, 233, 233);
+    margin: 10px 0px 10px 0px;
+    border-radius: 8px;
+    /* border: solid 2px rgb(218, 207, 207); */
+}
+
+.pet-index-item-link {
+    width: 300px;
+}
+
+.pet-index-image {
+    height: 320px;
+    width: 300px;
+    margin: 25px 0px 0px 0px;
+    border-radius: 10px 10px 0 0;
+}
+
+.pet-index-item-text-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    width: 300px;
+    margin-top: -5px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 10px;
+}
+
+.pet-index-item-text-2 {
+    /* position: absolute; */
+    /* bottom: 0; */
+    color: rgb(66, 63, 63);
+    font-size: 30px;
+    text-transform: capitalize;
+    /* font-variant: small-caps; */
+    margin: 20px;
+    /* background-color: indigo; */
+}
+
+
+.fa-heart {
+    color: rgb(192, 152, 140);
+    /* position: absolute; */
+    bottom: -35px;
+}

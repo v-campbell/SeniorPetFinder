@@ -41,19 +41,23 @@ class PetShow extends React.Component {
                     <div className='pet-show-links'>
                         {/* <Link to='/pets' className='pet-show-back-link'>BACK TO ALL PETS</Link> */}
                         {/* <Link to='/pets' className='pet-show-back-link'>MAYBE ANOTHER</Link>
-                        <Link to='/pets' className='pet-show-back-link'>OR ANOTHER</Link> */}
-                        {/* <button onClick={() => this.props.adoptPet(pet.id)}>adopt</button> */}
+                        <Link to='/pets' className='pet-show-back-link'>OR ANOTHER</Link> */}   
                     </div>
-                    <div className='pet-show-top-left'>
-                        <div className='pet-show-name'>Hi, I'm {pet.name}</div>
-                        <br/>
-                        <div className='pet-show-about'>{pet.about}</div>
-                        <i className="fas fa-grip-lines fa-4x"></i>
-                    </div>
-                    {/* <button onClick={favoriteButtonAction}>{favoriteButtonText}</button> */ }
-                    <div className='pet-show-images'>
-                        <Display photoUrls={pet.photoUrls} />
-                        {/* <img className='show-img-1' src={window.tennisURL} width='100%' /> */}
+                    <div className='pet-show-top-content'>
+                        <div className='pet-show-top-left'>
+                            <div className='pet-show-name'>Hi, I'm {pet.name}</div>
+                            <div className='pet-show-about'>{pet.about}</div>
+                            {/* <div className='adopt-section'> */}
+                                {/* <i className="fas fa-grip-lines fa-4x"></i> */}
+                                <button onClick={() => this.props.openModal('ADOPT')}>ADOPT</button>
+                                {/* <button onClick={() => this.props.adoptPet(pet.id)}>adopt</button> */}
+                            {/* </div> */}
+                        </div>
+                        {/* <button onClick={favoriteButtonAction}>{favoriteButtonText}</button> */ }
+                        <div className='pet-show-images'>
+                            <Display photoUrls={pet.photoUrls} />
+                            {/* <img className='show-img-1' src={window.tennisURL} width='100%' /> */}
+                        </div>
                     </div>
                 </div>
 
@@ -61,8 +65,10 @@ class PetShow extends React.Component {
                 <div className='pet-show-bottom'>
                     <div className='pet-show-grid'>
                         <div className='pet-show-grid-item'>
-                            ADOPTION CENTER
-                                <br />
+                            ADOPTION
+                            <br />
+                            CENTER
+                            <br />
                             INFO
                             </div>
                         <div className='pet-show-grid-item'>
@@ -92,12 +98,6 @@ class PetShow extends React.Component {
                                 <br />
                                 <li>The Life of Riley Fund encourages people over 65 to easily adopt animals from the SF SPCA by underwriting adoption fees for seniors.</li>
                             </div>
-                        </div>
-                        <div className='pet-show-grid-item'>
-
-                        </div>
-                        <div className='pet-show-grid-item'>
-
                         </div>
                         <div className='pet-show-grid-item'>
                             <div className='hours'>

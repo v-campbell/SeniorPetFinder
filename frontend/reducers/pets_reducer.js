@@ -7,7 +7,7 @@ export default  (oldState = {}, action) => {
         case RECEIVE_PETS:
             return action.pets;
         case RECEIVE_PET:
-            return Object.assign({}, oldState, { [action.pet.pet.id]: action.pet.pet });
+            return Object.assign({}, oldState, { [action.pet.id]: action.pet });
         default:
             return oldState;
     }

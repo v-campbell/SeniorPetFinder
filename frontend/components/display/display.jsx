@@ -29,7 +29,7 @@ export default class Display extends React.Component {
 
     render() {
         return(
-            <div className='display'>
+            <div className='photo-main'>
                 <div className='main-image-container'>
                     <img src={this.props.photoUrls[this.state.selectedPhoto]}/>
                 </div>

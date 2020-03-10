@@ -21,7 +21,7 @@ export const receiveErrors = errors => ({
 
 export const clearErrors = () => ({
     type: CLEAR_SESSION_ERRORS
-})
+});
 
 export const signup = user => dispatch => (
     signupUser(user)
