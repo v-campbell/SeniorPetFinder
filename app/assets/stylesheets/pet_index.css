@@ -3,6 +3,24 @@
     justify-content: center; */
 }
 
+.all-pets-banner {
+    display: flex;
+    /* position: fixed; */
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 74px;
+    padding: 12px;
+    top: 70px;
+
+
+    font-family: 'Barlow', sans-serif;
+    background-color: rgb(192, 152, 140);
+    color: rgb(240, 227, 223);
+    font-size: 15px;
+
+    z-index: 1;
+}
+
 .pet-index-header {
     padding: 80px 10px 0px 10px;
     font-family: 'Josefin Sans', sans-serif;
@@ -70,7 +88,7 @@
     /* position: absolute; */
     /* bottom: 0; */
     color: rgb(66, 63, 63);
-    font-size: 30px;
+    font-size: 20px;
     text-transform: capitalize;
     /* font-variant: small-caps; */
     margin: 20px;

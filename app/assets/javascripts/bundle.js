@@ -897,10 +897,16 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-index-header"
-      }, "All Pets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-index-subheader"
-      }, "look at them"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "for": "checkbox",
+        className: "all-pets-banner"
+      }, "\u2193 ALL PETS \u2193"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "checkbox",
+        type: "checkbox"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "all-pets-grid"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "petGrid"
       }, this.props.pets.map(function (pet) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -911,7 +917,7 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
           // unfavoritePet={this.props.unfavoritePet} 
 
         });
-      })));
+      })))));
     }
   }]);
 
@@ -1030,13 +1036,13 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-image-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: this.props.pet.photoUrls[0],
+        src: this.props.pet.photoUrls[1],
         className: "pet-index-image"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-item-text-1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-item-text-2"
-      }, pet.name, ", ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      }, pet.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Age \u22B7 ", pet.age, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Sex \u22B7 ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-heart fa-2x"
       })));
     }
@@ -1701,7 +1707,7 @@ var Splash = function Splash(_ref) {
     width: "50px",
     height: "50px"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Adopt a senior pet(s) and welcome them into their forever home!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash-display"
+    className: "index-display"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 };
 

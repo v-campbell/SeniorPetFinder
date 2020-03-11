@@ -65,7 +65,7 @@ const Splash = ({ currentUser }) => {
                     </div>
                 </div>
 
-                <div className='splash-display'>
+                <div className='index-display'>
                         <h1>CHECK THESE BABIES OUT</h1>
                         <PetIndexContainer />
                             {/* {this.props.pets.slice(6).map(pet =>

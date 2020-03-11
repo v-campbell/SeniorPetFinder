@@ -24,12 +24,14 @@ export default class PetIndexItem extends React.Component {
             <div className='pet-index-item'>
                 <Link to={`/pets/${pet.id}`} className='pet-index-item-link'>
                     <div className='pet-index-image-container'>
-                        <img src={this.props.pet.photoUrls[0]} className='pet-index-image'/>
+                        <img src={this.props.pet.photoUrls[1]} className='pet-index-image'/>
                     </div>
                 </Link>
                 <div className='pet-index-item-text-1'>
                     <div className='pet-index-item-text-2'>
-                        {pet.name}, {pet.age}
+                        {pet.name}
+                        <br/> Age ⊷ {pet.age}
+                        <br/> Sex ⊷ {pet.sex}
                     </div>
                     {/* <i className="fas fa-heart fa-3x"></i> */}
                     <i className="far fa-heart fa-2x"></i>
