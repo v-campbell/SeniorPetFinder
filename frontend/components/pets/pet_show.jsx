@@ -23,11 +23,23 @@ class PetShow extends React.Component {
         //     favoriteButtonAction = () => unfavoritePet(pet.id);
         // }
         const {pet} = this.props;
+        const {currentUser} = this.props;
         // const {favoritePet} = this.props;
         // const {unfavoritePet} = this.props;
 
         if (!pet) return null;
         if (!pet.photoUrls) return null;
+
+        let adoptButton;
+        // debugger
+        if (!pet.adoptedBy) {
+            adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
+        } else if ((pet.adoptedBy) && (pet.adoptedBy === currentUser.id)) {
+            adoptButton = <button onClick={() => this.props.openModal('UNADOPT')}>UNADOPT</button>
+        } else if ((pet.adoptedBy) && (pet.adoptedBy !== currentUser.id)) {
+            adoptButton = <button>ALREADY ADOPTED</button>
+        }
+
         return(
             <div className='pet-show'>
                 <div className='pet-show-top'>
@@ -47,11 +59,8 @@ class PetShow extends React.Component {
                         <div className='pet-show-top-left'>
                             <div className='pet-show-name'>Hi, I'm {pet.name}</div>
                             <div className='pet-show-about'>{pet.about}</div>
-                            {/* <div className='adopt-section'> */}
-                                {/* <i className="fas fa-grip-lines fa-4x"></i> */}
-                                <button onClick={() => this.props.openModal('ADOPT')}>ADOPT</button>
-                                {/* <button onClick={() => this.props.adoptPet(pet.id)}>adopt</button> */}
-                            {/* </div> */}
+                            {/* <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button> */}
+                            {adoptButton}
                         </div>
                         {/* <button onClick={favoriteButtonAction}>{favoriteButtonText}</button> */ }
                         <div className='pet-show-images'>

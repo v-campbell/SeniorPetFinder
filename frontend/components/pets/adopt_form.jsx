@@ -12,9 +12,6 @@ class AdoptForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // const id = Object.assign({}, this.state);
-        // const id = currentUser.id
-        // this.props.handleForm(this.props.currentUserId)
         this.props.handleForm(this.props.pet.id)
             .then(() => (this.props.closeModal()))
     }
@@ -40,27 +37,32 @@ class AdoptForm extends React.Component {
         return(
             <div>
                 <div onClick={this.props.closeModal} className='close-x'>×</div>
-                    <form onSubmit={this.handleSubmit} className='form-container'>
-                        <div className='form-header'>{this.props.formType}!</div>
+                        {/* <div className='form-header'>{this.props.formType}?</div> */}
 
                         {this.props.formType === 'Adopt' ?
-                            (<div className='adoptForm'>
-                                <br />
-                                {this.renderErrors()}
-                                CONGRATS BIG DECISION
-                                <input type='submit' className='final-button' value={this.props.formType}/>
-                                Want to unadopt? {this.props.otherForm}
-                                <br />
-                            </div>) : (<div>
-                                <br />
-                                {this.renderErrors()}
-                                BOOO YOU
-                                <div className='bottom-modal-buttons'>
-                                    Want to readopt? {this.props.otherForm}
+                            (<form onSubmit={this.handleSubmit} className='adopt-form-container'>
+                                <div className='adopt-form'>
+                                    <div className='adopt-form-header'>Are you ready for the best years of your life?</div>
+                                    <br />
+                                    {this.renderErrors()}
+                                    <div className='adopt-form-subheader'>YEAH YOU ARE</div>
+                                    <input type='submit' className='adopt-final-button' value={this.props.formType}/>
+                                    {/* Want to unadopt? {this.props.otherForm} */}
+                                    <br />
                                 </div>
+                            </form>) : (
+                            <div className='unadopt-form'>
+                                <form onSubmit={this.handleSubmit} className='unadopt-form-container'>
+                                    <div className='unadopt-form-header'>Are you sure? :(</div>
+                                    <br />
+                                    {this.renderErrors()}
+                                    <div className='unadopt-form-subheader'>BOOO YOU</div>
+                                    <input type='submit' className='unadopt-final-button' value={this.props.formType}/>
+                                    {/* Want to readopt? {this.props.otherForm} */}
+                                </form>
                             </div>)
                         }
-                    </form>
+                    
             </div >
         );
     }

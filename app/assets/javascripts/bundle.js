@@ -702,8 +702,7 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   // debugger
   return {
-    // currentUserId: state.session.id,
-    pet: state.entities.pets[ownProps.match.params.id],
+    pet: state.entities.pets[parseInt(ownProps.location.pathname.split('/')[2])],
     errors: state.errors.sessionErrors,
     formType: 'Adopt'
   };
@@ -714,7 +713,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     handleForm: function handleForm(id) {
       return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_2__["adoptPet"])(id));
     },
-    // takes user to other form 
     otherForm: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onClick: function onClick() {
         return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('UNADOPT'));
@@ -786,10 +784,7 @@ var AdoptForm = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       var _this2 = this;
 
-      e.preventDefault(); // const id = Object.assign({}, this.state);
-      // const id = currentUser.id
-      // this.props.handleForm(this.props.currentUserId)
-
+      e.preventDefault();
       this.props.handleForm(this.props.pet.id).then(function () {
         return _this2.props.closeModal();
       });
@@ -818,20 +813,33 @@ var AdoptForm = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         onClick: this.props.closeModal,
         className: "close-x"
-      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, "\xD7"), this.props.formType === 'Adopt' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
-        className: "form-container"
+        className: "adopt-form-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-header"
-      }, this.props.formType, "!"), this.props.formType === 'Adopt' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "adoptForm"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), "CONGRATS BIG DECISION", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "adopt-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "adopt-form-header"
+      }, "Are you ready for the best years of your life?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "adopt-form-subheader"
+      }, "YEAH YOU ARE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
-        className: "final-button",
+        className: "adopt-final-button",
         value: this.props.formType
-      }), "Want to unadopt? ", this.props.otherForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), "BOOO YOU", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "bottom-modal-buttons"
-      }, "Want to readopt? ", this.props.otherForm))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "unadopt-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        className: "unadopt-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "unadopt-form-header"
+      }, "Are you sure? :("), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "unadopt-form-subheader"
+      }, "BOOO YOU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        className: "unadopt-final-button",
+        value: this.props.formType
+      }))));
     }
   }]);
 
@@ -1026,7 +1034,7 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-image-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: this.props.pet.photoUrls[1],
+        src: this.props.pet.photoUrls[0],
         className: "pet-index-image"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-item-text-1"
@@ -1109,11 +1117,30 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       //     favoriteButtonText = <i class="fas fa-star"></i>;
       //     favoriteButtonAction = () => unfavoritePet(pet.id);
       // }
-      var pet = this.props.pet; // const {favoritePet} = this.props;
+      var pet = this.props.pet;
+      var currentUser = this.props.currentUser; // const {favoritePet} = this.props;
       // const {unfavoritePet} = this.props;
 
       if (!pet) return null;
       if (!pet.photoUrls) return null;
+      var adoptButton; // debugger
+
+      if (!pet.adoptedBy) {
+        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: function onClick() {
+            return _this.props.openModal('ADOPT');
+          }
+        }, "ADOPT ME? \uD83D\uDE4F");
+      } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
+        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: function onClick() {
+            return _this.props.openModal('UNADOPT');
+          }
+        }, "UNADOPT");
+      } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
+        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "ALREADY ADOPTED");
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1130,11 +1157,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-name"
       }, "Hi, I'm ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-about"
-      }, pet.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return _this.props.openModal('ADOPT');
-        }
-      }, "ADOPT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, pet.about), adoptButton), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
         photoUrls: pet.photoUrls
@@ -1211,10 +1234,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var mapStateToProps = function mapStateToProps(state, _ref) {
-  var match = _ref.match;
+var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    pet: state.entities.pets[match.params.id]
+    pet: state.entities.pets[parseInt(ownProps.location.pathname.split('/')[2])],
+    currentUser: state.entities.users[state.session.id]
   };
 };
 
@@ -1251,15 +1274,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_pet_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/pet_actions */ "./frontend/actions/pet_actions.js");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
 /* harmony import */ var _adopt_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./adopt_form */ "./frontend/components/pets/adopt_form.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
 
 
 
 
 
-var mapStateToProps = function mapStateToProps(state) {
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    pet: state.entities.pets[match.params.id],
+    pet: state.entities.pets[parseInt(ownProps.location.pathname.split('/')[2])],
     errors: state.errors.sessionErrors,
     formType: 'Unadopt'
   };
@@ -1285,7 +1310,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_adopt_form__WEBPACK_IMPORTED_MODULE_4__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_adopt_form__WEBPACK_IMPORTED_MODULE_4__["default"])));
 
 /***/ }),
 
@@ -2154,7 +2179,7 @@ var addAdoptToPet = function addAdoptToPet(id) {
 };
 var removeAdoptFromPet = function removeAdoptFromPet(id) {
   return $.ajax({
-    url: "/api/pets/adopt/".concat(id),
+    url: "/api/pets/unadopt/".concat(id),
     method: 'DELETE',
     data: {
       id: id

@@ -16,9 +16,24 @@ class Api::PetsController < ApplicationController
         # if no owner
         if !@pet.adopted_by 
             @pet.adopted_by = current_user.id
+            # current_user.pet_ids.push(@pet.id)
+            @pet.save!
             render '/api/pets/show'
         else
             render json: ["Sorry, I'm already adopted"], status: 418
+        end
+    end
+
+    def unadopt
+        @pet = Pet.find(params[:id])
+        # if owner
+        if @pet.adopted_by 
+            @pet.adopted_by = nil
+            # current_user.pet_ids.push(@pet.id)
+            @pet.save!
+            render '/api/pets/show'
+        else
+            render json: ["Sorry, you can't unadopt a pet you don't own"], status: 419
         end
     end
 

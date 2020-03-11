@@ -2,10 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { unadoptPet, clearErrors } from '../../actions/pet_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import AdoptForm from './adopt_form'
+import AdoptForm from './adopt_form';
+import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = (state) => ({
-    pet: state.entities.pets[match.params.id],
+
+const mapStateToProps = (state, ownProps) => ({
+    pet: state.entities.pets[parseInt(ownProps.location.pathname.split('/')[2])],
     errors: state.errors.sessionErrors,
     formType: 'Unadopt',
 });
@@ -22,5 +24,5 @@ const mapDispatchToProps = (dispatch) => ({
     clearErrors: () => dispatch(clearErrors())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AdoptForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AdoptForm));
 

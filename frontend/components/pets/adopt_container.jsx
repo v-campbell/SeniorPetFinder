@@ -8,8 +8,7 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
     // debugger
     return {
-        // currentUserId: state.session.id,
-        pet: state.entities.pets[ownProps.match.params.id],
+        pet: state.entities.pets[parseInt(ownProps.location.pathname.split('/')[2])],
         errors: state.errors.sessionErrors,
         formType: 'Adopt'
     }
@@ -17,7 +16,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => ({
     handleForm: (id) => dispatch(adoptPet(id)),
-    // takes user to other form 
     otherForm: (
         <button onClick={() => dispatch(openModal('UNADOPT'))}>
             Unadooopt

@@ -40,14 +40,15 @@
 
 .pet-show-top-left {
     display: flex;
-    align-content: center;
+    /* justify-content: center; */
+    align-items: flex-start;
     flex-direction: column;
     width: 40%;
+    padding-left: 30px;
 }
 
 .pet-show-name {
-    padding: 100px 0 0 25px;
-    padding-bottom: 30px;
+    padding: 100px 0 30px 0;
     color: rgb(66, 63, 63);
     font-size: 70px;
     font-weight: bolder;
@@ -62,19 +63,23 @@
     line-height: 2.2;
     color:  rgb(192, 152, 140);
     /* color: white; */
-    padding-left: 55px;
+    padding: 0 0 30px 0;
     width: 300px;
 }
 
-.adopt-section {
-    /* display: flex;
-    flex-direction: column; */
-    border: 2px solid red;
-}
-.adopt-section button {
+/* adopt button */
+.pet-show-top-left button {
+    font-size: 25px;
     padding: 20px 15px 20px 15px;
     border: 2px solid rgb(192, 152, 140);
     background-color: transparent;
+}
+
+.pet-show-top-left button:hover {
+    color: rgb(192, 152, 140);
+    border: 2px solid rgb(233, 217, 203);;
+    cursor: pointer;
+    /* text-decoration: underline; */
 }
 .fa-grip-lines {
     /* color: rgb(247, 239, 236); */
@@ -168,13 +173,6 @@
     border: 2px solid black;
     font-size: 7px;
     color: black;
-}
-
-.pet-show-button:hover {
-    color: #afa6a0;
-    border: 2px solid #504945;
-    cursor: pointer;
-    /* text-decoration: underline; */
 }
 
 .pet-show-grid {

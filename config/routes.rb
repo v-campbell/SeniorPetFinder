@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :pets, only: [:index, :show]
     patch 'pets/adopt/:id', :to => '/api/pets#adopt'
-    delete 'pets/adopt/:id', :to => '/api/pets#adopt'
+    delete 'pets/unadopt/:id', :to => '/api/pets#unadopt'
   end
   
   

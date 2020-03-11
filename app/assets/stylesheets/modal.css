@@ -29,7 +29,8 @@
 
   border-radius: 0.5rem;
 
-  font-family: Nexa Bold, arial, helvetica, sans-serif;
+  /* font-family: Nexa Bold, arial, helvetica, sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
   color: #5a5a5a;
   font-size: 13px;
   letter-spacing: 2px;
@@ -96,13 +97,11 @@
   /* color: rgba(40, 36, 46, 0.555); */
   display: block;
   text-align: center;
-
 }
 
 .bottom-modal-buttons {
   display: block;
   text-align: center;
-
 }
 
 .final-button {
@@ -130,6 +129,7 @@ button {
   border-radius: 2px;
   color: #9c6b4c;
   text-decoration: underline;
+  background-color: transparent;
 }
 
 button:hover {
@@ -161,3 +161,63 @@ button:hover {
   color: black;
   cursor: pointer;
 }
+
+.adopt-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  /* background-color: transparent; */
+}
+
+.adopt-form-header {
+  font-size: 30px;
+  color: white;
+  font-weight: bolder;
+}
+
+.adopt-form-subheader {
+  font-size: 13px;
+  color: rgb(223, 208, 208);
+}
+
+.adopt-form-container {
+  display: flex;
+  
+  padding: 50px;
+
+  background: linear-gradient(90deg, #e11a1a, #e1791a, #e0e11a, #54e11a, #1a2be1);
+  background-size: 1000% 1000%;
+  
+  /* -webkit-animation: rainbow 33s ease infinite; */
+  animation: rainbow 10s ease infinite;
+  
+  /* @-webkit-keyframes rainbow {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  } */
+  
+}
+
+@keyframes rainbow {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.adopt-final-button {
+  font-size: 16px;
+  padding: 15px 30px 15px 30px;
+  margin: 15px 15px 0px 15px;
+  text-transform: uppercase;
+}
+.unadopt-form-container {
+
+  padding: 50px;
+
+}
+

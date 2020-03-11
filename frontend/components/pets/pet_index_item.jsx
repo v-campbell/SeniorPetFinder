@@ -24,7 +24,7 @@ export default class PetIndexItem extends React.Component {
             <div className='pet-index-item gradient'>
                 <Link to={`/pets/${pet.id}`} className='pet-index-item-link'>
                     <div className='pet-index-image-container'>
-                        <img src={this.props.pet.photoUrls[1]} className='pet-index-image'/>
+                        <img src={this.props.pet.photoUrls[0]} className='pet-index-image'/>
                     </div>
                 </Link>
                 <div className='pet-index-item-text-1'>

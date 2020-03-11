@@ -4,8 +4,9 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import PetShow from './pet_show';
 
 
-const mapStateToProps = (state, {match}) => ({
-    pet: state.entities.pets[match.params.id]
+const mapStateToProps = (state, ownProps) => ({
+    pet: state.entities.pets[parseInt(ownProps.location.pathname.split('/')[2])],
+    currentUser: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -26,7 +26,7 @@ export const addAdoptToPet = id => $.ajax({
 });
 
 export const removeAdoptFromPet = id => $.ajax({
-    url: `/api/pets/adopt/${id}`,
+    url: `/api/pets/unadopt/${id}`,
     method: 'DELETE',
     data: { id }
 });
