@@ -1,5 +1,6 @@
 import React from 'react';
-import PetIndexContainer from '../pets/pet_index_container'
+import PetIndexContainer from '../pets/pet_index_container';
+import { Link } from 'react-router-dom';
 
 const Splash = ({ currentUser }) => {
     const loggedOutHome = () => (
@@ -18,9 +19,9 @@ const Splash = ({ currentUser }) => {
             <div className='splash-greeting'>
                 <img className='pirate' src={window.pirateURL} />
                 <div className='splash-text'>
-                        Meet Russell ;P
+                        Meet Russell.
                     <div className='splash-subtext'>
-                            He only has eye for you.
+                          He only has eye for you
                     </div>
                         {/* make into a link to Russell's show page */}
                     <br />
@@ -66,7 +67,17 @@ const Splash = ({ currentUser }) => {
                 </div>
 
                 <div className='index-display'>
-                        <h1>CHECK THESE BABIES OUT</h1>
+                        {/* <h1>CHECK THESE BABIES OUT</h1> */}
+                            {/* <div className='pet-index-banner'>
+                                ⊷ ALL PETS ⊷
+                            </div> */}
+                            <Link to={`/pets`} className='banner-link'>
+                                <label htmlFor='checkbox' className='all-pets-banner'>↓ SEE ALL PETS ↓</label>
+                            </Link>
+                            <input id="checkbox" type="checkbox" />
+                            <ul className="all-pets-grid">
+                            </ul>
+                        
                         <PetIndexContainer />
                             {/* {this.props.pets.slice(6).map(pet =>
                             <PetIndexItem

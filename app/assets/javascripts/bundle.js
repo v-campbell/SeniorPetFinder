@@ -896,17 +896,7 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
       // const {pets} = this.props;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "for": "checkbox",
-        className: "all-pets-banner"
-      }, "\u2193 ALL PETS \u2193"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "checkbox",
-        type: "checkbox"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "all-pets-grid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "READY TO ADOPT?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "petGrid"
       }, this.props.pets.map(function (pet) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -917,7 +907,7 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
           // unfavoritePet={this.props.unfavoritePet} 
 
         });
-      })))));
+      })));
     }
   }]);
 
@@ -1029,7 +1019,7 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
       var pet = this.props.pet;
       if (!pet.photoUrls) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-index-item"
+        className: "pet-index-item gradient"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/pets/".concat(pet.id),
         className: "pet-index-item-link"
@@ -1040,10 +1030,13 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
         className: "pet-index-image"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-item-text-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/pets/".concat(pet.id),
+        className: "pet-index-item-link"
+      }, pet.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-item-text-2"
-      }, pet.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Age \u22B7 ", pet.age, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " Sex \u22B7 ", pet.sex), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "far fa-heart fa-2x"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Age:  ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Sex:  ", pet.sex)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "far fa-heart fa-1x"
       })));
     }
   }]);
@@ -1652,6 +1645,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pets/pet_index_container */ "./frontend/components/pets/pet_index_container.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -1675,9 +1670,9 @@ var Splash = function Splash(_ref) {
       src: window.pirateURL
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-text"
-    }, "Meet Russell ;P", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Meet Russell.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "splash-subtext"
-    }, "He only has eye for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    }, "He only has eye for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-arrow-right"
     }))));
   };
@@ -1708,7 +1703,18 @@ var Splash = function Splash(_ref) {
     height: "50px"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Adopt a senior pet(s) and welcome them into their forever home!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "index-display"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "CHECK THESE BABIES OUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/pets",
+    className: "banner-link"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "checkbox",
+    className: "all-pets-banner"
+  }, "\u2193 SEE ALL PETS \u2193")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "checkbox",
+    type: "checkbox"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "all-pets-grid"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);

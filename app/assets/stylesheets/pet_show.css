@@ -185,6 +185,18 @@
     /* border: 3px solid red; */
 }
 
+/* .pet-show-grid > div:first-child {
+    border-bottom: solid 2px rgb(192, 152, 140);
+} */
+
+.name {
+    border-top: solid 2px rgb(192, 152, 140);
+    padding-top: 10px;
+}
+
+.fees {
+    padding-top: 10px;
+}
 .pet-show-grid-item {
     padding: 5px 5px;
     font-size: 12px;

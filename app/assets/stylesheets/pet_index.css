@@ -1,27 +1,22 @@
 .pet-index {
     /* display: flex;
     justify-content: center; */
+    padding-top: 85px;
 }
 
-.all-pets-banner {
+.pet-index > h1{
     display: flex;
-    /* position: fixed; */
-    justify-content: space-evenly;
-    width: 100%;
-    margin-top: 74px;
-    padding: 12px;
-    top: 70px;
-
-
-    font-family: 'Barlow', sans-serif;
-    background-color: rgb(192, 152, 140);
-    color: rgb(240, 227, 223);
-    font-size: 15px;
-
-    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+    word-spacing: 6px;
+    /* padding-top: 80px; */
+    /* margin-top: 30px; */
 }
 
-.pet-index-header {
+/* .pet-index-header {
     padding: 80px 10px 0px 10px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 50px;
@@ -35,29 +30,28 @@
     font-size: 30px;
     letter-spacing: 3px;
     color: rgb(192, 152, 140);
-}
+} */
 
 .petGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     /* font-family: 'Josefin Sans', sans-serif; */
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'PT Sans', sans-serif;
-    margin: 0 20px 0 20px;
-
+    margin: 0 10px 0 10px;
 }
 
 .pet-index-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 520px;
+    height: 480px;
     width: 360px;
     background-color: rgb(240, 233, 233);
-    margin: 10px 0px 10px 0px;
-    border-radius: 8px;
+    margin: 10px 0px 5px 0px;
+    border-radius: 4px;
     /* border: solid 2px rgb(218, 207, 207); */
 }
 
@@ -68,36 +62,47 @@
 .pet-index-image {
     height: 320px;
     width: 300px;
-    margin: 25px 0px 0px 0px;
+    margin: 35px 0px 0px 0px;
     border-radius: 10px 10px 0 0;
 }
 
-.pet-index-item-text-1{
+.pet-index-item-text-1 {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
     align-items: center;
+    justify-content: space-evenly;
     width: 300px;
-    margin-top: -5px;
+    margin-top: -8px;
+    /* margin: -5px 20px 20px 20px; */
     background-color: white;
     border-radius: 0 0 10px 10px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
+    padding: 10px 0px 10px 0px;
 }
 
 .pet-index-item-text-2 {
-    /* position: absolute; */
-    /* bottom: 0; */
-    color: rgb(66, 63, 63);
-    font-size: 20px;
-    text-transform: capitalize;
-    /* font-variant: small-caps; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
     margin: 20px;
-    /* background-color: indigo; */
 }
 
+.pet-index-item-link {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    color: rgb(192, 152, 140);
+}
+
+.pet-index-item-text-1 > div:first-child:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 .fa-heart {
     color: rgb(192, 152, 140);
-    /* position: absolute; */
-    bottom: -35px;
+    /* margin-right: 10px; */
+    /* margin: 20px; */
 }

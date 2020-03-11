@@ -19,7 +19,6 @@
 
    font-family: 'Josefin Sans', sans-serif;
    color: white;
-   /* color: red; */
    font-size: 90px;
    letter-spacing: 4px;
    word-spacing: 6px;
@@ -72,6 +71,13 @@
     margin-top: -3px
 }
 
+.gradient {
+    background-image:
+    linear-gradient(
+         #dfcfc6, rgb(192, 152, 140)
+    );
+}
+
 .splash-services-box h1{
     align-content: center;
     margin: 25px 0 5px 0;
@@ -121,7 +127,33 @@
     letter-spacing: 4px;
     word-spacing: 6px;
     /* padding-top: 80px; */
-    margin: 50px;
+    /* margin-top: 30px; */
+}
+
+.banner-link {
+    width: 100%;
+}
+
+.all-pets-banner {
+    display: flex;
+    /* position: fixed; */
+    justify-content: space-evenly;
+    width: 100%;
+    /* margin-top: 23px; */
+    padding: 12px;
+    /* top: 70px; */
+
+
+    font-family: 'Barlow', sans-serif;
+    background-color: rgb(192, 152, 140);
+    color: rgb(240, 227, 223);
+    font-size: 15px;
+
+    z-index: 1;
+}
+
+.all-pets-banner:hover {
+    text-decoration: underline;
 }
 
 .all-pets-grid {
