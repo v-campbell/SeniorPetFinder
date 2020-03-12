@@ -2,7 +2,14 @@
     /* display: flex;
     justify-content: center; */
     padding-top: 85px;
+    width: 100%;
+    
 }
+
+/* .pet-index *{
+    box-sizing:border-box;
+    border: 1px solid black;
+} */
 
 .pet-index > h1{
     display: flex;
@@ -32,15 +39,15 @@
     color: rgb(192, 152, 140);
 } */
 
-.petGrid {
+.pet-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-content: center;
     justify-content: space-around;
     /* font-family: 'Josefin Sans', sans-serif; */
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'PT Sans', sans-serif;
-    margin: 0 10px 0 10px;
+    /* margin: 15px 10px 15px 10px; */
 }
 
 .pet-index-item {
@@ -106,3 +113,28 @@
     /* margin-right: 10px; */
     /* margin: 20px; */
 }
+
+.load-more-button {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+
+    padding-bottom: 12px;
+  
+
+
+    font-family: 'Barlow', sans-serif;
+    /* background-color: rgb(192, 152, 140);
+    color: rgb(240, 227, 223); */
+    color: rgb(192, 152, 140);
+    font-size: 20px;
+
+    z-index: 1;
+}
+
+.load-more-button:hover {
+    text-decoration: underline;
+}
+

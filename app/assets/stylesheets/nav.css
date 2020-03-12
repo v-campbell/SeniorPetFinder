@@ -1,6 +1,7 @@
 .nav {
    display: flex;
    justify-content: space-between;
+   /* justify-content: flex-start; */
    align-items: center;
    width: 100%;
    position: fixed;
@@ -10,18 +11,38 @@
    z-index: 1;
 }
 
-.nav-left{
+.nav-left {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
    margin: 15px;
    margin-top: 25px;
-   /* color: blue; */
-   /* color: #9b7f71; */
    font-size: 50px;
    font-family: 'Josefin Sans', sans-serif;
    color: black;
 }
 
-.nav-left:hover {
+.nav-left-logo {
+   color: black;
+}
+
+.nav-left-logo:hover {
    color: #dfcfc6;
+}
+
+.welcome {
+   font-size: 16px;
+   text-transform: uppercase;
+   margin-right: 0;
+
+   /* color: rgb(143, 151, 160); */
+}
+
+.welcome-2 {
+   margin-left: 5px;
+   text-decoration: underline;
+   font-size: 15px;
+   color: #a18371;
 }
    
 .nav-right-logged-out {

@@ -39,7 +39,7 @@ export default class PetIndexItem extends React.Component {
                     </div>
                     <i className="far fa-heart fa-1x"></i>
                     {/* <i className="fas fa-heart fa-3x"></i> */}
-                </div>
+            </div>
 
             </div>
         )

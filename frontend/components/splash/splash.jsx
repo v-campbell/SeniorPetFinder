@@ -67,28 +67,28 @@ const Splash = ({ currentUser }) => {
                 </div>
 
                 <div className='index-display'>
-                        {/* <h1>CHECK THESE BABIES OUT</h1> */}
-                            {/* <div className='pet-index-banner'>
-                                ⊷ ALL PETS ⊷
-                            </div> */}
-                            <Link to={`/pets`} className='banner-link'>
-                                <label htmlFor='checkbox' className='all-pets-banner'>↓ SEE ALL PETS ↓</label>
-                            </Link>
-                            <input id="checkbox" type="checkbox" />
-                            <ul className="all-pets-grid">
-                            </ul>
-                        
-                        <PetIndexContainer />
-                            {/* {this.props.pets.slice(6).map(pet =>
-                            <PetIndexItem
-                                key={`pet${pet.id}`}
-                                pet={pet}
-                                id={pet.id}
-                                photoUrls={pet.photoUrls}
-                            // favoritePet={this.props.favoritePet}
-                            // unfavoritePet={this.props.unfavoritePet} 
-                            />
-                            )} */}
+                    <PetIndexContainer />
+                    {/* <h1>CHECK THESE BABIES OUT</h1> */}
+                        {/* <div className='pet-index-banner'>
+                            ⊷ ALL PETS ⊷
+                        </div> */}
+                        {/* <Link to={`/pets`} className='banner-link'>
+                            <label htmlFor='checkbox' className='all-pets-banner'>↓ SEE ALL PETS ↓</label>
+                        </Link> */}
+                        {/* <input id="checkbox" type="checkbox" />
+                        <ul className="all-pets-grid">
+                        </ul> */}
+                    
+                        {/* {this.props.pets.slice(6).map(pet =>
+                        <PetIndexItem
+                            key={`pet${pet.id}`}
+                            pet={pet}
+                            id={pet.id}
+                            photoUrls={pet.photoUrls}
+                        // favoritePet={this.props.favoritePet}
+                        // unfavoritePet={this.props.unfavoritePet} 
+                        />
+                        )} */}
                 </div>
         </div>
     )

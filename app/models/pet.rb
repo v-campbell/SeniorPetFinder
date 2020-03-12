@@ -7,4 +7,12 @@ class Pet < ApplicationRecord
         optional: true
 
     has_many_attached :photos
+
+    def self.fetch(maxId)
+        pets = Pet
+            .where('id > ?', maxId.to_i + Pet.first.id - 1)
+            .order(:id)
+            .limit(3)
+        pets
+    end
 end

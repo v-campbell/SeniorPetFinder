@@ -1,5 +1,6 @@
-export const fetchPets = () => $.ajax({
-    url: '/api/pets'
+export const fetchPets = (maxId) => $.ajax({
+    url: '/api/pets',
+    data: { maxId }
 });
 
 export const fetchPet = id => $.ajax({

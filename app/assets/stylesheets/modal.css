@@ -177,6 +177,11 @@ button:hover {
   font-size: 30px;
   color: white;
   font-weight: bolder;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 .adopt-form-subheader {
@@ -186,14 +191,15 @@ button:hover {
 
 .adopt-form-container {
   display: flex;
-  
   padding: 50px;
+  border-radius: 5px;
 
-  background: linear-gradient(90deg, #e11a1a, #e1791a, #e0e11a, #54e11a, #1a2be1);
+  background: linear-gradient(90deg, #eb7f7f, #d4a57a, #d6c781, #9fe086, #a7ace4, #cca7e4);
+  /* color: linear-gradient(90deg, #e11a1a, #e1791a, #e0e11a, #54e11a, #1a2be1); */
   background-size: 1000% 1000%;
   
   /* -webkit-animation: rainbow 33s ease infinite; */
-  animation: rainbow 10s ease infinite;
+  animation: rainbow 3s ease infinite;
   
   /* @-webkit-keyframes rainbow {
       0%{background-position:0% 50%}
@@ -210,14 +216,106 @@ button:hover {
 }
 
 .adopt-final-button {
-  font-size: 16px;
-  padding: 15px 30px 15px 30px;
-  margin: 15px 15px 0px 15px;
+  border-radius: 5px;
+  padding: 18px 30px 15px 30px;
+  margin: 45px 15px 0px 15px;
   text-transform: uppercase;
+  font-size: 40px;
+  /* color: rgb(192, 152, 140); */
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
 }
+
+.adopt-final-button:hover {
+  color: rgb(34, 31, 30);
+  border: 2px solid rgb(34, 31, 30);
+
+}
+
 .unadopt-form-container {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 50px;
-
+  /* background: linear-gradient(90deg, white, #f7f5f5, gray, rgb(10, 10, 10));
+  background-size: 1000% 1000%;
+  
+  animation: rainbow 3s ease infinite; */
 }
+
+.unadopt-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* padding: 15px 0 15px 0; */
+  /* background-color: transparent; */
+}
+
+.unadopt-form-header-1 {
+  font-size: 30px;
+  color: rgb(206, 154, 138);
+  font-weight: bolder;
+ 
+}
+
+.unadopt-form-subheader {
+  margin: 5px;
+  padding: 4px;
+  font-style: italic;
+  color: black;
+  /* background-color: rgb(192, 152, 140);
+  color: rgb(246, 232, 232); */
+}
+
+.unadopt-image {
+  height: 200px;
+  width: 200px;
+  /* margin: 35px 0px 0px 0px; */
+  border-radius: 3px;
+}
+
+.unadopt-form-container marquee {
+  padding-top: 10px;
+  width: 70%
+}
+
+.unadopt-button-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.unadopt-button-section div{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-self: center; */
+  text-align: center;
+  justify-content: space-between;
+}
+
+.unadopt-final-button {
+  font-size: 15px;
+  color: rgb(34, 31, 30);
+  text-transform: uppercase;
+  background-color: transparent;
+  /* color: black; */
+}
+
+/* .unadopt-x {
+  font-size: 60px;
+  color: red;
+  cursor: pointer;
+} */
+
+.unadopt-final-button:hover {
+  /* font-size: 8px; */
+  /* color: rgb(241, 229, 229); */
+  color: red;
+  cursor: pointer;
+}
+
 

@@ -6,19 +6,27 @@ const Nav = ({ currentUser, logout, openModal }) => {
     const nav = () => (
 
         <div className='nav'>
-                <Link className='nav-left' to='/'>
-                    〄
-                </Link>
+
             {!currentUser ? 
-            (
+            (  <>
+                <Link className='nav-left-logo' to='/'>
+                        〄
+                </Link>
                 <nav className='nav-right-logged-out'>
                     <button className='nav-buttons' onClick={() => openModal('LOG IN')}>LOGIN</button>
                     |
                     <button className='nav-buttons' onClick={() => openModal('SIGN UP')}>SIGNUP</button>
                 </nav>
+                </>
             ) : (
                 <>
-                {/* <h1 className='welcome-text'>READY TO ADOPT, {currentUser.username}?</h1> */}
+                <div className='nav-left'>
+                    <Link className='nav-left-logo' to='/'>
+                                〄
+                    </Link>
+                    <h1 className='nav-left welcome'>Welcome in, </h1>
+                    <h1 className='nav-left welcome-2'>{currentUser.username}.</h1>
+                </div>
                 <nav className='nav-right-loggedin'>
                     <Link to='/' className='nav-icons'>
                         {/* <i className="fas fa-home fa-3x"></i> */}
@@ -32,7 +40,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
 
                     <div className='nav-user'>
                         <Link to='/' className='nav-icons'>
-                            {/* <i className="fas fa-user-circle fa-3x" width='50px' height='50px'></i> */}
+                            {/* <i className="fas fa-user-circle fa-3x" width='10px' height='10px'></i> */}
                             <img src={window.userURL} width='30px' height='30px'/>
                         </Link>
                         {/* <br/>

@@ -159,9 +159,9 @@ var clearErrors = function clearErrors() {
     type: CLEAR_PET_ERRORS
   };
 };
-var getPets = function getPets() {
+var getPets = function getPets(maxId) {
   return function (dispatch) {
-    return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["fetchPets"])().then(function (pets) {
+    return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["fetchPets"])(maxId).then(function (pets) {
       return dispatch(receivePets(pets));
     });
   };
@@ -299,6 +299,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./footer/footer */ "./frontend/components/footer/footer.jsx");
 /* harmony import */ var _pets_pet_index_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pets/pet_index_container */ "./frontend/components/pets/pet_index_container.js");
 /* harmony import */ var _pets_pet_show_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pets/pet_show_container */ "./frontend/components/pets/pet_show_container.js");
+/* harmony import */ var _pets_adopt_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pets/adopt_container */ "./frontend/components/pets/adopt_container.jsx");
+/* harmony import */ var _user_user_show_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./user/user_show_container */ "./frontend/components/user/user_show_container.js");
  // import { Provider } from 'react-redux';
 
 
@@ -311,14 +313,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ //User Component
+
+
 
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
+    path: "/pets/adopt/:id",
+    component: _pets_adopt_container__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/pets/:id",
     component: _pets_pet_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/pets",
     component: _pets_pet_index_container__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/user",
+    component: _user_user_show_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
     component: _splash_splash_container__WEBPACK_IMPORTED_MODULE_5__["default"]
@@ -584,10 +595,10 @@ var Nav = function Nav(_ref) {
   var nav = function nav() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      className: "nav-left",
+    }, !currentUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      className: "nav-left-logo",
       to: "/"
-    }, "\u3004"), !currentUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    }, "\u3004"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-right-logged-out"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "nav-buttons",
@@ -599,7 +610,16 @@ var Nav = function Nav(_ref) {
       onClick: function onClick() {
         return openModal('SIGN UP');
       }
-    }, "SIGNUP")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    }, "SIGNUP"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-left"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      className: "nav-left-logo",
+      to: "/"
+    }, "\u3004"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "nav-left welcome"
+    }, "Welcome in, "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "nav-left welcome-2"
+    }, currentUser.username, ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-right-loggedin"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/",
@@ -820,9 +840,9 @@ var AdoptForm = /*#__PURE__*/function (_React$Component) {
         className: "adopt-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "adopt-form-header"
-      }, "Are you ready for the best years of your life?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Are you ready for the best years of your life?   \uD83C\uDF89"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "adopt-form-subheader"
-      }, "YEAH YOU ARE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "YEAH YOU ARE."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         className: "adopt-final-button",
         value: this.props.formType
@@ -832,14 +852,20 @@ var AdoptForm = /*#__PURE__*/function (_React$Component) {
         onSubmit: this.handleSubmit,
         className: "unadopt-form-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "unadopt-form-header"
-      }, "Are you sure? :("), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "unadopt-form-header-1"
+      }, "Are you sure? :("), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "You don't have to do this..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "look at this face one more time."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.props.pet.photoUrls[0],
+        className: "unadopt-image"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "unadopt-form-subheader"
-      }, "BOOO YOU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "\"I'll miss you so much.\" - ", this.props.pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("marquee", {
+        behavior: "alternate",
+        direction: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         className: "unadopt-final-button",
         value: this.props.formType
-      }))));
+      })))));
     }
   }]);
 
@@ -872,9 +898,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -887,25 +913,50 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(PetIndex, _React$Component);
 
   function PetIndex(props) {
+    var _this;
+
     _classCallCheck(this, PetIndex);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(PetIndex).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(PetIndex).call(this, props));
+    _this.maxId = 0;
+    _this.showMore = _this.showMore.bind(_assertThisInitialized(_this));
+    _this.state = {
+      show_more: true
+    };
+    return _this;
   }
 
   _createClass(PetIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.getPets();
+      this.props.getPets(this.maxId);
       window.scrollTo(0, 0);
+      this.maxId += 3;
+    }
+  }, {
+    key: "showMore",
+    value: function showMore() {
+      var _this2 = this;
+
+      this.props.getPets(this.maxId).then(function (action) {
+        if (Object.values(action.pets).length < 3) _this2.setState({
+          show_more: false
+        });
+      });
+      this.maxId += 3;
     }
   }, {
     key: "render",
     value: function render() {
-      // const {pets} = this.props;
+      var loadMore = this.state.show_more ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "load-more-button",
+        onClick: this.showMore
+      }, "\u2193 MORE PETS \u2193") : null; // const {pets} = this.props;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "READY TO ADOPT?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "petGrid"
+        className: "pet-grid"
       }, this.props.pets.map(function (pet) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           key: "pet".concat(pet.id),
@@ -915,7 +966,7 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
           // unfavoritePet={this.props.unfavoritePet} 
 
         });
-      })));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), loadMore);
     }
   }]);
 
@@ -950,8 +1001,8 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    getPets: function getPets() {
-      return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["getPets"])());
+    getPets: function getPets(maxId) {
+      return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["getPets"])(maxId));
     },
     getPet: function getPet(id) {
       return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["getPet"])(id));
@@ -1136,7 +1187,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
           onClick: function onClick() {
             return _this.props.openModal('UNADOPT');
           }
-        }, "UNADOPT");
+        }, "UNADOPT \uD83D\uDE2D");
       } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
         adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "ALREADY ADOPTED");
       }
@@ -1728,18 +1779,7 @@ var Splash = function Splash(_ref) {
     height: "50px"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Adopt a senior pet(s) and welcome them into their forever home!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "index-display"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/pets",
-    className: "banner-link"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "checkbox",
-    className: "all-pets-banner"
-  }, "\u2193 SEE ALL PETS \u2193")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: "checkbox",
-    type: "checkbox"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "all-pets-grid"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -1770,6 +1810,91 @@ var mapStateToProps = function mapStateToProps(state) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps)(_splash__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/user/user_show.jsx":
+/*!************************************************!*\
+  !*** ./frontend/components/user/user_show.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var UserShow = /*#__PURE__*/function (_React$Component) {
+  _inherits(UserShow, _React$Component);
+
+  function UserShow(props) {
+    _classCallCheck(this, UserShow);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(UserShow).call(this, props));
+  }
+
+  _createClass(UserShow, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.scrollTo(0, 0);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "user show page!");
+    }
+  }]);
+
+  return UserShow;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (UserShow);
+
+/***/ }),
+
+/***/ "./frontend/components/user/user_show_container.js":
+/*!*********************************************************!*\
+  !*** ./frontend/components/user/user_show_container.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _user_show__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user_show */ "./frontend/components/user/user_show.jsx");
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    currentUser: state.entities.users[state.session.id]
+  };
+}; // const mapDispatchToProps = (dispatch) => ({
+// });
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, null)(_user_show__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -1927,7 +2052,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
   switch (action.type) {
     case _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PETS"]:
-      return action.pets;
+      // return action.pets;
+      return Object.assign({}, oldState, action.pets);
 
     case _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PET"]:
       return Object.assign({}, oldState, _defineProperty({}, action.pet.id, action.pet));
@@ -2139,9 +2265,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeFavoriteFromPet", function() { return removeFavoriteFromPet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addAdoptToPet", function() { return addAdoptToPet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeAdoptFromPet", function() { return removeAdoptFromPet; });
-var fetchPets = function fetchPets() {
+var fetchPets = function fetchPets(maxId) {
   return $.ajax({
-    url: '/api/pets'
+    url: '/api/pets',
+    data: {
+      maxId: maxId
+    }
   });
 };
 var fetchPet = function fetchPet(id) {

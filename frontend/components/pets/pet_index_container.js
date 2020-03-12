@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    getPets: () => dispatch(getPets()),
+    getPets: (maxId) => dispatch(getPets(maxId)),
     getPet: id => dispatch(getPet(id)),
     favoritePet: id => dispatch(favoritePet(id)),
     unfavoritePet: id => dispatch(unfavoritePet(id))

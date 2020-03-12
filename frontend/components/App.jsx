@@ -11,6 +11,9 @@ import Footer from './footer/footer';
 //Pets Components
 import PetIndexContainer from './pets/pet_index_container';
 import PetShowContainer from './pets/pet_show_container';
+import AdoptContainer from './pets/adopt_container'
+//User Component
+import UserShowContainer from './user/user_show_container';
 
 
 const App = () => (
@@ -18,8 +21,12 @@ const App = () => (
         <Modal />
         <NavContainer />
         <Switch>
-            <ProtectedRoute path='/pets/:id' component={PetShowContainer} />
-            <ProtectedRoute path='/pets' component={PetIndexContainer} />
+            {/* <ProtectedRoute path='/pets/:id' component={PetShowContainer} />
+            <ProtectedRoute path='/pets' component={PetIndexContainer} /> */}
+            <ProtectedRoute path='/pets/adopt/:id' component={AdoptContainer} />
+            <Route path='/pets/:id' component={PetShowContainer} />
+            <Route path='/pets' component={PetIndexContainer} />
+            <Route path='/user' component={UserShowContainer} />
             <Route path='/' component={Splash}/>
         </Switch>
         <Route path='/' component={Footer} />

@@ -19,7 +19,7 @@ export const clearErrors = () => ({
     type: CLEAR_PET_ERRORS
 });
 
-export const getPets = () => dispatch => fetchPets()
+export const getPets = (maxId) => dispatch => fetchPets(maxId)
     .then(pets => dispatch(receivePets(pets)));
 
 export const getPet = id => dispatch => fetchPet(id)

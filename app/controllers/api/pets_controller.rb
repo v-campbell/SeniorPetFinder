@@ -3,7 +3,7 @@ class Api::PetsController < ApplicationController
     # TO ADOPT? HOW TO ADOPT?
 
     def index
-        @pets = Pet.all
+        @pets = Pet.fetch(params[:maxId])
     end
 
     def show
