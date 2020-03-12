@@ -12,16 +12,16 @@ class PetIndex extends React.Component {
     componentDidMount() {
         this.props.getPets(this.maxId);
         window.scrollTo(0,0);
-        this.maxId += 3;
+        this.maxId += 6;
     }
 
     showMore() {
         this.props.getPets(this.maxId)
             .then(action => {
-                if (Object.values(action.pets).length < 3)
+                if (Object.values(action.pets).length < 6)
                     this.setState({ show_more: false });
             });
-        this.maxId += 3
+        this.maxId += 6
     }
     
     render() {

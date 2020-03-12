@@ -595,7 +595,9 @@ var Nav = function Nav(_ref) {
   var nav = function nav() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav"
-    }, !currentUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }, !currentUser ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "nav-left"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       className: "nav-left-logo",
       to: "/"
     }, "\u3004"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
@@ -638,7 +640,7 @@ var Nav = function Nav(_ref) {
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "nav-user"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/",
+      to: "/user",
       className: "nav-icons"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: window.userURL,
@@ -931,7 +933,7 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       this.props.getPets(this.maxId);
       window.scrollTo(0, 0);
-      this.maxId += 3;
+      this.maxId += 6;
     }
   }, {
     key: "showMore",
@@ -939,11 +941,11 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       this.props.getPets(this.maxId).then(function (action) {
-        if (Object.values(action.pets).length < 3) _this2.setState({
+        if (Object.values(action.pets).length < 6) _this2.setState({
           show_more: false
         });
       });
-      this.maxId += 3;
+      this.maxId += 6;
     }
   }, {
     key: "render",
@@ -1861,7 +1863,9 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "user show page!");
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-show"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Your Adopted Dogs!"));
     }
   }]);
 

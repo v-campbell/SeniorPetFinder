@@ -8,7 +8,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
         <div className='nav'>
 
             {!currentUser ? 
-            (  <>
+            (  <div className='nav-left'>
                 <Link className='nav-left-logo' to='/'>
                         〄
                 </Link>
@@ -17,7 +17,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
                     |
                     <button className='nav-buttons' onClick={() => openModal('SIGN UP')}>SIGNUP</button>
                 </nav>
-                </>
+                </div>
             ) : (
                 <>
                 <div className='nav-left'>
@@ -39,7 +39,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
                     </Link>
 
                     <div className='nav-user'>
-                        <Link to='/' className='nav-icons'>
+                        <Link to='/user' className='nav-icons'>
                             {/* <i className="fas fa-user-circle fa-3x" width='10px' height='10px'></i> */}
                             <img src={window.userURL} width='30px' height='30px'/>
                         </Link>

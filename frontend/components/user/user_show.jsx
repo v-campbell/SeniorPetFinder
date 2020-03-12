@@ -11,8 +11,9 @@ class UserShow extends React.Component {
 
     render() {
         return (
-            <div>
-                user show page!
+            <div className='user-show'>
+                <div>Your Adopted Dogs!</div>
+                
             </div>
         )
     }
