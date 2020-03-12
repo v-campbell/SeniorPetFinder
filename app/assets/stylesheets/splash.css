@@ -58,6 +58,13 @@
    font-style: normal;
 }
 
+.gradient {
+    background-image:
+    linear-gradient(
+         #dfcfc6, rgb(192, 152, 140)
+    );
+}
+
 .splash-services-box {
     display: flex;
     flex-direction: column;
@@ -71,32 +78,14 @@
     margin-top: -3px
 }
 
-.gradient {
-    background-image:
-    linear-gradient(
-         #dfcfc6, rgb(192, 152, 140)
-    );
-}
 
 .splash-services-box h1{
     align-content: center;
     margin: 25px 0 5px 0;
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 28px;
     /* color:rgb(143, 123, 111); */
     color: white;
-}
-
-.splash-services-box hr{
-    border-top: 2px solid white;
-    /* margin-bottom: 40px;
-    margin-left: 310px; */
-}
-
-.splash-services-box hr{
-    text-align: center;
-    width: 50%;
-    color: red;
 }
 
 .splash-services {
@@ -112,10 +101,14 @@
     align-items: center;
     text-align: center;
     padding: 0 60px 0 60px;
-    width: 200px;
-    /* color: black; */
-    /* color: rgb(65, 49, 33); */
+    width: 195px;
    color: white;
+}
+
+.splash-services-box hr{
+    text-align: center;
+    width: 50%;
+    border-top: 2px solid rgb(236, 222, 222);
 }
 
 .index-display {
@@ -126,8 +119,6 @@
     font-size: 30px;
     letter-spacing: 4px;
     word-spacing: 6px;
-    /* padding-top: 80px; */
-    /* margin-top: 30px; */
     width: 100%;
 }
 

@@ -8,16 +8,18 @@ const Nav = ({ currentUser, logout, openModal }) => {
         <div className='nav'>
 
             {!currentUser ? 
-            (  <div className='nav-left'>
+            (  <>
+                <div className='nav-left'>
                 <Link className='nav-left-logo' to='/'>
                         〄
                 </Link>
+                </div>
                 <nav className='nav-right-logged-out'>
                     <button className='nav-buttons' onClick={() => openModal('LOG IN')}>LOGIN</button>
                     |
                     <button className='nav-buttons' onClick={() => openModal('SIGN UP')}>SIGNUP</button>
                 </nav>
-                </div>
+                </>
             ) : (
                 <>
                 <div className='nav-left'>

@@ -1,4 +1,4 @@
-import { RECEIVE_PETS, RECEIVE_PET } from '../actions/pet_actions';
+import { RECEIVE_PETS, RECEIVE_PET, RECEIVE_USER_PETS } from '../actions/pet_actions';
 
 export default  (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -9,6 +9,8 @@ export default  (oldState = {}, action) => {
             return Object.assign({}, oldState, action.pets)
         case RECEIVE_PET:
             return Object.assign({}, oldState, { [action.pet.id]: action.pet });
+        case RECEIVE_USER_PETS:
+            return Object.assign({}, oldState, action.payload.pets)
         default:
             return oldState;
     }

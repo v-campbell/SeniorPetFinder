@@ -40,8 +40,12 @@ class AdoptForm extends React.Component {
                         {this.props.formType === 'Adopt' ?
                             (<form onSubmit={this.handleSubmit} className='adopt-form-container'>
                                 <div className='adopt-form'>
-                            <div className='adopt-form-header'>Are you ready for the best years of your life?   🎉</div>
-                                    <br />
+                            <div className='adopt-form-header'>
+                                Are you ready for the best years of your life?
+                                <br/>
+                                <br/>
+                                🎉
+                            </div>
                                     <br />
                                     <br />
                                     {this.renderErrors()}

@@ -42,7 +42,7 @@ class LoginForm extends React.Component {
 
     fillDemo(e) {
         e.preventDefault();
-        this.props.handleForm({ username: 'definitelynotadog', password: 'password' })
+        this.props.handleForm({ username: 'Hachikō', password: 'password' })
         .then(() => (this.props.closeModal()))
     }
 

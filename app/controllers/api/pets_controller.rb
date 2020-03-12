@@ -37,4 +37,9 @@ class Api::PetsController < ApplicationController
         end
     end
 
+    def users_pets
+        @pets = Pet.where(adopted_by: params[:user_id])
+
+    end
+
 end

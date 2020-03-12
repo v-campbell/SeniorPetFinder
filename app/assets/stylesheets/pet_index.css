@@ -97,7 +97,7 @@
 
 .pet-index-item-link {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: normal;
     text-transform: capitalize;
     color: rgb(192, 152, 140);
@@ -116,25 +116,25 @@
 
 .load-more-button {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* width: 100%; */
-
-    padding-bottom: 12px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 100%;
+    padding: 12px 0 12px 0;
   
 
 
     font-family: 'Barlow', sans-serif;
-    /* background-color: rgb(192, 152, 140);
-    color: rgb(240, 227, 223); */
-    color: rgb(192, 152, 140);
+    background-color: rgb(192, 152, 140);
+    color: rgb(240, 227, 223);
+    /* color: rgb(192, 152, 140); */
     font-size: 20px;
-
-    z-index: 1;
 }
 
 .load-more-button:hover {
     text-decoration: underline;
+}
+
+.load-more-button:focus {
+    outline:0;
 }
 

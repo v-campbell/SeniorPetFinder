@@ -1,7 +1,75 @@
 .user-show {
     display: flex;
+    flex-direction: column;
 }
 
-.bench {
+.user-services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #dfcfc6;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    margin-top: 80px
+}
+
+.user-services {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0 0 0;
+    justify-content: space-evenly;
+}
+
+.user-services-box h1{
+    align-content: center;
+    margin: 25px 0 5px 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 28px;
+    color: white;
+}
+
+.user-services > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 60px 0 60px;
+    width: 200px;
+
+   color: white;
+}
+
+.user-services-box hr{
+    text-align: center;
     width: 50%;
+    border-top: 2px solid rgb(236, 222, 222);
+}
+
+.user-services-favorites{
+    color: rgb(236, 222, 222)
+}
+
+.adopted-pets {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adopted-pet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 15px;
+
+}
+
+.adopted-pets h1 {
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 15px;
 }

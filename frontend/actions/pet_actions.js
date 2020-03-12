@@ -1,8 +1,10 @@
-import { fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet, addAdoptToPet, removeAdoptFromPet } from '../util/pet_util';
+import { fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet, addAdoptToPet, removeAdoptFromPet, fetchUserPets } from '../util/pet_util';
 
 export const RECEIVE_PETS = 'RECEIVE_PET';
 export const RECEIVE_PET = 'RECEIVE_PETS';
 export const CLEAR_PET_ERRORS = 'CLEAR_PET_ERRORS';
+export const RECEIVE_USER_PETS = 'RECEIVE_USER_PETS';
+
 
 
 const receivePets = pets => ({
@@ -18,6 +20,11 @@ const receivePet = pet => ({
 export const clearErrors = () => ({
     type: CLEAR_PET_ERRORS
 });
+
+export const receiveUserPets = (payload) =>({
+    type: RECEIVE_USER_PETS,
+    payload
+})
 
 export const getPets = (maxId) => dispatch => fetchPets(maxId)
     .then(pets => dispatch(receivePets(pets)));
@@ -36,5 +43,8 @@ export const adoptPet = id => dispatch => addAdoptToPet(id)
 
 export const unadoptPet = id => dispatch => removeAdoptFromPet(id)
     .then(pet => dispatch(receivePet(pet)));
+
+export const getUserPets = id => dispatch => fetchUserPets(id)
+    .then(pets => dispatch(receiveUserPets(pets)));
 
 // window.getPet = getPet;
