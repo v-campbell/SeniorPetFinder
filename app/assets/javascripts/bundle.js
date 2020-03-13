@@ -1062,7 +1062,7 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       this.props.getPets(this.maxId);
       window.scrollTo(0, 0);
-      this.maxId += 3;
+      this.maxId += 9;
     }
   }, {
     key: "showMore",
@@ -1070,11 +1070,11 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       this.props.getPets(this.maxId).then(function (action) {
-        if (Object.values(action.pets).length < 3) _this2.setState({
+        if (Object.values(action.pets).length < 9) _this2.setState({
           show_more: false
         });
       });
-      this.maxId += 3;
+      this.maxId += 9;
     }
   }, {
     key: "render",

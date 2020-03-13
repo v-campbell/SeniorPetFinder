@@ -16,7 +16,7 @@ class Pet < ApplicationRecord
         pets = Pet
             .where('id > ?', maxId.to_i + Pet.first.id - 1)
             .order(:id)
-            .limit(3)
+            .limit(9)
         pets
     end
 end
