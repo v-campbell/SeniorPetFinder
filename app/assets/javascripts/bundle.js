@@ -335,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/pets/:id",
     component: _pets_pet_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
@@ -1262,9 +1262,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1278,9 +1278,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   _inherits(PetShow, _React$Component);
 
   function PetShow(props) {
+    var _this;
+
     _classCallCheck(this, PetShow);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(PetShow).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(PetShow).call(this, props));
+    _this.adoptShowButton = _this.adoptShowButton.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(PetShow, [{
@@ -1290,39 +1294,69 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       window.scrollTo(0, 0);
     }
   }, {
+    key: "adoptShowButton",
+    value: function adoptShowButton() {
+      var _this2 = this;
+
+      var adoptButton;
+      var pet = this.props.pet;
+      var currentUser = this.props.currentUser;
+      debugger;
+
+      if (currentUser) {
+        if (!pet.adoptedBy) {
+          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+            onClick: function onClick() {
+              return _this2.props.openModal('ADOPT');
+            }
+          }, "ADOPT ME? \uD83D\uDE4F");
+        } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
+          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+            onClick: function onClick() {
+              return _this2.props.openModal('UNADOPT');
+            }
+          }, "UNADOPT \uD83D\uDE2D");
+        } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
+          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "ALREADY ADOPTED");
+        }
+      } else {
+        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: function onClick() {
+            return _this2.props.openModal('LOG IN');
+          }
+        }, "ADOPT ME? \uD83D\uDE4F");
+      }
+
+      return adoptButton;
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this = this;
-
       // let favoriteButtonText = <i class="far fa-star"></i>;
       // let favoriteButtonAction = () => favoritePet(pet.id);
       // if (pet.favorited_by_current_user) {
       //     favoriteButtonText = <i class="fas fa-star"></i>;
       //     favoriteButtonAction = () => unfavoritePet(pet.id);
       // }
-      var pet = this.props.pet;
-      var currentUser = this.props.currentUser; // const {favoritePet} = this.props;
+      // const {favoritePet} = this.props;
       // const {unfavoritePet} = this.props;
-
+      var pet = this.props.pet;
+      var currentUser = this.props.currentUser;
       if (!pet) return null;
-      if (!pet.photoUrls) return null;
-      var adoptButton; // debugger
-
-      if (!pet.adoptedBy) {
-        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: function onClick() {
-            return _this.props.openModal('ADOPT');
-          }
-        }, "ADOPT ME? \uD83D\uDE4F");
-      } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
-        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: function onClick() {
-            return _this.props.openModal('UNADOPT');
-          }
-        }, "UNADOPT \uD83D\uDE2D");
-      } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
-        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "ALREADY ADOPTED");
-      }
+      if (!pet.photoUrls) return null; // debugger
+      // let adoptButton;
+      // const adoptShowButton = currentUser ? 
+      //     (
+      //         if (!pet.adoptedBy) {
+      //             adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
+      //             } else if ((pet.adoptedBy) && (pet.adoptedBy === currentUser.id)) {
+      //             adoptButton = <button onClick={() => this.props.openModal('UNADOPT')}>UNADOPT 😭</button>
+      //             } else if ((pet.adoptedBy) && (pet.adoptedBy !== currentUser.id)) {
+      //             adoptButton = <button>ALREADY ADOPTED</button>
+      //         }
+      //     ) : (
+      //         adoptButton = <button onClick={() => this.props.openModal('LOG IN')}>ADOPT ME? 🙏</button>
+      //     )
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show"
@@ -1340,7 +1374,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-name"
       }, "Hi, I'm ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-about"
-      }, pet.about), adoptButton), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, pet.about), this.adoptShowButton()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
         photoUrls: pet.photoUrls

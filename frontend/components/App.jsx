@@ -21,7 +21,7 @@ const App = () => (
         <Modal />
         <NavContainer />
         <Switch>
-            <ProtectedRoute path='/pets/:id' component={PetShowContainer} />
+            <Route path='/pets/:id' component={PetShowContainer} />
             {/* <ProtectedRoute path='/pets' component={PetIndexContainer} /> */}
             {/* <Route path='/pets/:id' component={PetShowContainer} />
             <Route path='/pets' component={PetIndexContainer} /> */}
