@@ -29,7 +29,7 @@ const App = () => (
             <ProtectedRoute path='/pets/adopt/:id' component={AdoptContainer} />
             {/* <Route path='/pets/:id' component={PetShowContainer} /> */}
             <Route path='/pets' component={PetIndexContainer} />
-            <Route path='/user' component={UserShowContainer} />
+            <ProtectedRoute path='/user' component={UserShowContainer} />
             <Route path='/' component={Splash}/>
         </Switch>
         <Route path='/' component={Footer} />

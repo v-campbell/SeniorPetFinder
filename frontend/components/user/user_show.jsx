@@ -15,7 +15,7 @@ class UserShow extends React.Component {
             <div className='user-show'>
                 {/* <div>Your Adopted Dogs!</div> */}
                 <div className='user-services-box'>
-                    <h1>Thank you for using senior pet finder!</h1>
+                    <h1>Thank you for using Senior Pet Finder!</h1>
                     <hr />
                     <div className='user-services'>
                         <div className='user-services-pets'>

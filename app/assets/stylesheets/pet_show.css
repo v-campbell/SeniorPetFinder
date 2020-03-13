@@ -76,6 +76,14 @@
     margin-bottom: 50px;
 }
 
+/* .pet-show-top-left button:focus {
+    outline:0;
+} */
+
+button:focus {
+    outline:0;
+}
+
 .pet-show-top-left button:hover {
     color: rgb(192, 152, 140);
     border: 2px solid rgb(233, 217, 203);;
