@@ -18,7 +18,6 @@ class PetShow extends React.Component {
         let adoptButton;
         const { pet } = this.props;
         const { currentUser } = this.props;
-        debugger
         if (currentUser) {
             if (!pet.adoptedBy) {
             adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
@@ -49,7 +48,7 @@ class PetShow extends React.Component {
 
         const { pet } = this.props;
         const { currentUser } = this.props;
-        
+
         if (!pet) return null;
         if (!pet.photoUrls) return null;
 

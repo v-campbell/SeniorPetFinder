@@ -405,12 +405,11 @@ var AdoptedPets = /*#__PURE__*/function (_React$Component) {
   _createClass(AdoptedPets, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.getUserPets(this.props.currentUserId); // this.props.getPets(50);
+      this.props.getUserPets(this.props.currentUserId);
     }
   }, {
     key: "render",
     value: function render() {
-      // debugger
       if (!this.props.currentUserId) return null;
       var adoptedOrNot = this.props.pets.length > 0 ? this.props.pets.map(function (pet) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1301,7 +1300,6 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       var adoptButton;
       var pet = this.props.pet;
       var currentUser = this.props.currentUser;
-      debugger;
 
       if (currentUser) {
         if (!pet.adoptedBy) {

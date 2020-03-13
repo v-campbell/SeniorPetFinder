@@ -5,11 +5,9 @@ class AdoptedPets extends React.Component {
 
     componentDidMount() {
         this.props.getUserPets(this.props.currentUserId);
-        // this.props.getPets(50);
     }
 
     render() {
-        // debugger
         if (!this.props.currentUserId) return null;
 
         const adoptedOrNot = this.props.pets.length > 0 ? (
