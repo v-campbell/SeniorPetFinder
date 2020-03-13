@@ -14,19 +14,20 @@ demo_user = User.create!({first_name: 'Hidesaburō', last_name: 'Ueno', email: '
 user1 = User.create!({first_name: 'Ehren', last_name: 'Campbell', email: 'thedogfather@gmail.com', username: 'dogdad', password: 'password'});
 user2 = User.create!({first_name: 'Victoria', last_name: 'Campbell', email: 'vnkcampbell@gmail.com', username: 'hotdog', password: 'password'});
 
-pet12 = Pet.create({name: 'Epi', breed: 'Jack Russell', age: 15, sex: 'F', size: 'S', about: "I love sunshine and naps and naps in the sunshine. My diet consists exclusively of chicken and dried anchovies.", adopted_by: user1.id})
+pet12 = Pet.create({name: 'Epi', breed: 'Jack Russell', age: 15, sex: 'F', size: 'S', about: "I love sunshine and naps and naps in the sunshine. My diet consists exclusively of chicken and dried anchovies.", adopted_by: demo_user.id})
 pet17 = Pet.create({name: 'Jimmy Dean', breed: 'Pot Belly', age: 8, sex: 'M', size: 'M', about: "I am cute, definitely a dog, cuddly and did I mention that I'm a dog?"})
 pet20 = Pet.create({name: 'Chelsea', breed: 'Mix Shepherd', age: 7, sex: 'F', size: 'L', about: 'I am always happy to make a new human friend. My tail spins around like a helicopter blade.'})
 pet21 = Pet.create({name: 'Gucci', breed: 'Mix Terrier, Pit Bull', age: 8, sex: 'M', size: 'XL', about: 'I am goofy, good-looking and guaranteed to make you smile! I like to play and cannot wait to meet you!'})
-pet22 = Pet.create({name: 'Leia', breed: 'Australian Cattle Dog Mix', age: 6, sex: 'F', size: 'L', about: 'I am sweet, like to be petted and loves treats which I take from your hand so daintily! I walk well on a leash and will happily meander with you for a nice long walk.'})
+pet22 = Pet.create({name: 'Leia', breed: 'Australian Cattle Dog Mix', age: 6, sex: 'F', size: 'L', about: 'I am sweet, like to be pet and loves treats which I take from your hand so daintily! I walk well on a leash and will happily meander with you for a nice long walk.'})
 pet23 = Pet.create({name: 'Sparky', breed: 'Mix Terrier, Pit Bull', age: 7, sex: 'M', size: 'L', about: "I am one handsome fellow. It takes me a second to warm up, but before you know it, I am ready for love. There isn't a smell out there that I don't want to check out."})
 pet24 = Pet.create({name: 'Remi', breed: 'Mix Terrier, Pit Bulll', age: 5, sex: 'F', size: 'L', about: "I haven't yet met a human I don't like! I love other dogs and don't care if they are small or large: I LOVE DOGS!"})
 pet25 = Pet.create({name: 'Kiwi', breed: 'Mix Terrier, Tibetan', age: 5, sex: 'F', size: 'M', about: "I am fuzzy, just like my namesake fruit, but the fruit doesn't want to spend all of its time in your lap like I do. A huge plus - I make the cutest snorting sounds."})
-pet26 = Pet.create({name: 'Maxie', breed: 'Domestic Longhair Mix', age: 5, sex: 'M', size: 'S', about: 'I enjoy meeting new people, while my sister Snowbelle likes to watch from afar until I give her the sign to come out and socialize. I am told by everyone that visits me that I am very handsome.'})
+pet26 = Pet.create({name: 'Maxie', breed: 'Domestic Longhair Mix', age: 5, sex: 'M', size: 'S', about: 'I enjoy meeting new people, while my sister Snowbelle likes to watch from afar until I give her the sign to come out and socialize. I am told by everyone that visits me that I am very handsome.', adopted_by: demo_user.id})
 pet27 = Pet.create({name: 'Darla', breed: 'Domestic Shorthair Mix', age: 12, sex: 'F', size: 'XS', about: 'I love nothing more than giving head butts to visitors and receiving oodles of pets in return. Please adopt me and give me oodles of pets.'})
 pet29 = Pet.create({name: 'Mochi', breed: 'Domestic Shorthair Mix', age: 6, sex: 'F', size: 'S', about: "I am feeling a bit overwhelmed in my new surroundings. I am not anti-social and have been described by others as calm and friendly, but right now, I am none of those things. With time, I promise I will return to my usual self!"})
 pet30 = Pet.create({name: 'Camelia', breed: 'Domestic Shorthair Mix', age: 12, sex: 'F', size: 'XS', about: 'I am a very sweet senior kitty which basically means I am a kitten with experience. I’m what you would call a Tortoiseshell – based on my fancy coat. I enjoy being a couch potato and like to spend time watching TV with my humans or simply sitting next to you while you read or work on your laptop.'})
 pet10 = Pet.create({name: 'Tucker', breed: 'Golden Retreiver', age: 9, sex: 'M', size: 'L', about: 'I wake up at 5:30AM sharp, which means you will also wake up at 5:30AM sharp.'})
+pet28 = Pet.create({name: 'Ryan', breed: 'Domestic Medium Hair Mix', age: 0, sex: 'M', size: 'S', about: 'I am a very well behaved cat and promise to be a great addition to your home. I can cook and am good at climbing things.'})
 pet11 = Pet.create({name: 'Buttercup', breed: 'Golden Retreiver', age: 9, sex: 'F', size: 'M', about: "I don't love other dogs. Or humans. Please adopt me. Or don't."})
 pet13 = Pet.create({name: 'Sparta', breed: 'Yorkshire Terrier', age: 7, sex: 'F', size: 'XS', about: "I'm baby", adopted_by: user1.id})
 pet14 = Pet.create({name: 'Nova', breed: 'Husky', age: 8, sex: 'F', size: 'L', about: "One time, I ate trash. Just kidding. I eat trash all the time.", adopted_by: user1.id})
@@ -42,7 +43,6 @@ pet7 = Pet.create({name: 'Kevin', breed: 'Bulldog', age: 12, sex: 'M', size: 'M'
 pet9 = Pet.create({name: 'Creed', breed: 'Mutt', age: 296, sex: 'M', size: 'M', about: "I've never owned a refridgerator before."})
 pet16 = Pet.create({name: 'Barley', breed: 'Maltipoo', age: 6, sex: 'M', size: 'S', about: "I don't care much for dog food. I do, however, care a lot about bananas. Love bananas."})
 pet18 = Pet.create({name: 'Catto', breed: 'Cat', age: 25, sex: 'F', size: 'S', about: "I love pizza, snacks, yoga and other people's babies."})
-pet28 = Pet.create({name: 'Ryan', breed: 'Domestic Medium Hair Mix', age: 0, sex: 'M', size: 'S', about: 'I am a very well behaved cat and promise to be a great addition to your home. I can cook and am good at climbing things.'})
 pet19 = Pet.create({name: 'Jamie', breed: '???', age: 99, sex: 'F', size: 'S', about: 'hungry baby'})
 
 #pet 1 photos
