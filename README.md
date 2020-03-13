@@ -31,27 +31,12 @@ Features
    - View multiple images for each pet
    - Adopt/unadopt pet
         - If a pet is adopted by a different user, the current user will not be able to adopt/unadopt
+<p align="center">
+  <a href="https://vidtube-app.herokuapp.com/">
+    <img src="https://media.giphy.com/media/ZXC8zMVYUx9NL28lzv/giphy.gif" alt="Adopt Button GIF" />
+  </a>
+</p>
    - View information regarding the pet's shelter
         - Send a prefilled email to said shelter to request more information regarding (real life) adoption!
  - ### User show page
    - Current (logged-in) user can view their adopted pets
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
