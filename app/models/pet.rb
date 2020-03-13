@@ -1,4 +1,7 @@
 class Pet < ApplicationRecord
+    # extend FriendlyId
+    # friendly_id :name, use: :slugged
+
     validates :name, :breed, :age, :sex, :size, :about, presence: true
 
     belongs_to :owner,
@@ -7,6 +10,7 @@ class Pet < ApplicationRecord
         optional: true
 
     has_many_attached :photos
+
 
     def self.fetch(maxId)
         pets = Pet

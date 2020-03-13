@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
         return(
             <ul className="errorBox">
                 {this.props.errors.map((error, i) => (
-                    <li className='errors' key={`error- ${i}`}>
+                    <li className='errors' key={`error-${i}`}>
                         {error}
                     </li>
                 ))}

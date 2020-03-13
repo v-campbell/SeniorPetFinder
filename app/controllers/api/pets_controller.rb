@@ -9,6 +9,7 @@ class Api::PetsController < ApplicationController
     def show
         # to avoid N+1 queries from Active Storage
         @pet = Pet.with_attached_photos.find(params[:id])
+        # @pet = Pet.friendly.find(params[:id])
     end
 
     def adopt

@@ -30,6 +30,8 @@ class UserShow extends React.Component {
                             {/* <ul className="all-pets-grid">
                             </ul> */}
                             VIEW ALL ADOPTED PETS
+                            {/* <a href="#link1">Take me to Link 1</a> */}
+
                         </div>
                         <div className='user-services-favorites'>
                             <img src={window.pawHeartURL} width='50px' height='50px' />
@@ -41,6 +43,8 @@ class UserShow extends React.Component {
                     </div>
                 </div>
                 <div className='adopted-pets'>
+                    {/* <a id="gotofav">HERE</a> */}
+                    {/* <a id="link1">Link 1</a> */}
                     <h1>ADOPTED PETS</h1>
                     <AdoptedPets />
                 </div>
