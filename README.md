@@ -38,5 +38,6 @@ Features
 </p>
    - View information regarding the pet's shelter
         - Send a prefilled email to said shelter to request more information regarding (real life) adoption!
+        
  - ### User show page
    - Current (logged-in) user can view their adopted pets
