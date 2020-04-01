@@ -120,26 +120,13 @@ class PetShow extends React.Component {
                             <div className='pet-show-about'>{pet.about}</div>
                       
                             {this.adoptShowButton()}
-                            {/* <button onClick={favoriteButtonAction}>{favoriteButtonText}</button> */}
-                            {/* <div id="favorite-button" className={this.state.isFave ? "is-fave" : ""}>
-                                <button className="show-favorite-button" onClick={this.handleFavClick}>
-                                    <i className="far fa-heart fa-1x"></i>
-                                </button>
-                            </div> */}
-                            {/* <div id="favorite-button" className={this.state.isFave ? "is-fave" : ""}>
-                                <button className="show-favorite-button" onClick={this.handleFavClick}>
-                                    {favButton}
-                                </button>
-                            </div> */}
 
                             {/* {this.favoriteButton()} */}
                             <div id="favorite-button" className={this.state.isFave ? "is-fave" : ""}>
                                 <button className="splash-favorite-button" onClick={this.handleFavClick}>
-                                    favorite
+                                    ★favoritebutton★
                                 </button>
                             </div>
-
-
                         </div>
                         <div className='pet-show-images'>
                             <Display photoUrls={pet.photoUrls} />

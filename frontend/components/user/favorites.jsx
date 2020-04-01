@@ -14,7 +14,6 @@ class Favorites extends React.Component {
         return (
             <div>
                 <section>
-                    <h1 className="favorites-title">Favorited Pets</h1>
                     <div className="favorite-index-item">
                         {faveList}
                     </div>

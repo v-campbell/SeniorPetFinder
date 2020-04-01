@@ -1571,7 +1571,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "splash-favorite-button",
         onClick: this.handleFavClick
-      }, "favorite"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "\u2605favoritebutton\u2605"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
         photoUrls: pet.photoUrls
@@ -2331,9 +2331,7 @@ var Favorites = /*#__PURE__*/function (_React$Component) {
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "no-fave"
       }, "You have no favorite pets to show on this list.");
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "favorites-title"
-      }, "Favorited Pets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "favorite-index-item"
       }, faveList)));
     }
