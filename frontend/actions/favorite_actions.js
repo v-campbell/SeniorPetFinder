@@ -78,7 +78,6 @@ export const createFavorite = (formData, userId) => dispatch => {
     );
 };
 
-
 export const deleteFavorite = (userId, favoriteId) => dispatch => {
     return APIUtil.deleteFavorite(userId, favoriteId).then(
         () => dispatch(removeFavorite(favoriteId)),

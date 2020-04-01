@@ -52,10 +52,10 @@ class Api::FavoritesController < ApplicationController
 
   def destroy
     @favorite = Favorite.find(params[:id])
-    if @favorite.user_id == current_user.id
+    if @favorite.user_id === current_user.id
       @favorite.destroy
     else 
-      render json: ["You havent added this pet to your favorite list yet"], status: 422
+      render json: ["You havent added this pet to your favorite list yet"], status: 424
     end
   end
 

@@ -40,10 +40,10 @@ class UserShow extends React.Component {
                             <br />
                             VIEW ALL FAVORITED PETS
                             (coming soon!)
-                            <div className={3 === this.state.selectedBtn ? "is-selected" : ""}
+                            {/* <div className={3 === this.state.selectedBtn ? "is-selected" : ""}
                                 onClick={this.buttonSelected(3)} >
                                 <Link to="/my/favorites"><span>My Saved Pets</span></Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,12 @@ class UserShow extends React.Component {
                     <h1>ADOPTED PETS</h1>
                     <AdoptedPets />
                 </div>
-                <Route
-                    path="/my/favorites"
-                    component={MyFavoritesContainer}
-                />
+                <div className='adopted-pets'>
+                    {/* <a id="gotofav">HERE</a> */}
+                    {/* <a id="link1">Link 1</a> */}
+                    <h1>FAVORITED PETS</h1>
+                    <MyFavoritesContainer />
+                </div>
             </div>
         )
     }

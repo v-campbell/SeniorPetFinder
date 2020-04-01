@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestFavorites", function() { return requestFavorites; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createFavorite", function() { return createFavorite; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteFavorite", function() { return deleteFavorite; });
-/* harmony import */ var _util_favorites_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/favorites_util */ "./frontend/util/favorites_util.js");
+/* harmony import */ var _util_favorites_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/favorites_util */ "./frontend/util/favorites_util.js");
 // import { addFavoriteToPet, removeFavoriteFromPet, fetchAllFavoritedPets } from '../util/favorite_api_util';
 // // import { receivePet } from '../actions/pet_actions';
 // export const RECEIVE_ALL_FAVORITES = "RECEIVE_ALL_FAVORITES"
@@ -167,14 +167,14 @@ var receiveFavoriteErrors = function receiveFavoriteErrors(errors) {
 
 var requestFavorites = function requestFavorites(userId) {
   return function (dispatch) {
-    return _util_favorites_util__WEBPACK_IMPORTED_MODULE_1__["fetchFavorites"](userId).then(function (favorites) {
+    return _util_favorites_util__WEBPACK_IMPORTED_MODULE_0__["fetchFavorites"](userId).then(function (favorites) {
       return dispatch(receiveFavorites(favorites));
     });
   };
 };
 var createFavorite = function createFavorite(formData, userId) {
   return function (dispatch) {
-    return _util_favorites_util__WEBPACK_IMPORTED_MODULE_1__["createFavorite"](formData, userId).then(function (favorite) {
+    return _util_favorites_util__WEBPACK_IMPORTED_MODULE_0__["createFavorite"](formData, userId).then(function (favorite) {
       dispatch(receiveFavorite(favorite));
     }, function (err) {
       dispatch(receiveFavoriteErrors(err.responseJSON));
@@ -183,7 +183,7 @@ var createFavorite = function createFavorite(formData, userId) {
 };
 var deleteFavorite = function deleteFavorite(userId, favoriteId) {
   return function (dispatch) {
-    return _util_favorites_util__WEBPACK_IMPORTED_MODULE_1__["deleteFavorite"](userId, favoriteId).then(function () {
+    return _util_favorites_util__WEBPACK_IMPORTED_MODULE_0__["deleteFavorite"](userId, favoriteId).then(function () {
       return dispatch(removeFavorite(favoriteId));
     }, function (err) {
       return dispatch(receiveFavoriteErrors(err.responseJSON));
@@ -1414,13 +1414,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, PetShow);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PetShow).call(this, props));
+    _this.adoptShowButton = _this.adoptShowButton.bind(_assertThisInitialized(_this));
+    _this.handleFavClick = _this.handleFavClick.bind(_assertThisInitialized(_this));
     _this.state = {
       isFave: props.favorites.find(function (fave) {
         return fave.pet_id === props.pet.id;
       })
     };
-    _this.adoptShowButton = _this.adoptShowButton.bind(_assertThisInitialized(_this));
-    _this.favoriteButton = _this.favoriteButton.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1438,6 +1438,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
+      // if (this.props.match.params.petId !== prevProps.match.params.petId) {
+      //     const id = this.props.match.params.petId
+      //     this.props.getPet(id);
+      // }  
+      // if (this.props.favorites !== prevProps.favorites) {
+      //     this.setState({ isFave: this.props.favorites.find(fave => fave.pet_id === parseInt(prevProps.match.params.petId)) })
+      // }
       if (this.props.match.params.petId !== prevProps.match.params.petId) {
         var id = this.props.match.params.petId;
         this.props.getPet(id);
@@ -1446,57 +1453,35 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       if (this.props.favorites !== prevProps.favorites) {
         this.setState({
           isFave: this.props.favorites.find(function (fave) {
-            return fave.pet_id === parseInt(prevProps.match.params.petId);
+            return fave.restaurant_id === parseInt(prevProps.match.params.restaurantId);
           })
         });
       }
-    }
-  }, {
-    key: "favoriteButton",
-    value: function favoriteButton() {
-      var _this2 = this;
+    } // favoriteButton() {
+    //     let favButton;
+    //     const { currentUser, createFavorite, deleteFavorite, favorites, favorited, pet, userId } = this.props;
+    //     // if (this.state.isFave) {
+    //         debugger
+    //     if (favorited) {
+    //         favButton = <button onClick={() => {
+    //             deleteFavorite(userId, this.state.isFave.id);
+    //             this.setState({ isFave: null });
+    //         }
+    //         }>★</button>
+    //     } else {
+    //         favButton = <button onClick={() => {
+    //             createFavorite({ pet_id: pet.id }, userId);
+    //             this.setState({ isFave: { pet_id: pet.id } });
+    //         }
+    //         }>☆</button>
+    //     }
+    //     return favButton;
+    // }
 
-      var favButton;
-      var _this$props = this.props,
-          currentUser = _this$props.currentUser,
-          createFavorite = _this$props.createFavorite,
-          deleteFavorite = _this$props.deleteFavorite,
-          favorites = _this$props.favorites,
-          pet = _this$props.pet,
-          userId = _this$props.userId;
-
-      if (this.state.isFave) {
-        favButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: function onClick() {
-            deleteFavorite(userId, _this2.state.isFave.id);
-
-            _this2.setState({
-              isFave: null
-            });
-          }
-        }, "\u2605");
-      } else {
-        favButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: function onClick() {
-            createFavorite({
-              pet_id: pet.id
-            }, userId);
-
-            _this2.setState({
-              isFave: {
-                pet_id: pet.id
-              }
-            });
-          }
-        }, "\u2606");
-      }
-
-      return favButton;
-    }
   }, {
     key: "adoptShowButton",
     value: function adoptShowButton() {
-      var _this3 = this;
+      var _this2 = this;
 
       var adoptButton;
       var pet = this.props.pet;
@@ -1506,13 +1491,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         if (!pet.adoptedBy) {
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             onClick: function onClick() {
-              return _this3.props.openModal('ADOPT');
+              return _this2.props.openModal('ADOPT');
             }
           }, "ADOPT ME? \uD83D\uDE4F");
         } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             onClick: function onClick() {
-              return _this3.props.openModal('UNADOPT');
+              return _this2.props.openModal('UNADOPT');
             }
           }, "UNADOPT \uD83D\uDE2D");
         } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
@@ -1521,7 +1506,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       } else {
         adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
-            return _this3.props.openModal('LOG IN');
+            return _this2.props.openModal('LOG IN');
           }
         }, "ADOPT ME? \uD83D\uDE4F");
       }
@@ -1529,13 +1514,41 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       return adoptButton;
     }
   }, {
+    key: "handleFavClick",
+    value: function handleFavClick(e) {
+      e.preventDefault();
+      var _this$props = this.props,
+          loggedIn = _this$props.loggedIn,
+          createFavorite = _this$props.createFavorite,
+          deleteFavorite = _this$props.deleteFavorite,
+          favorites = _this$props.favorites,
+          pet = _this$props.pet,
+          userId = _this$props.userId;
+
+      if (this.state.isFave) {
+        deleteFavorite(userId, this.state.isFave.id);
+        this.setState({
+          isFave: null
+        });
+      } else {
+        createFavorite({
+          pet_id: pet.id
+        }, userId);
+        this.setState({
+          isFave: {
+            pet_id: pet.id
+          }
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var pet = this.props.pet;
       var currentUser = this.props.currentUser;
       if (!pet) return null;
-      if (!pet.photoUrls) return null;
-      debugger;
+      if (!pet.photoUrls) return null; // debugger
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1552,7 +1565,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-name"
       }, "Hi, I'm ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-about"
-      }, pet.about), this.adoptShowButton(), this.favoriteButton()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, pet.about), this.adoptShowButton(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "favorite-button",
+        className: this.state.isFave ? "is-fave" : ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "splash-favorite-button",
+        onClick: this.handleFavClick
+      }, "favorite"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
         photoUrls: pet.photoUrls
@@ -1634,17 +1653,18 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(_ref, ownProps) {
   var entities = _ref.entities,
       session = _ref.session;
-  // let favorited = false;
-  var pet = entities.pets[parseInt(ownProps.location.pathname.split('/')[2])];
-  Object.values(entities.favorites).forEach(function (favorite) {
-    if (favorite["pet_id"] === pet.id) favorited = true;
-  });
+  var pet = entities.pets[parseInt(ownProps.location.pathname.split('/')[2])]; // let favorited = false;
+  // Object.values(entities.favorites).forEach((favorite) => {
+  //     if (favorite["pet_id"] === pet.id) (favorited = true);
+  // })
+
   return {
     // pet: entities.pets[ownProps.match.params.petId],
     pet: pet,
     userId: session.id,
     currentUser: entities.users[session.id],
-    favorites: Object.values(entities.favorites) || []
+    favorites: Object.values(entities.favorites) || [] // favorited: favorited,
+
   };
 };
 
@@ -2434,17 +2454,11 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
         src: window.pawHeartURL,
         width: "50px",
         height: "50px"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "VIEW ALL FAVORITED PETS (coming soon!)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: 3 === this.state.selectedBtn ? "is-selected" : "",
-        onClick: this.buttonSelected(3)
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
-        to: "/my/favorites"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "My Saved Pets")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "VIEW ALL FAVORITED PETS (coming soon!)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "adopted-pets"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "ADOPTED PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_adopted_pets_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Route, {
-        path: "/my/favorites",
-        component: _favorites_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-      }));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "ADOPTED PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_adopted_pets_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "adopted-pets"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "FAVORITED PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_favorites_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
     }
   }]);
 
@@ -2616,7 +2630,7 @@ var favoritesErrorsReducer = function favoritesErrorsReducer() {
       return [];
 
     case _actions_favorite_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_FAVORITE_ERRORS"]:
-      return action.errors;
+      return action.errors || [];
 
     default:
       return state;

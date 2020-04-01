@@ -8,18 +8,20 @@ import PetShow from './pet_show';
 
 const mapStateToProps = ({ entities, session }, ownProps) => {
     
-    // let favorited = false;
     let pet = entities.pets[parseInt(ownProps.location.pathname.split('/')[2])];
-    Object.values(entities.favorites).forEach((favorite) => {
-        if (favorite["pet_id"] === pet.id) (favorited = true);
-    })
+    
+    // let favorited = false;
+    // Object.values(entities.favorites).forEach((favorite) => {
+    //     if (favorite["pet_id"] === pet.id) (favorited = true);
+    // })
 
     return {
         // pet: entities.pets[ownProps.match.params.petId],
         pet: pet,
         userId: session.id,
         currentUser: entities.users[session.id],
-        favorites: Object.values(entities.favorites) || []
+        favorites: Object.values(entities.favorites) || [],
+        // favorited: favorited,
     }
 };
 

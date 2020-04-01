@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 class PetShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { isFave: props.favorites.find(fave => fave.pet_id === props.pet.id) }
         this.adoptShowButton = this.adoptShowButton.bind(this);
-        this.favoriteButton = this.favoriteButton.bind(this)
+        this.handleFavClick = this.handleFavClick.bind(this);
+        this.state = { isFave: props.favorites.find(fave => fave.pet_id === props.pet.id) }
     }
     
     componentDidMount() {
@@ -21,34 +21,43 @@ class PetShow extends React.Component {
 
     componentDidUpdate(prevProps){
 
+        // if (this.props.match.params.petId !== prevProps.match.params.petId) {
+        //     const id = this.props.match.params.petId
+        //     this.props.getPet(id);
+        // }  
+
+        // if (this.props.favorites !== prevProps.favorites) {
+        //     this.setState({ isFave: this.props.favorites.find(fave => fave.pet_id === parseInt(prevProps.match.params.petId)) })
+        // }
         if (this.props.match.params.petId !== prevProps.match.params.petId) {
             const id = this.props.match.params.petId
             this.props.getPet(id);
         }  
-
         if (this.props.favorites !== prevProps.favorites) {
-            this.setState({ isFave: this.props.favorites.find(fave => fave.pet_id === parseInt(prevProps.match.params.petId)) })
+            this.setState({ isFave: this.props.favorites.find(fave => fave.restaurant_id === parseInt(prevProps.match.params.restaurantId)) })
         }
     }
 
-    favoriteButton() {
-        let favButton;
-        const { currentUser, createFavorite, deleteFavorite, favorites, pet, userId } = this.props;
-        if (this.state.isFave) {
-            favButton = <button onClick={() => {
-                deleteFavorite(userId, this.state.isFave.id);
-                this.setState({ isFave: null });
-            }
-            }>★</button>
-        } else {
-            favButton = <button onClick={() => {
-                createFavorite({ pet_id: pet.id }, userId);
-                this.setState({ isFave: { pet_id: pet.id } });
-            }
-            }>☆</button>
-        }
-        return favButton;
-    }
+    // favoriteButton() {
+    //     let favButton;
+    //     const { currentUser, createFavorite, deleteFavorite, favorites, favorited, pet, userId } = this.props;
+    //     // if (this.state.isFave) {
+    //         debugger
+    //     if (favorited) {
+    //         favButton = <button onClick={() => {
+    //             deleteFavorite(userId, this.state.isFave.id);
+    //             this.setState({ isFave: null });
+    //         }
+    //         }>★</button>
+    //     } else {
+    //         favButton = <button onClick={() => {
+    //             createFavorite({ pet_id: pet.id }, userId);
+    //             this.setState({ isFave: { pet_id: pet.id } });
+    //         }
+    //         }>☆</button>
+    //     }
+    //     return favButton;
+    // }
 
     adoptShowButton() {
         let adoptButton;
@@ -67,6 +76,20 @@ class PetShow extends React.Component {
             }
         return adoptButton;
     }
+
+
+    handleFavClick(e) {
+        e.preventDefault();
+
+        const { loggedIn, createFavorite, deleteFavorite, favorites, pet, userId } = this.props;
+        if (this.state.isFave) {
+            deleteFavorite(userId, this.state.isFave.id)
+            this.setState({ isFave: null })
+        } else {
+            createFavorite({ pet_id: pet.id }, userId)
+            this.setState({ isFave: { pet_id: pet.id } })
+        }
+    }
     
     render() {
         const { pet } = this.props;
@@ -75,7 +98,7 @@ class PetShow extends React.Component {
         if (!pet) return null;
         if (!pet.photoUrls) return null;
     
-        debugger
+        // debugger
         return(
             <div className='pet-show'>
                 <div className='pet-show-top'>
@@ -109,7 +132,12 @@ class PetShow extends React.Component {
                                 </button>
                             </div> */}
 
-                            {this.favoriteButton()}
+                            {/* {this.favoriteButton()} */}
+                            <div id="favorite-button" className={this.state.isFave ? "is-fave" : ""}>
+                                <button className="splash-favorite-button" onClick={this.handleFavClick}>
+                                    favorite
+                                </button>
+                            </div>
 
 
                         </div>

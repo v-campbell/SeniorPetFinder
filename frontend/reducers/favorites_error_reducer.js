@@ -9,7 +9,7 @@ const favoritesErrorsReducer = (state = [], action) => {
         case REMOVE_FAVORITE:
             return [];
         case RECEIVE_FAVORITE_ERRORS:
-            return action.errors;
+            return action.errors || [];
         default:
             return state;
     }

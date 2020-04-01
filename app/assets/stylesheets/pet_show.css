@@ -249,8 +249,8 @@ button:focus {
     color: rgb(46, 44, 44);
 } */
 
-/* #favorite-button{
-  background-color: #fff;  
+#favorite-button{
+  /* background-color: #fff;   */
 }
 
 #favorite-button:hover{
@@ -258,11 +258,11 @@ button:focus {
 }
 
 .is-fave{
-  background-color: #DA3743 !important;
+  background-color: green !important;
   color: blue !important;
 }
 
-.show-favorite-button{
+/* .show-favorite-button{
   display: flex;
 } */
 
