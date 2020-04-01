@@ -258,11 +258,11 @@ button:focus {
 }
 
 .is-fave{
-  background-color: green !important;
+  background-color: orange !important;
   color: blue !important;
 }
 
-/* .show-favorite-button{
-  display: flex;
-} */
+.show-favorite-button{
+  color: green;
+}
 

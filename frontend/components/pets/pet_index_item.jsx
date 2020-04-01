@@ -4,21 +4,21 @@ import { Link } from 'react-router-dom';
 export default class PetIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        this.state = ({
-            favorited: false || this.props.favorited,
-        })
-        this.toggleFavorite = this.toggleFavorite.bind(this);
+        // this.state = ({
+        //     favorited: false || this.props.favorited,
+        // })
+        // this.toggleFavorite = this.toggleFavorite.bind(this);
     }
 
-    toggleFavorite() {
-        const pet = this.props.pet;
+    // toggleFavorite() {
+    //     const pet = this.props.pet;
 
-        if (this.state.favorited) {
-            this.props.unfavoritePet(pet.id);
-        } else {
-            this.props.favoritePet(pet.id);
-        }
-    }
+    //     if (this.state.favorited) {
+    //         this.props.unfavoritePet(pet.id);
+    //     } else {
+    //         this.props.favoritePet(pet.id);
+    //     }
+    // }
 
     // hoverText() {
     //     return(
@@ -59,7 +59,7 @@ export default class PetIndexItem extends React.Component {
                     </div>
                     {/* <i className="far fa-heart fa-1x"></i> */}
                     {/* <i className="fas fa-heart fa-3x"></i> */}
-                    <button onClick={favoriteButtonAction}>{favoriteButtonText}</button>
+                    {/* <button onClick={favoriteButtonAction}>{favoriteButtonText}</button> */}
 
             </div>
 

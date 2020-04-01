@@ -11,11 +11,7 @@ Rails.application.routes.draw do
     patch 'pets/adopt/:id', :to => '/api/pets#adopt'
     delete 'pets/unadopt/:id', :to => '/api/pets#unadopt'
     get 'users/:user_id/pets', :to => '/api/pets#users_pets'
-
     # resources :favorites, only: [:index, :show, :create, :destroy]
-
   end
   
-  
-
 end

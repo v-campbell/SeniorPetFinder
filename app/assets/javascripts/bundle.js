@@ -1211,10 +1211,9 @@ var PetIndex = /*#__PURE__*/function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/pet_actions */ "./frontend/actions/pet_actions.js");
-/* harmony import */ var _actions_favorite_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/favorite_actions */ "./frontend/actions/favorite_actions.js");
-/* harmony import */ var _pet_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pet_index */ "./frontend/components/pets/pet_index.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-
+/* harmony import */ var _pet_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pet_index */ "./frontend/components/pets/pet_index.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+ // import { favoritePet, unfavoritePet } from '../../actions/favorite_actions';
 
 
 
@@ -1232,17 +1231,13 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     },
     getPet: function getPet(id) {
       return dispatch(Object(_actions_pet_actions__WEBPACK_IMPORTED_MODULE_0__["getPet"])(id));
-    },
-    favoritePet: function favoritePet(id) {
-      return dispatch(Object(_actions_favorite_actions__WEBPACK_IMPORTED_MODULE_1__["favoritePet"])(id));
-    },
-    unfavoritePet: function unfavoritePet(id) {
-      return dispatch(Object(_actions_favorite_actions__WEBPACK_IMPORTED_MODULE_1__["unfavoritePet"])(id));
-    }
+    } // favoritePet: id => dispatch(favoritePet(id)),
+    // unfavoritePet: id => dispatch(unfavoritePet(id))
+
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(_pet_index__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(_pet_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -1269,9 +1264,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1284,41 +1279,34 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
   _inherits(PetIndexItem, _React$Component);
 
   function PetIndexItem(props) {
-    var _this;
-
     _classCallCheck(this, PetIndexItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(PetIndexItem).call(this, props));
-    _this.state = {
-      favorited:  false || _this.props.favorited
-    };
-    _this.toggleFavorite = _this.toggleFavorite.bind(_assertThisInitialized(_this));
-    return _this;
-  }
+    return _possibleConstructorReturn(this, _getPrototypeOf(PetIndexItem).call(this, props)); // this.state = ({
+    //     favorited: false || this.props.favorited,
+    // })
+    // this.toggleFavorite = this.toggleFavorite.bind(this);
+  } // toggleFavorite() {
+  //     const pet = this.props.pet;
+  //     if (this.state.favorited) {
+  //         this.props.unfavoritePet(pet.id);
+  //     } else {
+  //         this.props.favoritePet(pet.id);
+  //     }
+  // }
+  // hoverText() {
+  //     return(
+  //         <div className='hover-text'>
+  //             hover over
+  //             <div>HOVERED</div>
+  //         </div>
+  //     )
+  // }
+
 
   _createClass(PetIndexItem, [{
-    key: "toggleFavorite",
-    value: function toggleFavorite() {
-      var pet = this.props.pet;
-
-      if (this.state.favorited) {
-        this.props.unfavoritePet(pet.id);
-      } else {
-        this.props.favoritePet(pet.id);
-      }
-    } // hoverText() {
-    //     return(
-    //         <div className='hover-text'>
-    //             hover over
-    //             <div>HOVERED</div>
-    //         </div>
-    //     )
-    // }
-
-  }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this = this;
 
       var pet = this.props.pet;
       if (!pet.photoUrls) return null;
@@ -1327,7 +1315,7 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
       });
 
       var favoriteButtonAction = function favoriteButtonAction() {
-        return _this2.props.favoritePet(pet.id);
+        return _this.props.favoritePet(pet.id);
       };
 
       if (pet.favorited_by_current_user) {
@@ -1336,7 +1324,7 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
         });
 
         favoriteButtonAction = function favoriteButtonAction() {
-          return _this2.props.unfavoritePet(pet.id);
+          return _this.props.unfavoritePet(pet.id);
         };
       }
 
@@ -1357,9 +1345,7 @@ var PetIndexItem = /*#__PURE__*/function (_React$Component) {
         className: "pet-index-item-link"
       }, pet.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-index-item-text-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Age:  ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Sex:  ", pet.sex)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: favoriteButtonAction
-      }, favoriteButtonText)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Age:  ", pet.age), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Sex:  ", pet.sex))));
     }
   }]);
 
@@ -1416,21 +1402,27 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PetShow).call(this, props));
     _this.adoptShowButton = _this.adoptShowButton.bind(_assertThisInitialized(_this));
     _this.handleFavClick = _this.handleFavClick.bind(_assertThisInitialized(_this));
-    _this.state = {
-      isFave: props.favorites.find(function (fave) {
-        return fave.pet_id === props.pet.id;
-      })
-    };
+    _this.createdFav = false;
     return _this;
   }
 
   _createClass(PetShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       this.props.getPet(this.props.match.params.id);
 
       if (this.props.userId) {
-        this.props.requestFavorites(this.props.userId);
+        this.props.requestFavorites(this.props.userId).then(function (payload) {
+          _this2.setState({
+            favorites: Object.values(payload.favorites)
+          }); // .then(() => {
+          //     console.log(this.state)
+          // })
+          // console.log(payload)
+
+        });
       }
 
       window.scrollTo(0, 0);
@@ -1438,24 +1430,12 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      // if (this.props.match.params.petId !== prevProps.match.params.petId) {
-      //     const id = this.props.match.params.petId
-      //     this.props.getPet(id);
-      // }  
       // if (this.props.favorites !== prevProps.favorites) {
-      //     this.setState({ isFave: this.props.favorites.find(fave => fave.pet_id === parseInt(prevProps.match.params.petId)) })
+      //     this.setState({ isFave: this.props.favorites.find(fav => fav.pet_id === parseInt(prevProps.match.params.petId)) })
       // }
       if (this.props.match.params.petId !== prevProps.match.params.petId) {
         var id = this.props.match.params.petId;
         this.props.getPet(id);
-      }
-
-      if (this.props.favorites !== prevProps.favorites) {
-        this.setState({
-          isFave: this.props.favorites.find(function (fave) {
-            return fave.restaurant_id === parseInt(prevProps.match.params.restaurantId);
-          })
-        });
       }
     } // favoriteButton() {
     //     let favButton;
@@ -1481,7 +1461,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "adoptShowButton",
     value: function adoptShowButton() {
-      var _this2 = this;
+      var _this3 = this;
 
       var adoptButton;
       var pet = this.props.pet;
@@ -1491,13 +1471,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         if (!pet.adoptedBy) {
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             onClick: function onClick() {
-              return _this2.props.openModal('ADOPT');
+              return _this3.props.openModal('ADOPT');
             }
           }, "ADOPT ME? \uD83D\uDE4F");
         } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             onClick: function onClick() {
-              return _this2.props.openModal('UNADOPT');
+              return _this3.props.openModal('UNADOPT');
             }
           }, "UNADOPT \uD83D\uDE2D");
         } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
@@ -1506,7 +1486,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       } else {
         adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
-            return _this2.props.openModal('LOG IN');
+            return _this3.props.openModal('LOG IN');
           }
         }, "ADOPT ME? \uD83D\uDE4F");
       }
@@ -1516,29 +1496,45 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleFavClick",
     value: function handleFavClick(e) {
-      e.preventDefault();
+      e.preventDefault(); // debugger
+
       var _this$props = this.props,
-          loggedIn = _this$props.loggedIn,
           createFavorite = _this$props.createFavorite,
           deleteFavorite = _this$props.deleteFavorite,
-          favorites = _this$props.favorites,
           pet = _this$props.pet,
           userId = _this$props.userId;
+      var alreadyFavorited = -1;
+      var favorites = this.state.favorites; // console.log(favorites)
 
-      if (this.state.isFave) {
-        deleteFavorite(userId, this.state.isFave.id);
+      for (var i = 0; i < favorites.length; i++) {
+        console.log(alreadyFavorited, favorites, pet.id);
+
+        if (favorites[i].petId == pet.id) {
+          alreadyFavorited = i;
+        }
+      }
+
+      console.log(favorites, this.state);
+      console.log(this.createdFav); // debugger
+
+      if (alreadyFavorited !== -1 || this.createdFav) {
+        deleteFavorite(userId, pet.id);
+        favorites = favorites.splice(alreadyFavorited, alreadyFavorited);
+        console.log(favorites); // if (!favorites) favorites = {}
+        // console.log(this.state)
+
         this.setState({
-          isFave: null
+          favorites: favorites
         });
+        this.createdFav = false;
       } else {
         createFavorite({
           pet_id: pet.id
         }, userId);
-        this.setState({
-          isFave: {
-            pet_id: pet.id
-          }
-        });
+        this.createdFav = true; // .then((payload) => {
+        //     console.log(payload)
+        //     this.setState({ favorites: favorites.push(payload.favorite) })
+        // })
       }
     }
   }, {
@@ -1566,12 +1562,11 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }, "Hi, I'm ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-about"
       }, pet.about), this.adoptShowButton(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "favorite-button",
-        className: this.state.isFave ? "is-fave" : ""
+        id: "favorite-button"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "splash-favorite-button",
+        className: "show-favorite-button",
         onClick: this.handleFavClick
-      }, "\u2605favoritebutton\u2605"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.createdFav ? "★" : "☆"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
         photoUrls: pet.photoUrls
@@ -2694,7 +2689,8 @@ var favoritesReducer = function favoritesReducer() {
       return Object.assign(action.favorites);
 
     case _actions_favorite_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_FAVORITE"]:
-      return Object(lodash__WEBPACK_IMPORTED_MODULE_0__["merge"])({}, state, action.favorite);
+      // return merge({}, state, action.favorite)
+      return Object.assign({}, state, action.favorite);
 
     case _actions_favorite_actions__WEBPACK_IMPORTED_MODULE_1__["REMOVE_FAVORITE"]:
       var favorites = Object.assign({}, state);

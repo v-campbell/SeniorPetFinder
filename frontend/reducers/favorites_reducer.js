@@ -40,7 +40,8 @@ const favoritesReducer = (state = {}, action) => {
         case RECEIVE_FAVORITES:
             return Object.assign(action.favorites)
         case RECEIVE_FAVORITE:
-            return merge({}, state, action.favorite)
+            // return merge({}, state, action.favorite)
+            return Object.assign({}, state, action.favorite)
         case REMOVE_FAVORITE:
             const favorites = Object.assign({}, state)
             delete favorites[action.favoriteId]
