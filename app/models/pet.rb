@@ -9,7 +9,10 @@ class Pet < ApplicationRecord
         class_name: :User,
         optional: true
 
+    has_many :favorites
+    
     has_many_attached :photos
+
 
 
     def self.fetch(maxId)

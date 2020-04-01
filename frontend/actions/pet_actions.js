@@ -1,21 +1,23 @@
-import { fetchPets, fetchPet, addFavoriteToPet, removeFavoriteFromPet, addAdoptToPet, removeAdoptFromPet, fetchUserPets } from '../util/pet_util';
+import { fetchPets, fetchPet, addAdoptToPet, removeAdoptFromPet, fetchUserPets } from '../util/pet_util';
 
-export const RECEIVE_PETS = 'RECEIVE_PET';
-export const RECEIVE_PET = 'RECEIVE_PETS';
+export const RECEIVE_PETS = 'RECEIVE_PETS';
+export const RECEIVE_PET = 'RECEIVE_PET';
 export const CLEAR_PET_ERRORS = 'CLEAR_PET_ERRORS';
 export const RECEIVE_USER_PETS = 'RECEIVE_USER_PETS';
 
 
 
-const receivePets = pets => ({
+export const receivePets = pets => ({
     type: RECEIVE_PETS,
     pets
 })
 
-const receivePet = pet => ({
-    type: RECEIVE_PET,
-    pet
-})
+export const receivePet = pet => {
+    return ({
+        type: RECEIVE_PET,
+        pet
+    })
+}
 
 export const clearErrors = () => ({
     type: CLEAR_PET_ERRORS
@@ -32,19 +34,21 @@ export const getPets = (maxId) => dispatch => fetchPets(maxId)
 export const getPet = id => dispatch => fetchPet(id)
     .then(pet => dispatch(receivePet(pet)));
 
-export const favoritePet = id => dispatch => addFavoriteToPet(id)
-    .then(pet => dispatch(receivePet(pet)));
-
-export const unfavoritePet = id => dispatch => removeFavoriteFromPet(id)
-    .then(pet => dispatch(receivePet(pet)));
-
+    
 export const adoptPet = id => dispatch => addAdoptToPet(id)
-    .then(pet => dispatch(receivePet(pet)));
+.then(pet => dispatch(receivePet(pet)));
 
 export const unadoptPet = id => dispatch => removeAdoptFromPet(id)
-    .then(pet => dispatch(receivePet(pet)));
+.then(pet => dispatch(receivePet(pet)));
 
 export const getUserPets = id => dispatch => fetchUserPets(id)
-    .then(pets => dispatch(receiveUserPets(pets)));
+.then(pets => dispatch(receiveUserPets(pets)));
 
-// window.getPet = getPet;
+
+    
+    // export const favoritePet = id => dispatch => addFavoriteToPet(id)
+    //     .then(pet => dispatch(receivePet(pet)));
+    
+    // export const unfavoritePet = id => dispatch => removeFavoriteFromPet(id)
+    //     .then(pet => dispatch(receivePet(pet)));
+    // window.getPet = getPet;

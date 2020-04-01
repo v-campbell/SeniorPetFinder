@@ -1,0 +1,1 @@
+json.favorites @favorite.user_id, @favorite.pet_id

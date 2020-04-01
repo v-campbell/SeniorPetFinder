@@ -1,4 +1,5 @@
-import { getPets, getPet, favoritePet, unfavoritePet } from '../../actions/pet_actions';
+import { getPets, getPet } from '../../actions/pet_actions';
+import { favoritePet, unfavoritePet } from '../../actions/favorite_actions';
 import PetIndex from './pet_index';
 import { connect } from 'react-redux';
 

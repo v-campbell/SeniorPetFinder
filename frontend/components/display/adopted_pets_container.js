@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 
 const mapStateToProps = (state) => {
-    // debugger
     return {
         // pets_ids: Object.values(state.entities.users.pet_ids)
         pets: Object.values(state.entities.pets).filter(pet => pet.adoptedBy == state.session.id),

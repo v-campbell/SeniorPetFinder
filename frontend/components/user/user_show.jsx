@@ -1,5 +1,6 @@
 import React from 'react';
 import AdoptedPets from '../display/adopted_pets_container';
+import MyFavoritesContainer from "./favorites_container";
 
 class UserShow extends React.Component {
     constructor(props) {
@@ -39,6 +40,10 @@ class UserShow extends React.Component {
                             <br />
                             VIEW ALL FAVORITED PETS
                             (coming soon!)
+                            <div className={3 === this.state.selectedBtn ? "is-selected" : ""}
+                                onClick={this.buttonSelected(3)} >
+                                <Link to="/my/favorites"><span>My Saved Pets</span></Link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -48,6 +53,10 @@ class UserShow extends React.Component {
                     <h1>ADOPTED PETS</h1>
                     <AdoptedPets />
                 </div>
+                <Route
+                    path="/my/favorites"
+                    component={MyFavoritesContainer}
+                />
             </div>
         )
     }

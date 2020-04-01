@@ -14,7 +14,6 @@ class Api::PetsController < ApplicationController
 
     def adopt
         @pet = Pet.find(params[:id])
-        # debugger
         # if no owner
         if !@pet.adopted_by 
             @pet.adopted_by = current_user.id

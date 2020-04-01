@@ -43,8 +43,8 @@ class PetIndex extends React.Component {
                             pet={pet}
                             id={pet.id}
                             photoUrls={pet.photoUrls}
-                        // favoritePet={this.props.favoritePet}
-                        // unfavoritePet={this.props.unfavoritePet} 
+                            favoritePet={this.props.favoritePet}
+                            unfavoritePet={this.props.unfavoritePet} 
                         />
                     )}
                 </div>

@@ -4,6 +4,20 @@ import { Link } from 'react-router-dom';
 export default class PetIndexItem extends React.Component {
     constructor(props) {
         super(props);
+        this.state = ({
+            favorited: false || this.props.favorited,
+        })
+        this.toggleFavorite = this.toggleFavorite.bind(this);
+    }
+
+    toggleFavorite() {
+        const pet = this.props.pet;
+
+        if (this.state.favorited) {
+            this.props.unfavoritePet(pet.id);
+        } else {
+            this.props.favoritePet(pet.id);
+        }
     }
 
     // hoverText() {
@@ -16,9 +30,15 @@ export default class PetIndexItem extends React.Component {
     // }
 
     render() {
-        // debugger
         const {pet} = this.props;
         if (!pet.photoUrls) return null;
+
+        let favoriteButtonText = <i className="far fa-heart fa-1x"></i>;
+        let favoriteButtonAction = () => this.props.favoritePet(pet.id);
+        if (pet.favorited_by_current_user) {
+            favoriteButtonText = <i className="fas fa-heart"></i>;
+            favoriteButtonAction = () => this.props.unfavoritePet(pet.id);
+        }
         return (
             
             <div className='pet-index-item gradient'>
@@ -37,8 +57,10 @@ export default class PetIndexItem extends React.Component {
                         <p>Age:  {pet.age}</p>  
                         <p>Sex:  {pet.sex}</p>  
                     </div>
-                    <i className="far fa-heart fa-1x"></i>
+                    {/* <i className="far fa-heart fa-1x"></i> */}
                     {/* <i className="fas fa-heart fa-3x"></i> */}
+                    <button onClick={favoriteButtonAction}>{favoriteButtonText}</button>
+
             </div>
 
             </div>

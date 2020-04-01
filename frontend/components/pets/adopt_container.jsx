@@ -6,7 +6,6 @@ import AdoptForm from './adopt_form';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-    // debugger
     return {
         pet: state.entities.pets[parseInt(ownProps.location.pathname.split('/')[2])],
         errors: state.errors.sessionErrors,

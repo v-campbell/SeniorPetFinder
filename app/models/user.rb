@@ -11,6 +11,12 @@ class User < ApplicationRecord
     foreign_key: :adopted_by,
     class_name: :Pet
 
+  has_many :favorites
+
+  has_many :favorited_pets,
+    through: :favorites,
+    source: :pet
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil

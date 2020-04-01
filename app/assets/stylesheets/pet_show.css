@@ -249,3 +249,20 @@ button:focus {
     color: rgb(46, 44, 44);
 } */
 
+/* #favorite-button{
+  background-color: #fff;  
+}
+
+#favorite-button:hover{
+  border: 2px solid #da3743;
+}
+
+.is-fave{
+  background-color: #DA3743 !important;
+  color: blue !important;
+}
+
+.show-favorite-button{
+  display: flex;
+} */
+

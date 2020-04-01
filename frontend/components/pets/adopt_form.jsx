@@ -33,7 +33,6 @@ class AdoptForm extends React.Component {
     }
 
     render() {
-        // debugger
         return(
             <div>
                 <div onClick={this.props.closeModal} className='close-x'>×</div>
