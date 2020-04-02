@@ -2409,7 +2409,7 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
         src: window.pawHeartURL,
         width: "50px",
         height: "50px"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "VIEW ALL FAVORITED PETS (coming soon!)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "VIEW ALL FAVORITED PETS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "adopted-pets"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "ADOPTED PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_adopted_pets_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "adopted-pets"

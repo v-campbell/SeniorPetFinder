@@ -80,7 +80,6 @@ class PetShow extends React.Component {
         if (!pet) return null;
         if (!pet.photoUrls) return null;
     
-        // debugger
         return(
             <div className='pet-show'>
                 <div className='pet-show-top'>

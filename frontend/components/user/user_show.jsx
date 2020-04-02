@@ -39,7 +39,6 @@ class UserShow extends React.Component {
                             <br />
                             <br />
                             VIEW ALL FAVORITED PETS
-                            (coming soon!)
                             {/* <div className={3 === this.state.selectedBtn ? "is-selected" : ""}
                                 onClick={this.buttonSelected(3)} >
                                 <Link to="/my/favorites"><span>My Saved Pets</span></Link>

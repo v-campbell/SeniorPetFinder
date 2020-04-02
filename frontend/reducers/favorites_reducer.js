@@ -18,7 +18,6 @@
 //             newState[action.favorite.id] = action.favorite;
 //             return newState;
 //         case RECEIVE_FAVORITED_PET:
-//             debugger
 //             return Object.assign({}, prevState, { [action.pet.id]: action.pet });
 //         case REMOVE_FAVORITE:
 //             newState = merge({}, prevState);
