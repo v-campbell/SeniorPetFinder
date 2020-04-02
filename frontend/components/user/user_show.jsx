@@ -1,6 +1,6 @@
 import React from 'react';
 import AdoptedPets from '../display/adopted_pets_container';
-import MyFavoritesContainer from "./favorites_container";
+import FavoritedPets from "./favorites_container";
 
 class UserShow extends React.Component {
     constructor(props) {
@@ -57,7 +57,7 @@ class UserShow extends React.Component {
                     {/* <a id="gotofav">HERE</a> */}
                     {/* <a id="link1">Link 1</a> */}
                     <h1>FAVORITED PETS</h1>
-                    <MyFavoritesContainer />
+                    <FavoritedPets />
                 </div>
             </div>
         )

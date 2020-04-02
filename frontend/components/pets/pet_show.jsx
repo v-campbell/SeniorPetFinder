@@ -9,6 +9,7 @@ class PetShow extends React.Component {
         this.adoptShowButton = this.adoptShowButton.bind(this);
         this.handleFavClick = this.handleFavClick.bind(this);
         this.createdFav = false;
+        // this.createdFav = this.createdFav;
     }
     
     componentDidMount() {
@@ -17,46 +18,18 @@ class PetShow extends React.Component {
             this.props.requestFavorites(this.props.userId)
                 .then((payload) => {
                     this.setState({favorites: Object.values(payload.favorites)})
-                    // .then(() => {
-                    //     console.log(this.state)
-                    // })
-                    // console.log(payload)
                 })
         }
         window.scrollTo(0, 0);
     }
 
     componentDidUpdate(prevProps){
-        // if (this.props.favorites !== prevProps.favorites) {
-        //     this.setState({ isFave: this.props.favorites.find(fav => fav.pet_id === parseInt(prevProps.match.params.petId)) })
-        // }
 
         if (this.props.match.params.petId !== prevProps.match.params.petId) {
             const id = this.props.match.params.petId
             this.props.getPet(id);
         }
     }
-
-    // favoriteButton() {
-    //     let favButton;
-    //     const { currentUser, createFavorite, deleteFavorite, favorites, favorited, pet, userId } = this.props;
-    //     // if (this.state.isFave) {
-    //         debugger
-    //     if (favorited) {
-    //         favButton = <button onClick={() => {
-    //             deleteFavorite(userId, this.state.isFave.id);
-    //             this.setState({ isFave: null });
-    //         }
-    //         }>★</button>
-    //     } else {
-    //         favButton = <button onClick={() => {
-    //             createFavorite({ pet_id: pet.id }, userId);
-    //             this.setState({ isFave: { pet_id: pet.id } });
-    //         }
-    //         }>☆</button>
-    //     }
-    //     return favButton;
-    // }
 
     adoptShowButton() {
         let adoptButton;
@@ -79,35 +52,24 @@ class PetShow extends React.Component {
 
     handleFavClick(e) {
         e.preventDefault();
-        // debugger
         const { createFavorite, deleteFavorite, pet, userId } = this.props;
         let alreadyFavorited = -1;
         let favorites = this.state.favorites
-        // console.log(favorites)
         for (let i = 0; i < favorites.length; i++) {
-            console.log(alreadyFavorited, favorites, pet.id)
             if (favorites[i].petId == pet.id) {
                 alreadyFavorited = i;
             }
         }
-        console.log(favorites, this.state)
-        console.log(this.createdFav)
-        // debugger
+
         if ((alreadyFavorited !== -1) || this.createdFav) {
             deleteFavorite(userId, pet.id)
             favorites = favorites.splice(alreadyFavorited, alreadyFavorited)
-            console.log(favorites)
-            // if (!favorites) favorites = {}
-            // console.log(this.state)
+
             this.setState({ favorites: favorites })
             this.createdFav = false
         } else {
             createFavorite({ pet_id: pet.id }, userId)
             this.createdFav = true
-            // .then((payload) => {
-            //     console.log(payload)
-            //     this.setState({ favorites: favorites.push(payload.favorite) })
-            // })
         }
     }
     
@@ -143,7 +105,8 @@ class PetShow extends React.Component {
 
                             <div id="favorite-button">
                                 <button className="show-favorite-button" onClick={this.handleFavClick}>
-                                    {this.createdFav ? "★" : "☆" }
+                                    {/* {this.createdFav ? "★" : "☆" } */}
+                                    {this.createdFav ? "UNFAVORITE ☆" : "FAVORITE ★" }
                                 </button>
                             </div>
                         </div>

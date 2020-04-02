@@ -16,6 +16,7 @@ class Favorites extends React.Component {
                 <section>
                     <div className="favorite-index-item">
                         {faveList}
+                        {/* all the pets */}
                     </div>
                 </section>
             </div>

@@ -1402,7 +1402,8 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PetShow).call(this, props));
     _this.adoptShowButton = _this.adoptShowButton.bind(_assertThisInitialized(_this));
     _this.handleFavClick = _this.handleFavClick.bind(_assertThisInitialized(_this));
-    _this.createdFav = false;
+    _this.createdFav = false; // this.createdFav = this.createdFav;
+
     return _this;
   }
 
@@ -1417,11 +1418,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         this.props.requestFavorites(this.props.userId).then(function (payload) {
           _this2.setState({
             favorites: Object.values(payload.favorites)
-          }); // .then(() => {
-          //     console.log(this.state)
-          // })
-          // console.log(payload)
-
+          });
         });
       }
 
@@ -1430,34 +1427,11 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      // if (this.props.favorites !== prevProps.favorites) {
-      //     this.setState({ isFave: this.props.favorites.find(fav => fav.pet_id === parseInt(prevProps.match.params.petId)) })
-      // }
       if (this.props.match.params.petId !== prevProps.match.params.petId) {
         var id = this.props.match.params.petId;
         this.props.getPet(id);
       }
-    } // favoriteButton() {
-    //     let favButton;
-    //     const { currentUser, createFavorite, deleteFavorite, favorites, favorited, pet, userId } = this.props;
-    //     // if (this.state.isFave) {
-    //         debugger
-    //     if (favorited) {
-    //         favButton = <button onClick={() => {
-    //             deleteFavorite(userId, this.state.isFave.id);
-    //             this.setState({ isFave: null });
-    //         }
-    //         }>★</button>
-    //     } else {
-    //         favButton = <button onClick={() => {
-    //             createFavorite({ pet_id: pet.id }, userId);
-    //             this.setState({ isFave: { pet_id: pet.id } });
-    //         }
-    //         }>☆</button>
-    //     }
-    //     return favButton;
-    // }
-
+    }
   }, {
     key: "adoptShowButton",
     value: function adoptShowButton() {
@@ -1496,33 +1470,24 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleFavClick",
     value: function handleFavClick(e) {
-      e.preventDefault(); // debugger
-
+      e.preventDefault();
       var _this$props = this.props,
           createFavorite = _this$props.createFavorite,
           deleteFavorite = _this$props.deleteFavorite,
           pet = _this$props.pet,
           userId = _this$props.userId;
       var alreadyFavorited = -1;
-      var favorites = this.state.favorites; // console.log(favorites)
+      var favorites = this.state.favorites;
 
       for (var i = 0; i < favorites.length; i++) {
-        console.log(alreadyFavorited, favorites, pet.id);
-
         if (favorites[i].petId == pet.id) {
           alreadyFavorited = i;
         }
       }
 
-      console.log(favorites, this.state);
-      console.log(this.createdFav); // debugger
-
       if (alreadyFavorited !== -1 || this.createdFav) {
         deleteFavorite(userId, pet.id);
         favorites = favorites.splice(alreadyFavorited, alreadyFavorited);
-        console.log(favorites); // if (!favorites) favorites = {}
-        // console.log(this.state)
-
         this.setState({
           favorites: favorites
         });
@@ -1531,10 +1496,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         createFavorite({
           pet_id: pet.id
         }, userId);
-        this.createdFav = true; // .then((payload) => {
-        //     console.log(payload)
-        //     this.setState({ favorites: favorites.push(payload.favorite) })
-        // })
+        this.createdFav = true;
       }
     }
   }, {
@@ -1566,7 +1528,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "show-favorite-button",
         onClick: this.handleFavClick
-      }, this.createdFav ? "★" : "☆"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.createdFav ? "UNFAVORITE ☆" : "FAVORITE ★"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
         photoUrls: pet.photoUrls
@@ -2241,14 +2203,14 @@ var FavoriteIndexItem = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           favorite = _this$props.favorite,
           deleteFavorite = _this$props.deleteFavorite,
-          userId = _this$props.userId;
+          userId = _this$props.userId; // debugger
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-index-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return deleteFavorite(userId, favorite.id);
-        }
-      }, "Remove from favorited pets")));
+        className: "pet-liked-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/pets/".concat(favorite.petId),
+        className: "pet-index-item-link pet-liked-link"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, favorite.petName)));
     }
   }]);
 

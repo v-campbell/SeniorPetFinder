@@ -251,18 +251,33 @@ button:focus {
 
 #favorite-button{
   /* background-color: #fff;   */
+  /* display: inline-block; */
 }
 
-#favorite-button:hover{
+/* #favorite-button:hover{
   border: 2px solid #da3743;
-}
-
+} */
+/* 
 .is-fave{
   background-color: orange !important;
   color: blue !important;
-}
+} */
 
 .show-favorite-button{
-  color: green;
 }
 
+.favorite-index-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pet-liked-item {
+    display: flex;
+    text-align: center;
+    /* background-color: burlywood; */
+    padding: 10px;
+}
+
+.pet-liked-link:hover {
+    color: rgb(236, 220, 218)
+}
