@@ -3090,11 +3090,9 @@ var Protected = function Protected(_ref2) {
     path: path,
     exact: exact,
     render: function render(props) {
-      return (// loggedIn ? <Component {...props} /> : onClick={() => openModal('LOG IN')} />
-        loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
-          to: "/"
-        })
-      );
+      return loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+        to: "/"
+      });
     }
   });
 };
