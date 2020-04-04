@@ -57,7 +57,7 @@ class PetShow extends React.Component {
         e.preventDefault();
         const { createFavorite, deleteFavorite, pet, userId } = this.props;
         let alreadyFavorited = -1;
-        debugger
+        // debugger
         let favorites = this.state.favorites
         for (let i = 0; i < favorites.length; i++) {
             if (favorites[i].petId == pet.id) {

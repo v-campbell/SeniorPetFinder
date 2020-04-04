@@ -1479,8 +1479,8 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
           deleteFavorite = _this$props.deleteFavorite,
           pet = _this$props.pet,
           userId = _this$props.userId;
-      var alreadyFavorited = -1;
-      debugger;
+      var alreadyFavorited = -1; // debugger
+
       var favorites = this.state.favorites;
 
       for (var i = 0; i < favorites.length; i++) {
