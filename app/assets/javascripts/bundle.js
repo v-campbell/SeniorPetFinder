@@ -1402,7 +1402,10 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PetShow).call(this, props));
     _this.adoptShowButton = _this.adoptShowButton.bind(_assertThisInitialized(_this));
     _this.handleFavClick = _this.handleFavClick.bind(_assertThisInitialized(_this));
-    _this.createdFav = false; // this.createdFav = this.createdFav;
+    _this.state = {
+      createdFav: false
+    }; // this.createdFav = false;
+    // this.createdFav = this.createdFav;
 
     return _this;
   }
@@ -1477,6 +1480,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
           pet = _this$props.pet,
           userId = _this$props.userId;
       var alreadyFavorited = -1;
+      debugger;
       var favorites = this.state.favorites;
 
       for (var i = 0; i < favorites.length; i++) {
@@ -1505,8 +1509,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       var pet = this.props.pet;
       var currentUser = this.props.currentUser;
       if (!pet) return null;
-      if (!pet.photoUrls) return null; // debugger
-
+      if (!pet.photoUrls) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2203,8 +2206,7 @@ var FavoriteIndexItem = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           favorite = _this$props.favorite,
           deleteFavorite = _this$props.deleteFavorite,
-          userId = _this$props.userId; // debugger
-
+          userId = _this$props.userId;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-liked-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -2548,13 +2550,13 @@ var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./session_errors_reducer */ "./frontend/reducers/session_errors_reducer.js");
-/* harmony import */ var _favorites_error_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./favorites_error_reducer */ "./frontend/reducers/favorites_error_reducer.js");
+/* harmony import */ var _favorites_error_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./favorites_error_reducer */ "./frontend/reducers/favorites_error_reducer.js");
 
 
 
 var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   sessionErrors: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  favorites: _favorites_error_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  favorites: _favorites_error_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
 
@@ -2627,7 +2629,6 @@ __webpack_require__.r(__webpack_exports__);
 //             newState[action.favorite.id] = action.favorite;
 //             return newState;
 //         case RECEIVE_FAVORITED_PET:
-//             debugger
 //             return Object.assign({}, prevState, { [action.pet.id]: action.pet });
 //         case REMOVE_FAVORITE:
 //             newState = merge({}, prevState);

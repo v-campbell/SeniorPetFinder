@@ -8,7 +8,10 @@ class PetShow extends React.Component {
         super(props);
         this.adoptShowButton = this.adoptShowButton.bind(this);
         this.handleFavClick = this.handleFavClick.bind(this);
-        this.createdFav = false;
+        this.state = {
+            createdFav: false,
+        };
+        // this.createdFav = false;
         // this.createdFav = this.createdFav;
     }
     
@@ -54,6 +57,7 @@ class PetShow extends React.Component {
         e.preventDefault();
         const { createFavorite, deleteFavorite, pet, userId } = this.props;
         let alreadyFavorited = -1;
+        debugger
         let favorites = this.state.favorites
         for (let i = 0; i < favorites.length; i++) {
             if (favorites[i].petId == pet.id) {
