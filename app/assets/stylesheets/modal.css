@@ -19,17 +19,12 @@
 .modal-kid {
   position: absolute;
   top: 140px;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   background-color: white;
   width: 30rem;
   margin: auto;
-  /* max-height: 35rem; */
 
   border-radius: 0.5rem;
 
-  /* font-family: Nexa Bold, arial, helvetica, sans-serif; */
   font-family: 'Josefin Sans', sans-serif;
   color: #5a5a5a;
   font-size: 13px;

@@ -1770,6 +1770,9 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
+    login: function login(user) {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["login"])(user));
+    },
     handleForm: function handleForm(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["login"])(user));
     },
@@ -1844,6 +1847,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.renderErrors = _this.renderErrors.bind(_assertThisInitialized(_this));
     _this.fillDemo = _this.fillDemo.bind(_assertThisInitialized(_this));
+    _this.handleDemo = _this.handleDemo.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1859,12 +1863,63 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
-    key: "update",
-    value: function update(field) {
+    key: "handleDemo",
+    value: function handleDemo(e) {
       var _this3 = this;
 
+      var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
+      e.preventDefault();
+      var user = {
+        username: 'Hachikō',
+        password: 'password'
+      };
+      var username = user.username,
+          password = user.password;
+
+      if (this.state.username !== username) {
+        var inputUser = setInterval(function () {
+          if (_this3.state.username !== username) {
+            var temp = username.slice(0, _this3.state.username.length + 1);
+
+            _this3.setState({
+              username: temp
+            });
+          } else {
+            clearInterval(inputUser);
+            animatePassword();
+          }
+        }, speed);
+      }
+
+      var animatePassword = function animatePassword() {
+        var inputPassword = setInterval(function () {
+          if (_this3.state.password !== password) _this3.setState({
+            password: password.slice(0, _this3.state.password.length + 1)
+          });else {
+            clearInterval(inputPassword);
+            login();
+
+            _this3.props.closeModal();
+          }
+        }, speed);
+      };
+
+      var login = function login() {
+        _this3.props.login(_this3.state);
+
+        _this3.setState({
+          username: "",
+          password: ""
+        });
+      };
+    }
+  }, {
+    key: "update",
+    value: function update(field) {
+      var _this4 = this;
+
       return function (e) {
-        return _this3.setState(_defineProperty({}, field, e.currentTarget.value));
+        return _this4.setState(_defineProperty({}, field, e.currentTarget.value));
       };
     }
   }, {
@@ -1882,14 +1937,14 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "fillDemo",
     value: function fillDemo(e) {
-      var _this4 = this;
+      var _this5 = this;
 
       e.preventDefault();
       this.props.handleForm({
         username: 'Hachikō',
         password: 'password'
       }).then(function () {
-        return _this4.props.closeModal();
+        return _this5.props.closeModal();
       });
     }
   }, {
@@ -1962,7 +2017,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         value: this.props.formType
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bottom-modal-buttons"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Already have an account? ", this.props.otherForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Already have an account? ", this.props.otherForm), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-field"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-label"
@@ -1990,7 +2045,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bottom-modal-buttons"
       }, "Need an account? ", this.props.otherForm, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Too lazy to create one? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.fillDemo
+        onClick: this.handleDemo
       }, " DEMO USER "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))));
     }
   }]);

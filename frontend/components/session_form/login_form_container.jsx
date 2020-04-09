@@ -12,6 +12,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+    login: user => dispatch(login(user)),
     handleForm: (user) => dispatch(login(user)),
     // takes user to other form 
     otherForm: (
