@@ -695,11 +695,11 @@ var Footer = function Footer() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.linkedin.com/in/victoria-khym-campbell/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fab fa-linkedin fa-1x"
+    className: "fab fa-linkedin fa-2x"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/v-campbell/SeniorPetFinder/wiki"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fab fa-github-square fa-1x"
+    className: "fab fa-github-square fa-2x"
   })));
 };
 
@@ -2121,66 +2121,162 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pets/pet_index_container */ "./frontend/components/pets/pet_index_container.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
-var Splash = function Splash(_ref) {
-  var currentUser = _ref.currentUser;
+var Splash = /*#__PURE__*/function (_React$Component) {
+  _inherits(Splash, _React$Component);
 
-  var loggedOutHome = function loggedOutHome() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-      className: "splash-text splash-text-logged-out"
-    }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      className: "gray",
-      src: window.grayURL
-    }));
-  };
+  function Splash(props) {
+    var _this;
 
-  var loggedInHome = function loggedInHome() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "splash-greeting"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      className: "pirate",
-      src: window.pirateURL
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "splash-text"
-    }, "Meet Russell.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "splash-subtext"
-    }, "He only has eye for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      className: "fas fa-arrow-right"
-    }))));
-  };
+    _classCallCheck(this, Splash);
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, currentUser ? loggedInHome() : loggedOutHome(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash-services-box"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "HOW IT WORKS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash-services"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "services-pets"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-dog fa-3x"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Browse pets from ages 7+"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "services-favorites"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: window.pawHeartURL,
-    width: "50px",
-    height: "50px"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Log in to add good girls and boys to your favorites list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "services-brain"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fas fa-lightbulb fa-3x"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Stay awake thinking about the fact that your parents are getting older and happiness is temporary, just like everything else"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "services-adopt"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: window.handHoldURL,
-    width: "50px",
-    height: "50px"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Adopt a senior pet(s) and welcome them into their forever home!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "index-display"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
-};
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Splash).call(this, props));
+    _this.state = {
+      username: '',
+      password: '',
+      first_name: '',
+      last_name: '',
+      email: ''
+    };
+    _this.handleDemo = _this.handleDemo.bind(_assertThisInitialized(_this));
+    _this.loggedOutHome = _this.loggedOutHome.bind(_assertThisInitialized(_this));
+    _this.loggedInHome = _this.loggedInHome.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Splash, [{
+    key: "handleDemo",
+    value: function handleDemo(e) {
+      var _this2 = this;
+
+      var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
+      e.preventDefault();
+      var user = {
+        username: 'Hachikō',
+        password: 'password'
+      };
+      var username = user.username,
+          password = user.password;
+
+      if (this.state.username !== username) {
+        var inputUser = setInterval(function () {
+          if (_this2.state.username !== username) {
+            var temp = username.slice(0, _this2.state.username.length + 1);
+
+            _this2.setState({
+              username: temp
+            });
+          } else {
+            clearInterval(inputUser);
+            animatePassword();
+          }
+        }, speed);
+      }
+
+      var animatePassword = function animatePassword() {
+        var inputPassword = setInterval(function () {
+          if (_this2.state.password !== password) _this2.setState({
+            password: password.slice(0, _this2.state.password.length + 1)
+          });else {
+            clearInterval(inputPassword);
+            login();
+          }
+        }, speed);
+      };
+
+      var login = function login() {
+        _this2.props.login(_this2.state);
+
+        _this2.setState({
+          username: "",
+          password: ""
+        });
+      };
+    }
+  }, {
+    key: "loggedOutHome",
+    value: function loggedOutHome() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "splash-text splash-text-logged-out"
+      }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.handleDemo,
+        className: "splash-demo"
+      }, "DEMO", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-arrow-right"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "gray",
+        src: window.grayURL
+      }));
+    }
+  }, {
+    key: "loggedInHome",
+    value: function loggedInHome() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash-greeting"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "pirate",
+        src: window.pirateURL
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash-text"
+      }, "Meet Russell.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash-subtext"
+      }, "He only has eye for you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.currentUser ? this.loggedInHome() : this.loggedOutHome(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash-services-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "HOW IT WORKS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "splash-services"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "services-pets"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-dog fa-3x"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Browse pets from ages 7+"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "services-favorites"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.pawHeartURL,
+        width: "50px",
+        height: "50px"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Log in to add good girls and boys to your favorites list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "services-brain"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-lightbulb fa-3x"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Stay awake thinking about the fact that your parents are getting older and happiness is temporary, just like everything else"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "services-adopt"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.handHoldURL,
+        width: "50px",
+        height: "50px"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Adopt a senior pet(s) and welcome them into their forever home!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "index-display"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+    }
+  }]);
+
+  return Splash;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
 
@@ -2195,8 +2291,13 @@ var Splash = function Splash(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _splash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./splash */ "./frontend/components/splash/splash.jsx");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _splash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./splash */ "./frontend/components/splash/splash.jsx");
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+
+
 
 
 
@@ -2209,7 +2310,26 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps)(_splash__WEBPACK_IMPORTED_MODULE_1__["default"]));
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    login: function login(user) {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
+    },
+    handleForm: function handleForm(user) {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["login"])(user));
+    } // takes user to other form 
+    // otherForm: (
+    //     <button onClick={() => dispatch(openModal('SIGN UP'))}>
+    //         SIGN UP
+    //     </button>
+    // ),
+    // closeModal: () => dispatch(closeModal()),
+    // clearErrors: () => dispatch(clearErrors())
+
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_splash__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 

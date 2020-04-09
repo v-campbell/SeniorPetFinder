@@ -18,7 +18,7 @@
 
 
    font-family: 'Josefin Sans', sans-serif;
-   color: white;
+   color: rgba(254, 254, 254, 0.822);
    font-size: 90px;
    letter-spacing: 4px;
    word-spacing: 6px;
@@ -27,6 +27,12 @@
    font-style: normal;
 }
 
+.splash-demo {
+    color: rgba(247, 247, 247, 0.913);
+    font-size: 60px;
+    text-decoration: underline;
+
+}
 .splash-text-logged-out {
     display: inline-block;
     /* position: fixed; */
