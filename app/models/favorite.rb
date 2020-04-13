@@ -13,7 +13,7 @@
 
 class Favorite < ApplicationRecord
 
-  validates :user_id, uniqueness: { scope: :pet_id }
+  validates :user_id, uniqueness: { scope: :pet_id, message: 'Pet already favorited :)' }
   validates :user_id, :pet_id, presence: true
   
   belongs_to :pet

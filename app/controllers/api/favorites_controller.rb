@@ -1,6 +1,7 @@
 class Api::FavoritesController < ApplicationController
   def index 
     @favorites = Favorite.where(user_id: params[:user_id])
+    # @favorites = Favorite.find_by(user_id: params[:user_id])
     render :index
   end
 
