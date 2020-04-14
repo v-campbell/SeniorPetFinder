@@ -8,22 +8,31 @@ class PetShow extends React.Component {
         super(props);
         this.adoptShowButton = this.adoptShowButton.bind(this);
         this.handleFavClick = this.handleFavClick.bind(this);
+        this.checkFavs = this.checkFavs.bind(this);
         this.state = {
             createdFav: false,
         };
-        // this.createdFav = false;
-        // this.createdFav = this.createdFav;
     }
     
     componentDidMount() {
         this.props.getPet(this.props.match.params.id);
         if (this.props.userId) {
             this.props.requestFavorites(this.props.userId)
-                .then((payload) => {
-                    this.setState({favorites: Object.values(payload.favorites)})
-                })
+            .then((payload) => {
+                this.setState({favorites: Object.values(payload.favorites)})
+            })
+            .then(this.checkFavs)
         }
         window.scrollTo(0, 0);
+    }
+
+    checkFavs() {
+        // debugger
+        for (let i = 0; i < this.state.favorites.length; i++) {
+            if (this.state.favorites[i].petId == this.props.pet.id) {
+                this.setState({ createdFav: true })
+            }
+        }
     }
 
     componentDidUpdate(prevProps){
@@ -65,15 +74,15 @@ class PetShow extends React.Component {
             }
         }
 
-        if ((alreadyFavorited !== -1) || this.createdFav) {
+        if ((alreadyFavorited !== -1) || this.state.createdFav) {
             deleteFavorite(userId, pet.id)
             favorites = favorites.splice(alreadyFavorited, alreadyFavorited)
 
             this.setState({ favorites: favorites })
-            this.createdFav = false
+            this.state.createdFav = false
         } else {
             createFavorite({ pet_id: pet.id }, userId)
-            this.createdFav = true
+            this.state.createdFav = true
         }
     }
     
@@ -95,9 +104,7 @@ class PetShow extends React.Component {
                         <li>⊷ SIZE: {pet.size}</li>                
                     </div>
                     <div className='pet-show-links'>
-                        {/* <Link to='/pets' className='pet-show-back-link'>BACK TO ALL PETS</Link> */}
-                        {/* <Link to='/pets' className='pet-show-back-link'>MAYBE ANOTHER</Link>
-                        <Link to='/pets' className='pet-show-back-link'>OR ANOTHER</Link> */}   
+          
                     </div>
                     <div className='pet-show-top-content'>
                         <div className='pet-show-top-left'>
@@ -108,8 +115,7 @@ class PetShow extends React.Component {
 
                             <div id="favorite-button">
                                 <button className="show-favorite-button" onClick={this.handleFavClick}>
-                                    {/* {this.createdFav ? "★" : "☆" } */}
-                                    {this.createdFav ? "UNFAVORITE ☆" : "FAVORITE ★" }
+                                    {this.state.createdFav ? "★ (remove favorite)" : "☆ (add favorite)" }
                                 </button>
                             </div>
                         </div>
