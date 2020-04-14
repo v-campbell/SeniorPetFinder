@@ -1482,11 +1482,12 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
           }, "ALREADY ADOPTED");
         }
       } else {
-        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "adopt-button",
           onClick: function onClick() {
             return _this3.props.openModal('LOG IN');
           }
-        }, "ADOPT ME? \uD83D\uDE4F");
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"));
         window.scrollTo(0, 0);
       }
 

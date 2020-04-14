@@ -69,7 +69,13 @@ class PetShow extends React.Component {
             adoptButton = <div className='already-adopted'>ALREADY ADOPTED</div>
             }
         } else {
-            adoptButton = <button onClick={() => this.props.openModal('LOG IN')}>ADOPT ME? 🙏</button>
+            adoptButton =
+                <div className="adopt-button" onClick={() => this.props.openModal('LOG IN')}>
+                    <div>UNADOPT ME?</div>
+                    <div>😭</div>
+                    <div>UNADOPT ME?</div>
+                    <div>😭</div>
+                </div>
             window.scrollTo(0, 0);
         }
         return adoptButton;
