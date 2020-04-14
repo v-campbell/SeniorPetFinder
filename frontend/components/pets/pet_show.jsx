@@ -49,7 +49,12 @@ class PetShow extends React.Component {
         const { currentUser } = this.props;
         if (currentUser) {
             if (!pet.adoptedBy) {
-            adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
+            // adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
+                adoptButton=
+                <div className="button_base demo-button" onClick={() => this.props.openModal('ADOPT')}>
+                    <div>🙏</div>
+                    <div>ADOPT ME?</div>
+                </div>
             } else if ((pet.adoptedBy) && (pet.adoptedBy === currentUser.id)) {
             adoptButton = <button onClick={() => this.props.openModal('UNADOPT')}>UNADOPT 😭</button>
             } else if ((pet.adoptedBy) && (pet.adoptedBy !== currentUser.id)) {
@@ -57,6 +62,7 @@ class PetShow extends React.Component {
             }
         } else {
             adoptButton = <button onClick={() => this.props.openModal('LOG IN')}>ADOPT ME? 🙏</button>
+            window.scrollTo(0, 0);
         }
         return adoptButton;
     }
@@ -68,11 +74,16 @@ class PetShow extends React.Component {
         let alreadyFavorited = -1;
         // debugger
         let favorites = this.state.favorites
-        for (let i = 0; i < favorites.length; i++) {
-            if (favorites[i].petId == pet.id) {
-                alreadyFavorited = i;
+        // if (!currentUser) {
+        //     this.props.openModal('LOG IN')
+        //     window.scrollTo(0, 0);
+        // } else {
+            for (let i = 0; i < favorites.length; i++) {
+                if (favorites[i].petId == pet.id) {
+                    alreadyFavorited = i;
+                }
             }
-        }
+        // }
 
         if ((alreadyFavorited !== -1) || this.state.createdFav) {
             deleteFavorite(userId, pet.id)
@@ -111,12 +122,14 @@ class PetShow extends React.Component {
                             <div className='pet-show-name'>Hi, I'm {pet.name}</div>
                             <div className='pet-show-about'>{pet.about}</div>
                       
-                            {this.adoptShowButton()}
+                            <div className='pet-show-buttons'>
+                                {this.adoptShowButton()}
 
-                            <div id="favorite-button">
-                                <button className="show-favorite-button" onClick={this.handleFavClick}>
-                                    {this.state.createdFav ? "★ (remove favorite)" : "☆ (add favorite)" }
-                                </button>
+                                <div id="favorite-button">
+                                    <div className="show-favorite-button" onClick={this.handleFavClick}>
+                                        {this.state.createdFav ? <i class="fas fa-bookmark fa-2x"></i> : <i class="far fa-bookmark fa-2x"></i> }
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className='pet-show-images'>

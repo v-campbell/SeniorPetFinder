@@ -73,7 +73,7 @@
     padding: 20px 15px 20px 15px;
     border: 2px solid rgb(192, 152, 140);
     background-color: transparent;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 /* .pet-show-top-left button:focus {
@@ -96,6 +96,12 @@ button:focus {
     padding: 0 0 0 30px;
 }
 
+.pet-show-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+}
 .photo-main {
     display: flex;
     /* height: 100%; */
@@ -264,6 +270,7 @@ button:focus {
 } */
 
 .show-favorite-button{
+    border: 0px;
 }
 
 .favorite-index-item {

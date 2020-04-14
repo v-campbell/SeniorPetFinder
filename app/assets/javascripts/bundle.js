@@ -1462,11 +1462,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
 
       if (currentUser) {
         if (!pet.adoptedBy) {
-          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          // adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
+          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "button_base demo-button",
             onClick: function onClick() {
               return _this3.props.openModal('ADOPT');
             }
-          }, "ADOPT ME? \uD83D\uDE4F");
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"));
         } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
             onClick: function onClick() {
@@ -1482,6 +1484,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
             return _this3.props.openModal('LOG IN');
           }
         }, "ADOPT ME? \uD83D\uDE4F");
+        window.scrollTo(0, 0);
       }
 
       return adoptButton;
@@ -1497,13 +1500,17 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
           userId = _this$props.userId;
       var alreadyFavorited = -1; // debugger
 
-      var favorites = this.state.favorites;
+      var favorites = this.state.favorites; // if (!currentUser) {
+      //     this.props.openModal('LOG IN')
+      //     window.scrollTo(0, 0);
+      // } else {
 
       for (var i = 0; i < favorites.length; i++) {
         if (favorites[i].petId == pet.id) {
           alreadyFavorited = i;
         }
-      }
+      } // }
+
 
       if (alreadyFavorited !== -1 || this.state.createdFav) {
         deleteFavorite(userId, pet.id);
@@ -1542,12 +1549,18 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-name"
       }, "Hi, I'm ", pet.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-about"
-      }, pet.about), this.adoptShowButton(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, pet.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pet-show-buttons"
+      }, this.adoptShowButton(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "favorite-button"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-favorite-button",
         onClick: this.handleFavClick
-      }, this.state.createdFav ? "★ (remove favorite)" : "☆ (add favorite)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state.createdFav ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        "class": "fas fa-bookmark fa-2x"
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        "class": "far fa-bookmark fa-2x"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {
         photoUrls: pet.photoUrls
