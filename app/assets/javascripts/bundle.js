@@ -1464,17 +1464,18 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         if (!pet.adoptedBy) {
           // adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-            className: "button_base demo-button",
+            className: "adopt-button",
             onClick: function onClick() {
               return _this3.props.openModal('ADOPT');
             }
-          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"));
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"));
         } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
-          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "adopt-button",
             onClick: function onClick() {
               return _this3.props.openModal('UNADOPT');
             }
-          }, "UNADOPT \uD83D\uDE2D");
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"));
         } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "ALREADY ADOPTED");
         }

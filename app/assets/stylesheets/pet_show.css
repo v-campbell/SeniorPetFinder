@@ -3,16 +3,13 @@
     flex-direction: column;
     padding-top: 85px;
     font-family: 'Josefin Sans', sans-serif;
-    /* background-color: rgb(234, 224, 215); */
 }
 
 .pet-show-top {
     display: flex;
     flex-direction: row;
-    /* background-color: rgb(247, 243, 240); */
     background-color: white;
     justify-content: center;
-    /* border: 3px solid yellow; */
 }
 
 .pet-show-top-content {
@@ -68,17 +65,12 @@
 }
 
 /* adopt button */
-.pet-show-top-left button {
+/* .pet-show-top-left button {
     font-size: 25px;
     padding: 20px 15px 20px 15px;
     border: 2px solid rgb(192, 152, 140);
     background-color: transparent;
-    /* margin-bottom: 50px; */
 }
-
-/* .pet-show-top-left button:focus {
-    outline:0;
-} */
 
 button:focus {
     outline:0;
@@ -88,10 +80,166 @@ button:focus {
     color: rgb(192, 152, 140);
     border: 2px solid rgb(233, 217, 203);;
     cursor: pointer;
-    /* text-decoration: underline; */
+} */
+
+.adopt-button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    /* top: 50%;
+    left: 50%; */
+    /* margin-top: -25px;
+    margin-left: -100px; */
+    width: 200px;
+    height: 50px;
+    /* box-sizing: border-box; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+    perspective: 500px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    cursor: pointer;
 }
+
+.adopt-button div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    border: #000000 solid 1px;
+    pointer-events: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.adopt-button div:nth-child(1) {
+    color: #000000;
+    background-color: #ffffff;
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 100px, 50px, 0px);
+    position: absolute;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.adopt-button div:nth-child(2) {
+    color: #000000;
+    background-color: #000000;
+    z-index: -1;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 100px, 50px, 0px);
+    position: absolute;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.adopt-button div:nth-child(3) {
+    color: #000000;
+    background-color: #ffffff;
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 200px, 50px, 100px);
+    position: absolute;
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.adopt-button div:nth-child(4) {
+    color: #000000;
+    background-color: #000000;
+    z-index: -1;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 200px, 50px, 100px);
+    position: absolute;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.adopt-button:hover div:nth-child(1) {
+    background-color: #000000;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+}
+
+.adopt-button:hover div:nth-child(2) {
+    color: #ffffff;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
+.adopt-button:hover div:nth-child(3) {
+    background-color: #000000;
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+}
+
+.adopt-button:hover div:nth-child(4) {
+    color: #ffffff;
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
 .fa-grip-lines {
-    /* color: rgb(247, 239, 236); */
     color: chocolate;
     padding: 0 0 0 30px;
 }
@@ -104,8 +252,6 @@ button:focus {
 }
 .photo-main {
     display: flex;
-    /* height: 100%; */
-    /* width: 800px; */
 }
 
 .pet-show-images {
@@ -113,7 +259,6 @@ button:focus {
     width: 100%;
     padding-bottom: 20px;
     padding-top: 50px;
-    /* border: 1px solid green; */
 }
 
 .main-image-container {
@@ -123,23 +268,14 @@ button:focus {
     height: 504px;
     width: 700px;
     background-color: rgb(234, 224, 215);
-    /* background-color: white; */
 }
 
 /* large pic */
 .main-image-container > img {
-    /* display: inline-block;
-    width: auto;
-    height: auto;
-    max-width: 800px;
-    max-height: 500px;
-    margin-top: 44px; */
-
     max-width: 700px;
     max-height: 504px;
     height: auto;
     width: auto;
-    /* border: 1px solid blue; */
 }
 
 .photo-thumbnail {
@@ -156,15 +292,6 @@ button:focus {
     height: 100px;
     margin-bottom: 1%;
 }
-
-/* @keyframes selected-image {
-    from {opacity: 50%;}
-    to {opacity: 100%;}
-}
-
-.photo-thumbnail > img::selection {
-    animation-name: selected-image;
-} */
 
 .not-selected-photo {
     opacity: 50%;
@@ -247,31 +374,29 @@ button:focus {
 .fees li:last-child, .contact li:last-child {
     color: rgb(78, 77, 77);
 }
-/* 
-.hours div:nth-child(even){
-    color: rgb(71, 68, 68);
+
+@keyframes spin {
+  50% {
+    -webkit-transform:rotateY(180deg);
+    transform:rotateY(-180deg);
+  }
 }
-.hours div:nth-child(odd){
-    color: rgb(46, 44, 44);
-} */
-
-#favorite-button{
-  /* background-color: #fff;   */
-  /* display: inline-block; */
-}
-
-/* #favorite-button:hover{
-  border: 2px solid #da3743;
-} */
-/* 
-.is-fave{
-  background-color: orange !important;
-  color: blue !important;
-} */
-
-.show-favorite-button{
+.show-favorite-button {
     border: 0px;
+  perspective: 800px;
+  -webkit-perspective: 800px;
+  -webkit-transform-orgin:right center;
+  
+  /* @include disableTapHighlightColor(); */
 }
+
+.show-favorite-button:hover {
+    animation-name:spin;
+    animation-iteration-count:infinite;
+    animation-duration:1.2s;
+    animation-timing-function:ease-in;
+    cursor: pointer;
+  }
 
 .favorite-index-item {
     display: flex;
