@@ -28,11 +28,111 @@
 }
 
 .splash-demo {
-    color: rgba(247, 247, 247, 0.913);
+    /* color: rgba(8, 8, 8, 0.913);
     font-size: 60px;
-    text-decoration: underline;
-
+    text-decoration: underline; */
 }
+
+.button_base {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    /* margin-top: -25px;
+    margin-left: -100px; */
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    /* box-sizing: border-box; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.button_base:hover {
+    cursor: pointer;
+}
+
+.demo-button {
+    perspective: 500px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.demo-button div {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: #000000 solid 1px;
+    pointer-events: none;
+    /* box-sizing: border-box; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.demo-button div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #000000;
+    background-color: #000000;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.demo-button div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #000000;
+    background-color: #ffffff;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.demo-button:hover div:nth-child(1) {
+    color: #ffffff;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
+.demo-button:hover div:nth-child(2) {
+    background-color: #000000;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+}
+
 .splash-text-logged-out {
     display: inline-block;
     /* position: fixed; */

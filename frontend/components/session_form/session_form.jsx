@@ -132,10 +132,8 @@ class LoginForm extends React.Component {
                             <div className='bottom-modal-buttons'>
                                 <br />
                                 Already have an account? {this.props.otherForm}
-                                {/* <br />
-                                <br />
-                                <br />
-                                Too lazy to create one? <button onClick={this.fillDemo}> DEMO USER </button> */}
+                                {/* <br /> */}
+                                {/* Too lazy to create one? <button onClick={this.handleSignUpDemo}> DEMO USER </button> */}
                             </div>
                             <br />
                             </div>

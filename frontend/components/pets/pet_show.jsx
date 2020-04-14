@@ -57,7 +57,7 @@ class PetShow extends React.Component {
             }
         } else {
             adoptButton = <button onClick={() => this.props.openModal('LOG IN')}>ADOPT ME? 🙏</button>
-            }
+        }
         return adoptButton;
     }
 
@@ -184,8 +184,8 @@ class PetShow extends React.Component {
                                 <i className="fas fa-mobile-alt"></i>  415.522.3500
                                     <br />
                                 <br />
-                                {/* <i className="far fa-envelope"></i>  <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20${pet.name}&body=Hello!%20I%20am%20interested%20in%20adopting%20${pet.name}.%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0AYour%20Name%20Here`}>adoptions@sfspca.org</a> */}
-                                <i className="far fa-envelope"></i>  <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20${pet.name}&body=Hello!%20I%20am%20interested%20in%20adopting%20${pet.name}.%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0A${currentUser.firstName}`}>adoptions@sfspca.org</a>
+                                <i className="far fa-envelope"></i>  <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20${pet.name}&body=Hello!%20I%20am%20interested%20in%20adopting%20${pet.name}.%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0AYour%20Name%20Here`}>adoptions@sfspca.org</a>
+                                {/* <i className="far fa-envelope"></i>  <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20${pet.name}&body=Hello!%20I%20am%20interested%20in%20adopting%20${pet.name}.%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0A${currentUser.firstName}`}>adoptions@sfspca.org</a> */}
                                 <br />
                                 <br />
                                 <br />

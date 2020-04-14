@@ -59,10 +59,13 @@ class Splash extends React.Component {
                 (old) best friend.
                 <br />
                 <br />
-                <button onClick={this.handleDemo} className='splash-demo'> 
+                {/* <button onClick={this.handleDemo} className='splash-demo'> 
                     DEMO
-                    <i className="fas fa-arrow-right"></i>
-                </button>
+                </button> */}
+                    <div className="button_base demo-button" onClick={this.handleDemo}>
+                        <div>DEMO</div>
+                        <div>DEMO</div>
+                    </div>
                 </h1>
                 <img className='gray' src={window.grayURL} />
             </div>

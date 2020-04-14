@@ -21,11 +21,11 @@ const App = () => (
         <Modal />
         <NavContainer />
         <Switch>
-            <Route path='/pets/:id' component={PetShowContainer} />
-            <ProtectedRoute path='/pets/adopt/:id' component={AdoptContainer} />
-            <Route path='/pets' component={PetIndexContainer} />
-            <ProtectedRoute path='/user' component={UserShowContainer} />
-            <Route path='/' component={Splash}/>
+            <Route exact path='/pets/:id' component={PetShowContainer} />
+            <ProtectedRoute exact path='/pets/adopt/:id' component={AdoptContainer} />
+            <Route exact path='/pets' component={PetIndexContainer} />
+            <ProtectedRoute exact path='/user' component={UserShowContainer} />
+            <Route exact path='/' component={Splash}/>
         </Switch>
         <Route path='/' component={Footer} />
     </div>

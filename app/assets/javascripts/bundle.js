@@ -430,18 +430,23 @@ __webpack_require__.r(__webpack_exports__);
 
 var App = function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
     path: "/pets/:id",
     component: _pets_pet_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
+    exact: true,
     path: "/pets/adopt/:id",
     component: _pets_adopt_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
     path: "/pets",
     component: _pets_pet_index_container__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
+    exact: true,
     path: "/user",
     component: _user_user_show_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
     path: "/",
     component: _splash_splash_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -1589,7 +1594,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }), "  415.522.3500", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-envelope"
       }), "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20".concat(pet.name, "&body=Hello!%20I%20am%20interested%20in%20adopting%20").concat(pet.name, ".%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0A").concat(currentUser.firstName)
+        href: "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=adoptions@sfspca.org?subject=Interested%20in%20adopting%20".concat(pet.name, "&body=Hello!%20I%20am%20interested%20in%20adopting%20").concat(pet.name, ".%20What%20are%20my%20next%20steps?%20Thank%20you%20in%20advance%20for%20your%20time.%0A%0ABest%20regards,%0A%0AYour%20Name%20Here")
       }, "adoptions@sfspca.org"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "*Additional $23 San Francisco License Fee for SF Residents"))))));
     }
   }]);
@@ -2229,12 +2234,10 @@ var Splash = /*#__PURE__*/function (_React$Component) {
     value: function loggedOutHome() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "splash-text splash-text-logged-out"
-      }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleDemo,
-        className: "splash-demo"
-      }, "DEMO", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-arrow-right"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "button_base demo-button",
+        onClick: this.handleDemo
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "DEMO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "DEMO"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "gray",
         src: window.grayURL
       }));
