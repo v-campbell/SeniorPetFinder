@@ -64,24 +64,6 @@
     width: 300px;
 }
 
-/* adopt button */
-/* .pet-show-top-left button {
-    font-size: 25px;
-    padding: 20px 15px 20px 15px;
-    border: 2px solid rgb(192, 152, 140);
-    background-color: transparent;
-}
-
-button:focus {
-    outline:0;
-}
-
-.pet-show-top-left button:hover {
-    color: rgb(192, 152, 140);
-    border: 2px solid rgb(233, 217, 203);;
-    cursor: pointer;
-} */
-
 .adopt-button {
     display: flex;
     justify-content: center;
@@ -250,6 +232,7 @@ button:focus {
     width: 70%;
     align-items: center;
 }
+
 .photo-main {
     display: flex;
 }
@@ -288,9 +271,9 @@ button:focus {
 
 .photo-thumbnail > img {
 
-    width: 120px;
-    height: 100px;
-    margin-bottom: 1%;
+    width: 180px;
+    height: 160px;
+    margin-bottom: 6.5%;
 }
 
 .not-selected-photo {
@@ -382,17 +365,19 @@ button:focus {
   }
 }
 .show-favorite-button {
+    color: rgba(31, 30, 30, 0.904);
     border: 0px;
-  perspective: 800px;
-  -webkit-perspective: 800px;
-  -webkit-transform-orgin:right center;
-  
+    perspective: 800px;
+    -webkit-perspective: 800px;
+    -webkit-transform-orgin:right center;
+
   /* @include disableTapHighlightColor(); */
 }
 
 .show-favorite-button:hover {
     animation-name:spin;
-    animation-iteration-count:infinite;
+    /* animation-iteration-count:infinite; */
+    animation-iteration-count:0.5;
     animation-duration:1.2s;
     animation-timing-function:ease-in;
     cursor: pointer;
@@ -400,16 +385,27 @@ button:focus {
 
 .favorite-index-item {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
-.pet-liked-item {
+
+.already-adopted {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border: rgba(31, 30, 30, 0.904) solid 3px;
+    margin: 15px;
+    color: rgba(31, 30, 30, 0.904);
+}
+/* .pet-liked-item {
     display: flex;
     text-align: center;
-    /* background-color: burlywood; */
     padding: 10px;
 }
 
 .pet-liked-link:hover {
     color: rgb(236, 220, 218)
-}
+} */

@@ -1477,7 +1477,9 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
             }
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"));
         } else if (pet.adoptedBy && pet.adoptedBy !== currentUser.id) {
-          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "ALREADY ADOPTED");
+          adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "already-adopted"
+          }, "ALREADY ADOPTED");
         }
       } else {
         adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
