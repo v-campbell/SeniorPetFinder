@@ -78,7 +78,8 @@
 }
 
 .input:focus {
-  background-color: rgb(223, 228, 243);
+  background-color: rgb(243, 232, 223);
+  outline: rgb(255, 174, 0);
 }
 
 .form-container {
@@ -95,6 +96,10 @@
 .bottom-modal-buttons {
   display: block;
   text-align: center;
+}
+
+.bottom-modal-buttons button:focus {
+    outline: none;
 }
 
 .final-button {

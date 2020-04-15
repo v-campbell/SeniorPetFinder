@@ -231,6 +231,7 @@
     justify-content: space-between;
     width: 70%;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .photo-main {

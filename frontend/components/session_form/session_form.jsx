@@ -65,6 +65,7 @@ class LoginForm extends React.Component {
     }
 
     renderErrors() {
+        window.scrollTo(0, 0);
         return(
             <ul className="errorBox">
                 {this.props.errors.map((error, i) => (

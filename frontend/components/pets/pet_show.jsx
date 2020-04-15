@@ -27,7 +27,6 @@ class PetShow extends React.Component {
     }
 
     checkFavs() {
-        // debugger
         for (let i = 0; i < this.state.favorites.length; i++) {
             if (this.state.favorites[i].petId == this.props.pet.id) {
                 this.setState({ createdFav: true })
@@ -86,7 +85,6 @@ class PetShow extends React.Component {
         e.preventDefault();
         const { createFavorite, deleteFavorite, pet, userId } = this.props;
         let alreadyFavorited = -1;
-        // debugger
         let favorites = this.state.favorites
         // if (!currentUser) {
         //     this.props.openModal('LOG IN')
