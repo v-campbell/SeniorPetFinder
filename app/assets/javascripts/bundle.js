@@ -1468,7 +1468,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
               return _this3.props.openModal('ADOPT');
             }
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"));
-        } else if (pet.adoptedBy && pet.adoptedBy === currentUser.id) {
+        } else if (pet.adoptedBy && pet.adoptedBy == currentUser.id) {
           adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "adopt-button",
             onClick: function onClick() {
@@ -1559,9 +1559,9 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "show-favorite-button",
         onClick: this.handleFavClick
       }, this.state.createdFav ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        "class": "fas fa-bookmark fa-2x"
+        className: "fas fa-bookmark fa-2x"
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        "class": "far fa-bookmark fa-2x"
+        className: "far fa-bookmark fa-2x"
       }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-images"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_display__WEBPACK_IMPORTED_MODULE_1__["default"], {

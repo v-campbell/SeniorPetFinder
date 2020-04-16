@@ -56,7 +56,7 @@ class PetShow extends React.Component {
                         <div>ADOPT ME?</div>
                         <div>🙏</div>
                     </div>
-            } else if ((pet.adoptedBy) && (pet.adoptedBy === currentUser.id)) {
+            } else if ((pet.adoptedBy) && (pet.adoptedBy == currentUser.id)) {
                 adoptButton = 
                     <div className="adopt-button" onClick={() => this.props.openModal('UNADOPT')}>
                         <div>UNADOPT ME?</div>
@@ -139,7 +139,7 @@ class PetShow extends React.Component {
 
                                 <div id="favorite-button">
                                     <div className="show-favorite-button" onClick={this.handleFavClick}>
-                                        {this.state.createdFav ? <i class="fas fa-bookmark fa-2x"></i> : <i class="far fa-bookmark fa-2x"></i> }
+                                        {this.state.createdFav ? <i className="fas fa-bookmark fa-2x"></i> : <i className="far fa-bookmark fa-2x"></i> }
                                     </div>
                                 </div>
                             </div>
