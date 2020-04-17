@@ -6,14 +6,14 @@ class Api::FavoritesController < ApplicationController
   end
 
   def create 
-    @favorite = Favorite.new(favorites_params)
+    @favorite = Favorite.create(favorites_params)
     @favorite.user_id = current_user.id
 
     # @favorite = Favorite.new
     # @favorite.user_id = current_user.id
     # @favorite.pet_id = params[:id]
 
-    if @favorite.save
+    if @favorite
       render :show
     else
       render json: @favorite.errors.full_messages, status: 425
@@ -23,7 +23,7 @@ class Api::FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.where(pet_id: params[:id], user_id: params[:user_id])[0]
     # if @favorite.user_id === current_user.id
-      Favorite.destroy(@favorite.id)
+      Favorite.delete(@favorite)
     # else 
       # render json: ["You haven't added this pet to your favorite list yet"], status: 424
     # end
