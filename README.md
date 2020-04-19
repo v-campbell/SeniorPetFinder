@@ -29,9 +29,9 @@ Features
   <p align="center">
       <img src="app/assets/images/loggedoutshow.gif">
   </p> 
-  - ### Pets index page
+- ### Pets index page
    - Views clickable profile cards with limited information and an image for each pet
- - ### Pet show page
+- ### Pet show page
    - View multiple images for each pet
    - Adopt/unadopt pet
         - If a pet is adopted by a different user, the current user will not be able to adopt/unadopt
@@ -41,13 +41,36 @@ Features
     - View information regarding the pet's shelter
         - Send a prefilled email to said shelter to request more information regarding (real life) adoption!
         
- - ### User show page
+- ### User show page
    - Current (logged-in) user can view their adopted pets and click each profile to navigate to the pet's show page. Feel free to favorite any pet, even if it's not your own!
    <p align="center">
       <img src="app/assets/images/userpage.gif">
   </p>
+  
+- ### Additional styling features
+  - Added hoverable button animations
+  <p align="center">
+    <img src="app/assets/images/button1.gif">
+    <img src="app/assets/images/button2.gif">
+  </p>
 
-- ### Code snippets
+  - Created custom animation for favorite button
+  ```
+  @keyframes spin {
+    50% {
+      -webkit-transform:rotateY(180deg);
+      transform:rotateY(-180deg);
+    }
+  }
+
+  .show-favorite-button:hover {
+      animation-name:spin;
+      animation-iteration-count:0.5;
+      animation-duration:1.2s;
+      animation-timing-function:ease-in;
+      cursor: pointer;
+  }
+  ```
   - Created a Mini class for selectable thumbnails to allow for a user-friendly display of multiple pet images in the pet show page
   ```
   class Mini extends React.Component {
@@ -64,12 +87,9 @@ Features
     }
   }
   ```
-- ### Additional styling features
-  - Hoverable buttons to increase interactivity
   <p align="center">
-    <img src="app/assets/images/button1.gif">
-    <img src="app/assets/images/button2.gif">
-</p>
+    <img src="app/assets/images/thumbnails.gif">
+  </p>
 
 - ### Future Considerations (coming soon!)
   - Filterable search
