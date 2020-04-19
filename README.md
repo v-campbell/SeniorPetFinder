@@ -42,7 +42,7 @@ Features
  - ### User show page
    - Current (logged-in) user can view their adopted pets
    <p align="center">
-      <img src={window.userpage.gif}/>
+      <img src = "app/assets/images/userpage.gif">
   </p>
 
   
