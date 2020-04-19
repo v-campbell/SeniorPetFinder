@@ -38,10 +38,18 @@ Features
   <p align="center">
     <img src="app/assets/images/adoptbutton.gif"/>
   </p>
-   - Created a component "Display" to accommodate multiple images per pet and used it in the pet show page
-  ```
-  import React from 'react';
+    - View information regarding the pet's shelter
+        - Send a prefilled email to said shelter to request more information regarding (real life) adoption!
+        
+ - ### User show page
+   - Current (logged-in) user can view their adopted pets and click each profile to navigate to the pet's show page. Feel free to favorite any pet, even if it's not your own!
+   <p align="center">
+      <img src="app/assets/images/userpage.gif">
+  </p>
 
+- ### Code snippets
+  - Created a Mini class for selectable thumbnails to allow for a user-friendly display of multiple pet images in the pet show page
+  ```
   class Mini extends React.Component {
     render() {
         return(
@@ -55,54 +63,16 @@ Features
         )
     }
 }
+```
+- ### Additional styling features
+  - Hoverable buttons to increase interactivity
+  <p align="center">
+    <img src="app/assets/images/button1.gif">
+    <img src="app/assets/images/button2.gif">
+</p>
 
-export default class Display extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedPhoto: 0
-        };
-        this.selectTab = this.selectTab.bind(this);
-    }
-
-    selectTab(i) {
-        this.setState({selectedPhoto: i});
-    }
-
-    render() {
-        return(
-            <div className='photo-main'>
-                <div className='main-image-container'>
-                    <img src={this.props.photoUrls[this.state.selectedPhoto]}/>
-                </div>
-                <Mini
-                    selected={this.state.selectedPhoto}
-                    selectTab={this.selectTab}
-                    photos={this.props.photoUrls}>
-                </Mini>
-            
-            </div>
-        )
-    }
-}
-  - View information regarding the pet's shelter
-    - Send a prefilled email to said shelter to request more information regarding (real life) adoption!
-        
- - ### User show page
-   - Current (logged-in) user can view their adopted pets and click each profile to navigate to the pet's show page. Feel free to favorite any pet, even if it's not your own!
-   <p align="center">
-      <img src="app/assets/images/userpage.gif">
-  </p>
-
- - ### Additional styling features
-   - Hoverable buttons to increase interactivity
-   <p align="center">
-      <img src="app/assets/images/button1.gif">
-      <img src="app/assets/images/button2.gif">
-  </p>
-
- - ### Future Considerations (coming soon!)
-   - Filterable search
-   - Browse by location (Google Maps API integration)
+- ### Future Considerations (coming soon!)
+  - Filterable search
+  - Browse by location (Google Maps API integration)
 
   
