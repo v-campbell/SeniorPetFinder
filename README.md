@@ -39,7 +39,7 @@ Features
   - Log in modal prompted when attempting to adopt while logged out
   - Demo user log in available
   <p align="center">
-      <img src="app/assets/images/loggedoutshow.gif">
+      <img src="app/assets/images/demo.gif">
   </p> 
 - ### Pets index page
    - Views clickable profile cards with limited information and an image for each pet
@@ -87,21 +87,21 @@ Features
     <img src="app/assets/images/favorite.gif">
   </p>
   - Created a Mini class for selectable thumbnails to allow for a user-friendly display of multiple pet images in the pet show page
-  ```
-  class Mini extends React.Component {
-    render() {
-        return(
-            <div className='photo-thumbnail'>
-                {this.props.photos.map((photoUrl, i) => (
-                    <img key={i} src={photoUrl}
-                    onClick={() => this.props.selectTab(i)}
-                    className={this.props.selected === i ? "" : "not-selected-photo"}
-                    />))}
-            </div>
-        )
+    ```
+    class Mini extends React.Component {
+      render() {
+          return(
+              <div className='photo-thumbnail'>
+                  {this.props.photos.map((photoUrl, i) => (
+                      <img key={i} src={photoUrl}
+                      onClick={() => this.props.selectTab(i)}
+                      className={this.props.selected === i ? "" : "not-selected-photo"}
+                      />))}
+              </div>
+          )
+      }
     }
-  }
-  ```
+    ```
   <p align="center">
     <img src="app/assets/images/thumbnails.gif">
   </p>
