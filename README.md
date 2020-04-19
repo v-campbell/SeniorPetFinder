@@ -27,7 +27,7 @@ Features
    - Log in modal prompted when attempting to adopt while logged out
    - Demo user log in available
   <p align="center">
-      <img src = "app/assets/images/loggedoutshow.gif">
+      <img src="app/assets/images/loggedoutshow.gif">
   </p> 
   - ### Pets index page
    - Views clickable profile cards with limited information and an image for each pet
@@ -39,14 +39,21 @@ Features
         - Send a prefilled email to said shelter to request more information regarding (real life) adoption!
 <p align="center">
   <!-- <a href="https://vidtube-app.herokuapp.com/"> -->
-    <img src="https://media.giphy.com/media/ZXC8zMVYUx9NL28lzv/giphy.gif" alt="Adopt Button GIF" />
+    <img src="app/assets/images/adoptbutton.gif"/>
   <!-- </a> -->
 </p>
         
  - ### User show page
    - Current (logged-in) user can view their adopted pets and click each profile to navigate to the pet's show page. Feel free to favorite any pet, even if it's not your own!
    <p align="center">
-      <img src = "app/assets/images/userpage.gif">
+      <img src="app/assets/images/userpage.gif">
+  </p>
+
+ - ### Additional styling features
+   - Hoverable buttons to increase interactivity
+   <p align="center">
+      <img src="app/assets/images/button1.gif">
+      <img src="app/assets/images/button2.gif">
   </p>
 
   
