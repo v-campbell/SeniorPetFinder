@@ -1480,13 +1480,13 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
             className: "already-adopted"
           }, "ALREADY ADOPTED");
         }
-      } else {
+      } else if (!currentUser) {
         adoptButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "adopt-button",
           onClick: function onClick() {
             return _this3.props.openModal('LOG IN');
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "UNADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE2D"));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ADOPT ME?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\uD83D\uDE4F"));
         window.scrollTo(0, 0);
       }
 
