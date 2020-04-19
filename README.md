@@ -86,7 +86,8 @@ Features
    <p align="center">
     <img src="app/assets/images/favorite.gif">
   </p>
-  - Created a Mini class for selectable thumbnails to allow for a user-friendly display of multiple pet images in the pet show page
+  - Created a Mini class for selectable thumbnails to allow for a user-friendly display of multiple pet images in the pet show page 
+  
   ```
   class Mini extends React.Component {
     render() {
