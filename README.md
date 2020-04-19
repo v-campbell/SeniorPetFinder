@@ -1,6 +1,8 @@
-# README
+# Read.ME
 
-Thank you for visiting Senior Pet Finder! Senior Pet Finder is inspired by Pet Finder, but only for pets over the age of 6. As a logged out user, you have the ability to view the full list of pets, as well as each pet's profile page. As a logged in user, you have the additional ability to adopt/unadopt pets, favorite/unfavorite pets, as well as view your lists of adopted and favorites pets. 
+[Live Demo](https://senior-pet-finder.herokuapp.com/)
+
+Thank you for visiting Senior Pet Finder! Senior Pet Finder is a pet adoption web application inspired by [Pet Finder](https://www.petfinder.com/), but only for pets over the age of 6. As a logged out user, you have the ability to view the full list of pets, as well as each pet's profile page. As a logged in user, you have the additional ability to adopt/unadopt pets, favorite/unfavorite pets, as well as view your lists of adopted and favorites pets. 
 
 
 ***
@@ -16,7 +18,10 @@ Technologies Used
     - HTML5
     - CSS3
 * Storage 
-    - AWS
+    - AWS S3
+* Hosting
+    - Heroku
+
 ***
 Features
 --------
@@ -87,7 +92,7 @@ Features
     <img src="app/assets/images/favorite.gif">
   </p>
   - Created a Mini class for selectable thumbnails to allow for a user-friendly display of multiple pet images in the pet show page 
-  
+
   ```
   class Mini extends React.Component {
     render() {
