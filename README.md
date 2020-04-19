@@ -62,8 +62,8 @@ Features
             </div>
         )
     }
-}
-```
+  }
+  ```
 - ### Additional styling features
   - Hoverable buttons to increase interactivity
   <p align="center">
