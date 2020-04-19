@@ -34,10 +34,15 @@ Features
     - View information regarding the pet's shelter
         - Send a prefilled email to said shelter to request more information regarding (real life) adoption!
 <p align="center">
-  <a href="https://vidtube-app.herokuapp.com/">
+  <!-- <a href="https://vidtube-app.herokuapp.com/"> -->
     <img src="https://media.giphy.com/media/ZXC8zMVYUx9NL28lzv/giphy.gif" alt="Adopt Button GIF" />
-  </a>
+  <!-- </a> -->
 </p>
         
  - ### User show page
    - Current (logged-in) user can view their adopted pets
+   <p align="center">
+      <img src={userpage.gif}/>
+  </p>
+
+  
