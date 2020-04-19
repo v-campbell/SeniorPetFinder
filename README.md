@@ -24,8 +24,20 @@ Features
    - Users can securely create an account and log in/out
         - User Auth created using BCrypt 
         - Certain actions/pages (i.e. adoption) only available through a protected route to ensure a user is logged-in
-   - Log in modal prompted when attempting to adopt while logged out
-   - Demo user log in available
+        - Bootstrap current user to prevent loading flash due to initial rendering of a 'not-logged-in' state before receiving current user
+  ```
+  <% if logged_in? %>
+    <script id="bootstrap-current-user" type="text/javascript">
+      window.currentUser = 
+      <%= render(
+          "api/users/user.json.jbuilder", 
+          user: current_user
+          ).html_safe %>
+    </script>
+  <% end %>
+  ```
+  - Log in modal prompted when attempting to adopt while logged out
+  - Demo user log in available
   <p align="center">
       <img src="app/assets/images/loggedoutshow.gif">
   </p> 
@@ -71,6 +83,9 @@ Features
       cursor: pointer;
   }
   ```
+   <p align="center">
+    <img src="app/assets/images/favorite.gif">
+  </p>
   - Created a Mini class for selectable thumbnails to allow for a user-friendly display of multiple pet images in the pet show page
   ```
   class Mini extends React.Component {
