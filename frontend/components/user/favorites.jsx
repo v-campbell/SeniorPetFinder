@@ -9,17 +9,13 @@ class Favorites extends React.Component {
 
     render() {
         const { favorites, deleteFavorite, userId } = this.props;
-        const faveList = favorites.length > 0 ? favorites.map(favorite => <FavoriteIndexItem key={favorite.id} favorite={favorite} deleteFavorite={deleteFavorite} userId={userId} />)
+        const faveList = favorites.length > 0 ? favorites.map(favorite => <FavoriteIndexItem key={favorite.id} favorite={favorite} deleteFavorite={deleteFavorite} userId={userId}/>)
             : <p className="no-fave">You have no favorite pets to show on this list.</p>
         return (
-            <div>
-                <section>
+
                     <div className="favorite-index-item">
                         {faveList}
-                        {/* all the pets */}
                     </div>
-                </section>
-            </div>
         )
     }
 }

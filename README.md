@@ -1,4 +1,4 @@
-# Read.ME
+# Senior Pet Finder Read.ME
 
 [Live Demo](https://senior-pet-finder.herokuapp.com/)
 

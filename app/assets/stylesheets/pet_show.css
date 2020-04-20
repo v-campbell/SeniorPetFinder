@@ -386,9 +386,20 @@
 
 .favorite-index-item {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    width: 20%;
+    justify-content: space-between;
+    border: 10px solid rgb(192, 152, 142);
+}
+
+.pet-liked-link {
+    padding: 1rem;
+}
+
+.pet-liked-link:hover {
+    text-decoration: underline;
 }
 
 .already-adopted {
@@ -401,12 +412,3 @@
     margin: 15px;
     color: rgba(31, 30, 30, 0.904);
 }
-/* .pet-liked-item {
-    display: flex;
-    text-align: center;
-    padding: 10px;
-}
-
-.pet-liked-link:hover {
-    color: rgb(236, 220, 218)
-} */

@@ -2495,9 +2495,9 @@ var Favorites = /*#__PURE__*/function (_React$Component) {
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "no-fave"
       }, "You have no favorite pets to show on this list.");
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "favorite-index-item"
-      }, faveList)));
+      }, faveList);
     }
   }]);
 
