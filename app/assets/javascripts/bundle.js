@@ -290,6 +290,7 @@ var getPet = function getPet(id) {
 var adoptPet = function adoptPet(id) {
   return function (dispatch) {
     return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["addAdoptToPet"])(id).then(function (pet) {
+      console.log(pet);
       return dispatch(receivePet(pet));
     }, function (err) {
       console.log(err);

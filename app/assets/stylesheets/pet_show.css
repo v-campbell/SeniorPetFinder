@@ -91,6 +91,10 @@
     cursor: pointer;
 }
 
+.adopt-button:focus {
+  outline: none;
+}
+
 .adopt-button div {
     display: flex;
     justify-content: center;

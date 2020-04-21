@@ -34,15 +34,17 @@ export const getPets = (maxId) => dispatch => fetchPets(maxId)
 export const getPet = id => dispatch => fetchPet(id)
     .then(pet => dispatch(receivePet(pet)));
 
-    
 export const adoptPet = id => dispatch => addAdoptToPet(id)
-    .then(pet => dispatch(receivePet(pet)), err => { console.log(err) })
+    .then(pet => {
+        console.log(pet)
+        return dispatch(receivePet(pet))
+    }, err => { console.log(err) })
 
 export const unadoptPet = id => dispatch => removeAdoptFromPet(id)
-.then(pet => dispatch(receivePet(pet)));
+    .then(pet => dispatch(receivePet(pet)));
 
 export const getUserPets = id => dispatch => fetchUserPets(id)
-.then(pets => dispatch(receiveUserPets(pets)));
+    .then(pets => dispatch(receiveUserPets(pets)));
 
 
     
