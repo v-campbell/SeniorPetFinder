@@ -175,6 +175,7 @@ var requestFavorites = function requestFavorites(userId) {
 var createFavorite = function createFavorite(formData, userId) {
   return function (dispatch) {
     return _util_favorites_util__WEBPACK_IMPORTED_MODULE_0__["createFavorite"](formData, userId).then(function (favorite) {
+      debugger;
       dispatch(receiveFavorite(favorite));
     }, function (err) {
       dispatch(receiveFavoriteErrors(err.responseJSON));
@@ -1437,6 +1438,8 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "checkFavs",
     value: function checkFavs() {
+      debugger;
+
       for (var i = 0; i < this.state.favorites.length; i++) {
         if (this.state.favorites[i].petId == this.props.pet.id) {
           this.setState({

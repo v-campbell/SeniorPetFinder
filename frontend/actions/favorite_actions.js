@@ -70,6 +70,7 @@ export const requestFavorites = (userId) => dispatch => {
 export const createFavorite = (formData, userId) => dispatch => {
     return APIUtil.createFavorite(formData, userId).then(
         (favorite) => {
+            debugger
             dispatch(receiveFavorite(favorite))
         },
         (err) => {
