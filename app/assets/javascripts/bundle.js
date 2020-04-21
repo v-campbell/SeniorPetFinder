@@ -291,6 +291,8 @@ var adoptPet = function adoptPet(id) {
   return function (dispatch) {
     return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["addAdoptToPet"])(id).then(function (pet) {
       return dispatch(receivePet(pet));
+    })["catch"](function (err) {
+      console.log(err);
     });
   };
 };

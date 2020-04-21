@@ -36,7 +36,8 @@ export const getPet = id => dispatch => fetchPet(id)
 
     
 export const adoptPet = id => dispatch => addAdoptToPet(id)
-.then(pet => dispatch(receivePet(pet)));
+.then(pet => dispatch(receivePet(pet)))
+.catch(err => {console.log(err)})
 
 export const unadoptPet = id => dispatch => removeAdoptFromPet(id)
 .then(pet => dispatch(receivePet(pet)));
