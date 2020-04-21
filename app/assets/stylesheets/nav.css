@@ -129,7 +129,7 @@
    justify-content: flex-end;
    align-items: center;
    width: 100%;
-   position: fixed;
+   /* position: fixed; */
    /* position: absolute; */
    bottom: 0;
    left: 0;
@@ -142,7 +142,7 @@
 .fa-linkedin, .fa-github-square {
    padding: 5px; 
    margin-right: 8px;
-   color: #000000;
+   color: #a18371;
 }
 
 .fa-linkedin:hover, .fa-github-square:hover {
