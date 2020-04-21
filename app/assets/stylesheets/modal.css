@@ -228,7 +228,10 @@ button:hover {
 .adopt-final-button:hover {
   color: rgb(34, 31, 30);
   border: 2px solid rgb(34, 31, 30);
+}
 
+.adopt-final-button:focus {
+  outline: none;
 }
 
 .unadopt-form-container {
@@ -303,17 +306,15 @@ button:hover {
   /* color: black; */
 }
 
-/* .unadopt-x {
-  font-size: 60px;
-  color: red;
-  cursor: pointer;
-} */
-
 .unadopt-final-button:hover {
   /* font-size: 10px; */
   /* color: rgb(241, 229, 229); */
   color: red;
   cursor: pointer;
+}
+
+.unadopt-final-button:focus {
+  outline: none;
 }
 
 
