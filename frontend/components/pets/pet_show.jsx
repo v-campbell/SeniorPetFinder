@@ -47,7 +47,7 @@ class PetShow extends React.Component {
         const { pet } = this.props;
         const { currentUser } = this.props;
         if (currentUser) {
-            if (!pet.adoptedBy) {
+            if (!pet.adopted_by) {
             // adoptButton = <button onClick={() => this.props.openModal('ADOPT')}>ADOPT ME? 🙏</button>
                 adoptButton =
                     <div className="adopt-button" onClick={() => this.props.openModal('ADOPT')}>
@@ -56,7 +56,7 @@ class PetShow extends React.Component {
                         <div>ADOPT ME?</div>
                         <div>🙏</div>
                     </div>
-            } else if ((pet.adoptedBy) && (pet.adoptedBy == currentUser.id)) {
+            } else if ((pet.adopted_by) && (pet.adopted_by == currentUser.id)) {
                 adoptButton = 
                     <div className="adopt-button" onClick={() => this.props.openModal('UNADOPT')}>
                         <div>UNADOPT ME?</div>
@@ -64,7 +64,7 @@ class PetShow extends React.Component {
                         <div>UNADOPT ME?</div>
                         <div>😭</div>
                     </div>
-            } else if ((pet.adoptedBy) && (pet.adoptedBy !== currentUser.id)) {
+            } else if ((pet.adopted_by) && (pet.adopted_by !== currentUser.id)) {
             adoptButton = <div className='already-adopted'>ALREADY ADOPTED</div>
             }
         } else if (!currentUser) {
