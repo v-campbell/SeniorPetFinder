@@ -13,6 +13,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
                 <Link className='nav-left-logo' to='/'>
                         〄
                 </Link>
+                <h1 className='nav-left welcome'>Welcome to senior pet finder </h1>
                 </div>
                 <nav className='nav-right-logged-out'>
                     <button className='nav-buttons' onClick={() => openModal('LOG IN')}>LOGIN</button>
@@ -26,7 +27,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
                     <Link className='nav-left-logo' to='/'>
                                 〄
                     </Link>
-                    <h1 className='nav-left welcome'>Welcome in, </h1>
+                    <h1 className='nav-left welcome'>Welcome to senior pet finder, </h1>
                     <h1 className='nav-left welcome-2'>{currentUser.username}.</h1>
                 </div>
                 <nav className='nav-right-loggedin'>

@@ -831,7 +831,9 @@ var Nav = function Nav(_ref) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       className: "nav-left-logo",
       to: "/"
-    }, "\u3004")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    }, "\u3004"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      className: "nav-left welcome"
+    }, "Welcome to senior pet finder ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-right-logged-out"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "nav-buttons",
@@ -850,7 +852,7 @@ var Nav = function Nav(_ref) {
       to: "/"
     }, "\u3004"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       className: "nav-left welcome"
-    }, "Welcome in, "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    }, "Welcome to senior pet finder, "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       className: "nav-left welcome-2"
     }, currentUser.username, ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-right-loggedin"
