@@ -389,7 +389,8 @@
 }
 
 .pet-liked-link {
-    font-size: 10rem;
+    font-size: 5rem;
+    width: 100%;
     padding: 1rem;
 }
 
