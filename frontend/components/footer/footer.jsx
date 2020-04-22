@@ -2,6 +2,9 @@ import React from 'react';
 
 const Footer = () => (
     <div className='splash-footer'>
+        <div>
+            Thank you for stopping by! {'  '}
+        </div>
         <a href='https://www.linkedin.com/in/victoria-khym-campbell/'>
             <i className="fab fa-linkedin fa-2x"></i>
         </a>

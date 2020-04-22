@@ -125,7 +125,7 @@
 
 .splash-footer {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    justify-content: flex-end;
    align-items: center;
    width: 100%;
@@ -137,12 +137,19 @@
    background-color: white;
    /* background-color: rgb(234, 224, 215); */
    z-index: 1;
+   font-size: 13px;
+   font-family: 'Josefin Sans', sans-serif;
+   color: black;
 }
 
 .fa-linkedin, .fa-github-square {
-   padding: 5px; 
+   padding: 5px;
    margin-right: 8px;
    color: #a18371;
+}
+
+.fa-linkedin {
+   padding-left: 18px;
 }
 
 .fa-linkedin:hover, .fa-github-square:hover {
