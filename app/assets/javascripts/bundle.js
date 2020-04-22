@@ -518,8 +518,7 @@ var AdoptedPets = /*#__PURE__*/function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           pet: pet,
           key: pet.id,
-          photoUrls: pet.photoUrls,
-          id: "adopted-pet-grid-item"
+          photoUrls: pet.photoUrls
         });
       }) : // <div> You haven't adoped any pets yet. render link to show page </div>   
       null;
@@ -2423,7 +2422,7 @@ var FavoriteIndexItem = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/pets/".concat(favorite.pet_id),
         className: "pet-index-item-link pet-liked-link"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, favorite.pet_name)));
+      }, favorite.pet_name));
     }
   }]);
 
@@ -2501,9 +2500,11 @@ var Favorites = /*#__PURE__*/function (_React$Component) {
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "no-fave"
       }, "You have no favorite pets to show on this list.");
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "favorite-index-item"
-      }, faveList);
+      return (// <div className="favorite-index-item">
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "adopted-pet-grid"
+        }, faveList)
+      );
     }
   }]);
 

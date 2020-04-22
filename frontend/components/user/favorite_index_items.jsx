@@ -13,9 +13,9 @@ class FavoriteIndexItem extends React.Component {
                     {/* <div className='pet-index-image-container'>
                         <img src={this.props.pet.photoUrls[0]} className='pet-index-image' />
                     </div> */}
-                    <div>
+                    {/* <div> */}
                         {favorite.pet_name}
-                    </div>
+                    {/* </div> */}
                 </Link>
             </div>
         )

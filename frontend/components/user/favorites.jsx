@@ -12,10 +12,10 @@ class Favorites extends React.Component {
         const faveList = favorites.length > 0 ? favorites.map(favorite => <FavoriteIndexItem key={favorite.id} favorite={favorite} deleteFavorite={deleteFavorite} userId={userId}/>)
             : <p className="no-fave">You have no favorite pets to show on this list.</p>
         return (
-
-                    <div className="favorite-index-item">
+            // <div className="favorite-index-item">
+            <div className="adopted-pet-grid">
                         {faveList}
-                    </div>
+            </div>
         )
     }
 }

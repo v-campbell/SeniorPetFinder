@@ -164,13 +164,6 @@
    font-style: normal;
 }
 
-.gradient {
-    background-image:
-    linear-gradient(
-         #dfcfc6, rgb(192, 152, 140)
-    );
-}
-
 .splash-services-box {
     display: flex;
     flex-direction: column;

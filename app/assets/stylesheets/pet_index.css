@@ -43,7 +43,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     /* font-family: 'Josefin Sans', sans-serif; */
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'PT Sans', sans-serif;
@@ -57,7 +57,7 @@
     height: 480px;
     width: 360px;
     background-color: rgb(240, 233, 233);
-    margin: 10px 0px 5px 0px;
+    /* margin: 10px 0px 5px 0px; */
     border-radius: 4px;
     /* border: solid 2px rgb(218, 207, 207); */
 }
@@ -73,6 +73,14 @@
     border-radius: 10px 10px 0 0;
 }
 
+.gradient {
+    /* background-image: */
+    /* linear-gradient(
+         #dfcfc6, rgb(192, 152, 140)
+    ); */
+    background-color: white;
+}
+
 .pet-index-item-text-1 {
     display: flex;
     align-items: center;
@@ -80,7 +88,7 @@
     width: 300px;
     margin-top: -8px;
     /* margin: -5px 20px 20px 20px; */
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 0 0 10px 10px;
     /* padding-bottom: 10px; */
     padding: 10px 0px 10px 0px;

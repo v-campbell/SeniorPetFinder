@@ -58,6 +58,16 @@
     display: flex;
 }
 
+.favorite-index-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    width: 50%;
+    justify-content: space-between;
+    border: 10px solid rgb(192, 152, 142);
+}
+
 .adopted-pets {
     display: flex;
     width: 50%;
@@ -69,15 +79,15 @@
 .adopted-pet-grid {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     justify-content: space-around;
-    margin: 15px;
-    width: 100%;
-}
-
-#adopted-pet-grid-item {
-    height: 120px;
-    width: 90px;
+    /* margin: 15px; */
+    width: 80%;
+    border: 10px solid rgb(192, 152, 142);
+    padding: 3rem;
+    zoom: 0.4;
+    -moz-transform: scale(0.4);
 }
 
 .adopted-pets h1 {

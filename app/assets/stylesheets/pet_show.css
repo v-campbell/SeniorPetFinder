@@ -388,17 +388,8 @@
     cursor: pointer;
 }
 
-.favorite-index-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* flex-wrap: wrap; */
-    width: 50%;
-    justify-content: space-between;
-    border: 10px solid rgb(192, 152, 142);
-}
-
 .pet-liked-link {
+    font-size: 10rem;
     padding: 1rem;
 }
 

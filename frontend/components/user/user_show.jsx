@@ -22,6 +22,7 @@ class UserShow extends React.Component {
                         <div className='user-services-pets'>
                             {/* <img src={window.oldLogoURL} width='50px' height='50px' /> */}
                             <i className="fas fa-dog fa-3x"></i>
+                            {/* <img src={window.pawHeartURL} width='50px' height='50px' /> */}
                             <br />
                             <br />
                             {/* <Link to={`/pets`} className='banner-link'>
@@ -52,7 +53,7 @@ class UserShow extends React.Component {
                         {/* <a id="gotofav">HERE</a> */}
                         {/* <a id="link1">Link 1</a> */}
                         <h1>ADOPTED PETS</h1>
-                        <AdoptedPets />
+                        <AdoptedPets /> 
                     </div>
                     <div className='adopted-pets'>
                         {/* <a id="gotofav">HERE</a> */}
