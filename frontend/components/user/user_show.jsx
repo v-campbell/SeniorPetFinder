@@ -46,17 +46,20 @@ class UserShow extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className='adopted-pets'>
-                    {/* <a id="gotofav">HERE</a> */}
-                    {/* <a id="link1">Link 1</a> */}
-                    <h1>ADOPTED PETS</h1>
-                    <AdoptedPets />
-                </div>
-                <div className='adopted-pets'>
-                    {/* <a id="gotofav">HERE</a> */}
-                    {/* <a id="link1">Link 1</a> */}
-                    <h1>FAVORITED PETS</h1>
-                    <FavoritedPets />
+                <div className='user-bottom'>
+
+                    <div className='adopted-pets'>
+                        {/* <a id="gotofav">HERE</a> */}
+                        {/* <a id="link1">Link 1</a> */}
+                        <h1>ADOPTED PETS</h1>
+                        <AdoptedPets />
+                    </div>
+                    <div className='adopted-pets'>
+                        {/* <a id="gotofav">HERE</a> */}
+                        {/* <a id="link1">Link 1</a> */}
+                        <h1>FAVORITED PETS</h1>
+                        <FavoritedPets />
+                    </div>
                 </div>
             </div>
         )

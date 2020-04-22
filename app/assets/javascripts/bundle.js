@@ -518,7 +518,8 @@ var AdoptedPets = /*#__PURE__*/function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pets_pet_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           pet: pet,
           key: pet.id,
-          photoUrls: pet.photoUrls
+          photoUrls: pet.photoUrls,
+          className: "adopted-pet-grid-item"
         });
       }) : // <div> You haven't adoped any pets yet. render link to show page </div>   
       null;
@@ -2623,10 +2624,12 @@ var UserShow = /*#__PURE__*/function (_React$Component) {
         width: "50px",
         height: "50px"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "VIEW ALL FAVORITED PETS"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "user-bottom"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "adopted-pets"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "ADOPTED PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_display_adopted_pets_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "adopted-pets"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "FAVORITED PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_favorites_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "FAVORITED PETS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_favorites_container__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
     }
   }]);
 

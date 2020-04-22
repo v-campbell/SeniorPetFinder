@@ -54,8 +54,13 @@
     color: rgb(236, 222, 222)
 }
 
+.user-bottom {
+    display: flex;
+}
+
 .adopted-pets {
     display: flex;
+    width: 50%;
     /* flex-wrap: wrap; */
     flex-direction: column;
     align-items: center;
@@ -68,6 +73,11 @@
     justify-content: space-around;
     margin: 15px;
     width: 100%;
+}
+
+.adopted-pet-grid-item {
+    height: 240px;
+    width: 180px;
 }
 
 .adopted-pets h1 {
