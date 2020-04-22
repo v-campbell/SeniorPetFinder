@@ -2421,7 +2421,7 @@ var FavoriteIndexItem = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-liked-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/pets/".concat(favorite.petId),
+        to: "/pets/".concat(favorite.pet_id),
         className: "pet-index-item-link pet-liked-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, favorite.petName)));
     }

@@ -9,7 +9,7 @@ class FavoriteIndexItem extends React.Component {
                     {/* <section>
                         <button onClick={() => deleteFavorite(userId, favorite.id)}>Remove from favorited pets</button>
                     </section> */}
-                <Link to={`/pets/${favorite.petId}`} className='pet-index-item-link pet-liked-link'>
+                <Link to={`/pets/${favorite.pet_id}`} className='pet-index-item-link pet-liked-link'>
                     {/* <div className='pet-index-image-container'>
                         <img src={this.props.pet.photoUrls[0]} className='pet-index-image' />
                     </div> */}
