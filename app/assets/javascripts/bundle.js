@@ -555,7 +555,7 @@ var mapStateToProps = function mapStateToProps(state) {
   return {
     // pets_ids: Object.values(state.entities.users.pet_ids)
     pets: Object.values(state.entities.pets).filter(function (pet) {
-      return pet.adoptedBy == state.session.id;
+      return pet.adopted_by == state.session.id;
     }),
     currentUserId: state.session.id
   };

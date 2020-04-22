@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state) => {
     return {
         // pets_ids: Object.values(state.entities.users.pet_ids)
-        pets: Object.values(state.entities.pets).filter(pet => pet.adoptedBy == state.session.id),
+        pets: Object.values(state.entities.pets).filter(pet => pet.adopted_by == state.session.id),
         currentUserId: state.session.id 
     }   
 };
