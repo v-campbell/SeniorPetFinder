@@ -75,9 +75,9 @@
     width: 100%;
 }
 
-.adopted-pet-grid-item {
-    height: 240px;
-    width: 180px;
+#adopted-pet-grid-item {
+    height: 120px;
+    width: 90px;
 }
 
 .adopted-pets h1 {

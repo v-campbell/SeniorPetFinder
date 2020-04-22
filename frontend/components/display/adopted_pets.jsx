@@ -16,7 +16,7 @@ class AdoptedPets extends React.Component {
                     pet={pet}
                     key={pet.id}
                     photoUrls={pet.photoUrls}
-                    className='adopted-pet-grid-item'
+                    id='adopted-pet-grid-item'
                 />
             )) : (
                 // <div> You haven't adoped any pets yet. render link to show page </div>   

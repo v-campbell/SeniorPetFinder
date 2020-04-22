@@ -175,7 +175,7 @@ var requestFavorites = function requestFavorites(userId) {
 var createFavorite = function createFavorite(formData, userId) {
   return function (dispatch) {
     return _util_favorites_util__WEBPACK_IMPORTED_MODULE_0__["createFavorite"](formData, userId).then(function (favorite) {
-      debugger;
+      // debugger
       dispatch(receiveFavorite(favorite));
     }, function (err) {
       dispatch(receiveFavoriteErrors(err.responseJSON));
@@ -519,7 +519,7 @@ var AdoptedPets = /*#__PURE__*/function (_React$Component) {
           pet: pet,
           key: pet.id,
           photoUrls: pet.photoUrls,
-          className: "adopted-pet-grid-item"
+          id: "adopted-pet-grid-item"
         });
       }) : // <div> You haven't adoped any pets yet. render link to show page </div>   
       null;
@@ -1439,8 +1439,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "checkFavs",
     value: function checkFavs() {
-      debugger;
-
+      // debugger
       for (var i = 0; i < this.state.favorites.length; i++) {
         if (this.state.favorites[i].petId == this.props.pet.id) {
           this.setState({
