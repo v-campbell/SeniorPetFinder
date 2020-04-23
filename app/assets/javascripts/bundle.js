@@ -700,16 +700,24 @@ __webpack_require__.r(__webpack_exports__);
 
 var Footer = function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Thank you for stopping by! SeniorPetFinder is an originally-designed clone of ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.petfinder.com/"
+  }, "PetFinder"), ". ", '  '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-footer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Thank you for stopping by! ", '  '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.linkedin.com/in/victoria-khym-campbell/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fab fa-linkedin fa-2x"
+    "class": "fab fa-linkedin-in fa-3x"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/v-campbell/SeniorPetFinder/wiki"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fab fa-github-square fa-2x"
-  })));
+    "class": "fab fa-github-alt fa-3x"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://angel.co/u/victoria-campbell-18"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fab fa-angellist fa-3x"
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
