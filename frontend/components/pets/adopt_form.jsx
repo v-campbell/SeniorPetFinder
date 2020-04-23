@@ -32,6 +32,7 @@ class AdoptForm extends React.Component {
         this.props.clearErrors()
     }
 
+
     render() {
         return(
             <div>
