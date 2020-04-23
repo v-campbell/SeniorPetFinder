@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => (
     <div className='footer'>
         <div>
-            Thank you for stopping by! SeniorPetFinder is an originally-designed clone of <a href='https://www.petfinder.com/'>PetFinder</a>. {'  '}
+            Thank you for stopping by! SeniorPetFinder is an originally-designed clone of <a href='https://www.petfinder.com/'>PetFinder</a> by Victoria Campbell. {'  '}
         </div>
         {/* <a href='https://www.linkedin.com/in/victoria-khym-campbell/'>
             <i className="fab fa-linkedin fa-2x"></i>

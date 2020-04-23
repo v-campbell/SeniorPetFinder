@@ -703,7 +703,7 @@ var Footer = function Footer() {
     className: "footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Thank you for stopping by! SeniorPetFinder is an originally-designed clone of ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.petfinder.com/"
-  }, "PetFinder"), ". ", '  '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "PetFinder"), " by Victoria Campbell. ", '  '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.linkedin.com/in/victoria-khym-campbell/"
