@@ -18,7 +18,7 @@ class Splash extends React.Component {
 
     handleDemo(e, speed = 50) {
         e.preventDefault();
-        const user = { username: 'Hachikō [DEMO]', password: 'password' };
+        const user = { username: 'Hachikō', password: 'password' };
         let { username, password } = user;
         if (this.state.username !== username) {
             const inputUser = setInterval(() => {

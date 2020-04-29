@@ -11,7 +11,7 @@ User.destroy_all
 Pet.destroy_all
 Favorite.destroy_all
 
-demo_user = User.create!({first_name: 'Hidesaburō', last_name: 'Ueno', email: 'shibuya@gmail.com', username: 'Hachikō [DEMO]', password: 'password'});
+demo_user = User.create!({first_name: 'Hidesaburō', last_name: 'Ueno', email: 'shibuya@gmail.com', username: 'Hachikō', password: 'password'});
 user1 = User.create!({first_name: 'Ehren', last_name: 'Campbell', email: 'thedogfather@gmail.com', username: 'dogdad', password: 'password'});
 user2 = User.create!({first_name: 'Victoria', last_name: 'Campbell', email: 'vnkcampbell@gmail.com', username: 'hotdog', password: 'password'});
 
