@@ -12,7 +12,7 @@ class Api::FavoritesController < ApplicationController
     # @favorite = Favorite.new
     # @favorite.user_id = current_user.id
     # @favorite.pet_id = params[:id]
-    if @favorite.save
+    if @favorite.save!
       render :show
     else
       render json: @favorite.errors.full_messages, status: 425
