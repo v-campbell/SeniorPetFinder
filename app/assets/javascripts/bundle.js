@@ -701,7 +701,7 @@ __webpack_require__.r(__webpack_exports__);
 var Footer = function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Thank you for stopping by! SeniorPetFinder is an originally-designed clone of ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "SeniorPetFinder is an originally-designed clone of ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.petfinder.com/"
   }, "PetFinder"), " by Victoria Campbell. ", '  '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-footer"
@@ -1569,7 +1569,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
         className: "pet-show-about"
       }, pet.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-buttons"
-      }, this.adoptShowButton(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.adoptShowButton(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", '       ', " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "favorite-button"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-favorite-button",
@@ -1917,7 +1917,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
       e.preventDefault();
       var user = {
-        username: 'Hachikō',
+        username: 'Hachikō [DEMO]',
         password: 'password'
       };
       var username = user.username,
@@ -1989,7 +1989,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
 
       e.preventDefault();
       this.props.handleForm({
-        username: 'Hachikō',
+        username: 'Hachikō [DEMO]',
         password: 'password'
       }).then(function () {
         return _this5.props.closeModal();
@@ -2220,7 +2220,7 @@ var Splash = /*#__PURE__*/function (_React$Component) {
       var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
       e.preventDefault();
       var user = {
-        username: 'Hachikō',
+        username: 'Hachikō [DEMO]',
         password: 'password'
       };
       var username = user.username,

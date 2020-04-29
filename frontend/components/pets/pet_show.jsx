@@ -137,7 +137,7 @@ class PetShow extends React.Component {
                       
                             <div className='pet-show-buttons'>
                                 {this.adoptShowButton()}
-
+                                <div> {'       '} </div>
                                 <div id="favorite-button">
                                     <div className="show-favorite-button" onClick={this.handleFavClick}>
                                         {this.state.createdFav ? <i className="fas fa-bookmark fa-2x"></i> : <i className="far fa-bookmark fa-2x"></i> }

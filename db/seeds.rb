@@ -11,7 +11,7 @@ User.destroy_all
 Pet.destroy_all
 Favorite.destroy_all
 
-demo_user = User.create!({first_name: 'Hidesaburō', last_name: 'Ueno', email: 'shibuya@gmail.com', username: 'Hachikō', password: 'password'});
+demo_user = User.create!({first_name: 'Hidesaburō', last_name: 'Ueno', email: 'shibuya@gmail.com', username: 'Hachikō [DEMO]', password: 'password'});
 user1 = User.create!({first_name: 'Ehren', last_name: 'Campbell', email: 'thedogfather@gmail.com', username: 'dogdad', password: 'password'});
 user2 = User.create!({first_name: 'Victoria', last_name: 'Campbell', email: 'vnkcampbell@gmail.com', username: 'hotdog', password: 'password'});
 
@@ -28,7 +28,7 @@ pet27 = Pet.create({name: 'Darla', breed: 'Domestic Shorthair Mix', age: 12, sex
 pet29 = Pet.create({name: 'Mochi', breed: 'Domestic Shorthair Mix', age: 6, sex: 'F', size: 'S', about: "I am feeling a bit overwhelmed in my new surroundings. I am not anti-social and have been described by others as calm and friendly, but right now, I am none of those things. With time, I promise I will return to my usual self!"})
 pet30 = Pet.create({name: 'Camelia', breed: 'Domestic Shorthair Mix', age: 12, sex: 'F', size: 'XS', about: 'I am a very sweet senior kitty which basically means I am a kitten with experience. I’m what you would call a Tortoiseshell – based on my fancy coat. I enjoy being a couch potato and like to spend time watching TV with my humans or simply sitting next to you while you read or work on your laptop.'})
 pet10 = Pet.create({name: 'Tucker', breed: 'Golden Retreiver', age: 9, sex: 'M', size: 'L', about: 'I wake up at 5:30AM sharp, which means you will also wake up at 5:30AM sharp.'})
-pet28 = Pet.create({name: 'Ryan', breed: 'Domestic Medium Hair Mix', age: 0, sex: 'M', size: 'S', about: 'I am a very well behaved cat and promise to be a great addition to your home. I can cook and am good at climbing things.'})
+# pet28 = Pet.create({name: 'Ryan', breed: 'Domestic Medium Hair Mix', age: 0, sex: 'M', size: 'S', about: 'I am a very well behaved cat and promise to be a great addition to your home. I can cook and am good at climbing things.'})
 pet11 = Pet.create({name: 'Buttercup', breed: 'Golden Retreiver', age: 9, sex: 'F', size: 'M', about: "I don't love other dogs. Or humans. Please adopt me. Or don't."})
 pet13 = Pet.create({name: 'Sparta', breed: 'Yorkshire Terrier', age: 7, sex: 'F', size: 'XS', about: "I'm baby", adopted_by: user1.id})
 pet14 = Pet.create({name: 'Nova', breed: 'Husky', age: 8, sex: 'F', size: 'L', about: "One time, I ate trash. Just kidding. I eat trash all the time.", adopted_by: user1.id})
@@ -44,7 +44,7 @@ pet7 = Pet.create({name: 'Kevin', breed: 'Bulldog', age: 12, sex: 'M', size: 'M'
 pet9 = Pet.create({name: 'Creed', breed: 'Mutt', age: 296, sex: 'M', size: 'M', about: "I've never owned a refridgerator before."})
 pet16 = Pet.create({name: 'Barley', breed: 'Maltipoo', age: 6, sex: 'M', size: 'S', about: "I don't care much for dog food. I do, however, care a lot about bananas. Love bananas."})
 pet18 = Pet.create({name: 'Catto', breed: 'Cat', age: 25, sex: 'F', size: 'S', about: "I love pizza, snacks, yoga and other people's babies."})
-pet19 = Pet.create({name: 'Jamie', breed: '???', age: 99, sex: 'F', size: 'S', about: 'hungry baby'})
+# pet19 = Pet.create({name: 'Jamie', breed: '???', age: 99, sex: 'F', size: 'S', about: 'hungry baby'})
 
 #pet 1 photos
 pet1.photos.attach(io: open('https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/floor.jpg'), filename: "floor.jpg")
@@ -139,9 +139,9 @@ pet18.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazo
 pet18.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/catto2.png"), filename: "catto2.png")
 
 #pet 19 photos
-pet19.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/jamie1.png"), filename: "jamie1.png")
-pet19.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/jamie2.png"), filename: "jamie2.png")
-pet19.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/jamie3.jpg"), filename: "jamie3.jpg")
+# pet19.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/jamie1.png"), filename: "jamie1.png")
+# pet19.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/jamie2.png"), filename: "jamie2.png")
+# pet19.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/jamie3.jpg"), filename: "jamie3.jpg")
 
 #pet 20 photos
 pet20.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/Chelsea1.jpg"), filename: "Chelsea1.jpg")
@@ -183,9 +183,9 @@ pet27.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazo
 pet27.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/Darla2.jpg"), filename: "Darla2.jpg")
 
 #pet 28 photos
-pet28.photos.attach(io: open("https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/ryan1.jpg"), filename: "ryan1.jpg")
-pet28.photos.attach(io: open("https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/ryan2.jpg"), filename: "ryan2.jpg")
-pet28.photos.attach(io: open("https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/ryan3.jpg"), filename: "ryan3.jpg")
+# pet28.photos.attach(io: open("https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/ryan1.jpg"), filename: "ryan1.jpg")
+# pet28.photos.attach(io: open("https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/ryan2.jpg"), filename: "ryan2.jpg")
+# pet28.photos.attach(io: open("https://senior-pet-finder-seeds.s3-us-west-1.amazonaws.com/ryan3.jpg"), filename: "ryan3.jpg")
 
 #pet 29 photos
 pet29.photos.attach(io: open("https://senior-pet-finder-seeds.s3.us-west-1.amazonaws.com/Mochi1.jpg"), filename: "Mochi1.jpg")
