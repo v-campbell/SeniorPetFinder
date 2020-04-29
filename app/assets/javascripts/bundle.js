@@ -1917,7 +1917,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
       e.preventDefault();
       var user = {
-        username: 'Hachikō',
+        username: 'hotdog',
         password: 'password'
       };
       var username = user.username,
@@ -1989,7 +1989,7 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
 
       e.preventDefault();
       this.props.handleForm({
-        username: 'Hachikō',
+        username: 'hotdog',
         password: 'password'
       }).then(function () {
         return _this5.props.closeModal();
@@ -2220,7 +2220,7 @@ var Splash = /*#__PURE__*/function (_React$Component) {
       var speed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 50;
       e.preventDefault();
       var user = {
-        username: 'Hachikō',
+        username: 'hotdog',
         password: 'password'
       };
       var username = user.username,

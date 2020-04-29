@@ -11,9 +11,9 @@ User.destroy_all
 Pet.destroy_all
 Favorite.destroy_all
 
-demo_user = User.create!({first_name: 'Hidesaburō', last_name: 'Ueno', email: 'shibuya@gmail.com', username: 'Hachikō', password: 'password'});
+demo_user = User.create!({first_name: 'Hidesaburō', last_name: 'Ueno', email: 'shibuya@gmail.com', username: 'hotdog', password: 'password'});
 user1 = User.create!({first_name: 'Ehren', last_name: 'Campbell', email: 'thedogfather@gmail.com', username: 'dogdad', password: 'password'});
-user2 = User.create!({first_name: 'Victoria', last_name: 'Campbell', email: 'vnkcampbell@gmail.com', username: 'hotdog', password: 'password'});
+user2 = User.create!({first_name: 'Victoria', last_name: 'Campbell', email: 'vnkcampbell@gmail.com', username: 'vicky', password: 'password'});
 
 pet12 = Pet.create({name: 'Epi', breed: 'Jack Russell', age: 15, sex: 'F', size: 'S', about: "I love sunshine and naps and naps in the sunshine. My diet consists exclusively of chicken and dried anchovies.", adopted_by: demo_user.id})
 pet17 = Pet.create({name: 'Jimmy Dean', breed: 'Pot Belly', age: 8, sex: 'M', size: 'M', about: "I am cute, definitely a dog, cuddly and did I mention that I'm a dog?"})
