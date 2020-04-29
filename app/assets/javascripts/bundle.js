@@ -1430,6 +1430,18 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(PetShow, [{
+    key: "checkFavs",
+    value: function checkFavs() {
+      // debugger
+      for (var i = 0; i < this.state.favorites.length; i++) {
+        if (this.state.favorites[i].petId == this.props.pet.id) {
+          this.setState({
+            createdFav: true
+          });
+        }
+      }
+    }
+  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -1445,18 +1457,6 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }
 
       window.scrollTo(0, 0);
-    }
-  }, {
-    key: "checkFavs",
-    value: function checkFavs() {
-      // debugger
-      for (var i = 0; i < this.state.favorites.length; i++) {
-        if (this.state.favorites[i].petId == this.props.pet.id) {
-          this.setState({
-            createdFav: true
-          });
-        }
-      }
     }
   }, {
     key: "componentDidUpdate",
