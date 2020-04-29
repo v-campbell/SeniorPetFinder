@@ -38,7 +38,6 @@ export default class Display extends React.Component {
                     selectTab={this.selectTab}
                     photos={this.props.photoUrls}>
                 </Mini>
-            
             </div>
         )
     }

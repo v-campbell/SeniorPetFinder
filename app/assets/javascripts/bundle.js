@@ -291,7 +291,7 @@ var getPet = function getPet(id) {
 var adoptPet = function adoptPet(id) {
   return function (dispatch) {
     return Object(_util_pet_util__WEBPACK_IMPORTED_MODULE_0__["addAdoptToPet"])(id).then(function (pet) {
-      console.log(pet);
+      // console.log(pet)
       return dispatch(receivePet(pet));
     }, function (err) {
       console.log(err);
@@ -708,15 +708,15 @@ var Footer = function Footer() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.linkedin.com/in/victoria-khym-campbell/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-linkedin-in fa-3x"
+    className: "fab fa-linkedin-in fa-3x"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/v-campbell/SeniorPetFinder/wiki"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-github-alt fa-3x"
+    className: "fab fa-github-alt fa-3x"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://angel.co/u/victoria-campbell-18"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-angellist fa-3x"
+    className: "fab fa-angellist fa-3x"
   }))));
 };
 
@@ -860,7 +860,8 @@ var Nav = function Nav(_ref) {
       to: "/"
     }, "\u3004"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       className: "nav-left welcome"
-    }, "Welcome to senior pet finder, "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    }, "Welcome to senior pet finder, "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/user",
       className: "nav-left welcome-2"
     }, currentUser.username, ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-right-loggedin"
@@ -1588,7 +1589,7 @@ var PetShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
       }, "ADOPTION", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "CENTER", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "INFO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pet-show-grid-item"
+        className: "pet-show-grid-item empty-grid"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pet-show-grid-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

@@ -15,6 +15,7 @@
 .pet-show-top-content {
     display: inline-flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .pet-show-banner {
@@ -22,16 +23,12 @@
     position: fixed;
     justify-content: space-evenly;
     width: 100%;
-    /* margin-top: 10px; */
     padding: 12px;
     top: 70px;
-
-
     font-family: 'Barlow', sans-serif;
     background-color: rgb(192, 152, 140);
     color: rgb(240, 227, 223);
-    font-size: 15px;
-
+    font-size: 19px;
     z-index: 1;
 }
 
@@ -233,18 +230,19 @@
 .pet-show-buttons {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 40%;
     align-items: center;
     padding-bottom: 10px;
 }
 
 .photo-main {
     display: flex;
+    padding-right: none;
 }
 
 .pet-show-images {
     display: inline-block;
-    width: 100%;
+    /* width: 100%; */
     padding-bottom: 20px;
     padding-top: 50px;
 }
@@ -279,10 +277,14 @@
     width: 180px;
     height: 160px;
     margin-bottom: 6.5%;
-}
+} 
 
 .not-selected-photo {
     opacity: 50%;
+}
+
+.not-selected-photo:hover {
+    cursor: pointer;
 }
 
 .pet-show-links {
@@ -313,12 +315,12 @@
     /* border: 3px solid red; */
 }
 
-/* .pet-show-grid > div:first-child {
+.empty-grid {
     border-bottom: solid 2px rgb(192, 152, 140);
-} */
+}
 
 .name {
-    border-top: solid 2px rgb(192, 152, 140);
+    /* border-top: solid 2px rgb(192, 152, 140); */
     padding-top: 10px;
 }
 
@@ -336,12 +338,13 @@
 .pet-show-grid > div:first-child {
     grid-row-start: 1;
     grid-column-start: 1;
-    font-size: 30px;
+    font-size: 44px;
+    border-bottom: solid 2px rgb(192, 152, 140);
     color: rgb(192, 152, 140);
 }
 
 .pet-show-grid-item > div > h3 {
-    font-size: 15px;
+    font-size: 20px;
     color: rgb(192, 152, 140);
     margin-bottom: 10px;
 }

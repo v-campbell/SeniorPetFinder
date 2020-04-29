@@ -13,13 +13,13 @@ const Footer = () => (
         </a> */}
         <div className='splash-footer'>
             <a href='https://www.linkedin.com/in/victoria-khym-campbell/'>
-                <i class="fab fa-linkedin-in fa-3x"></i>
+                <i className="fab fa-linkedin-in fa-3x"></i>
             </a>
             <a href='https://github.com/v-campbell/SeniorPetFinder/wiki'>
-                <i class="fab fa-github-alt fa-3x"></i>
+                <i className="fab fa-github-alt fa-3x"></i>
             </a>
             <a href='https://angel.co/u/victoria-campbell-18'>
-                <i class="fab fa-angellist fa-3x"></i>
+                <i className="fab fa-angellist fa-3x"></i>
             </a>
         </div>
     </div>

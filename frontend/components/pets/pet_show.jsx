@@ -161,7 +161,7 @@ class PetShow extends React.Component {
                             <br />
                             INFO
                             </div>
-                        <div className='pet-show-grid-item'>
+                        <div className='pet-show-grid-item empty-grid'>
 
                         </div>
                         <div className='pet-show-grid-item'>

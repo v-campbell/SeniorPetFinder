@@ -28,7 +28,10 @@ const Nav = ({ currentUser, logout, openModal }) => {
                                 〄
                     </Link>
                     <h1 className='nav-left welcome'>Welcome to senior pet finder, </h1>
-                    <h1 className='nav-left welcome-2'>{currentUser.username}.</h1>
+                    {/* <h1 className='nav-left welcome-2'>{currentUser.username}.</h1> */}
+                    <Link to='/user' className='nav-left welcome-2'>
+                            {currentUser.username}.
+                    </Link>
                 </div>
                 <nav className='nav-right-loggedin'>
                     <Link to='/' className='nav-icons'>
