@@ -1,6 +1,5 @@
 class Api::PetsController < ApplicationController
     # before_action :require_logged_in 
-    # TO ADOPT? HOW TO ADOPT?
 
     def index
         @pets = Pet.fetch(params[:maxId])
@@ -8,8 +7,8 @@ class Api::PetsController < ApplicationController
 
     def show
         # to avoid N+1 queries from Active Storage
+        @favorites = current_user.favorited_pets
         @pet = Pet.with_attached_photos.find(params[:id])
-        # @pet = Pet.friendly.find(params[:id])
     end
 
     def adopt

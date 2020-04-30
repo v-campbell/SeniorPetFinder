@@ -22,16 +22,22 @@ class PetShow extends React.Component {
             }
         }
     }
-    
+
     componentDidMount() {
-        this.props.getPet(this.props.match.params.id);
-        if (this.props.userId) {
-            this.props.requestFavorites(this.props.userId)
-            .then((payload) => {
-                this.setState({favorites: Object.values(payload.favorites)})
-            })
-            .then(this.checkFavs)
-        }
+        this.props.getPet(this.props.match.params.id)
+        .then(payload => {
+            // debugger
+            if (payload.pet.favorited) {
+                this.setState({ createdFav: true })
+            };
+        })
+        // if (this.props.userId) {
+        //     this.props.requestFavorites(this.props.userId)
+        //     .then((payload) => {
+        //         this.setState({favorites: Object.values(payload.favorites)})
+        //     })
+        //     .then(this.checkFavs)
+        // }
         window.scrollTo(0, 0);
     }
 
@@ -85,28 +91,28 @@ class PetShow extends React.Component {
     handleFavClick(e) {
         e.preventDefault();
         const { createFavorite, deleteFavorite, pet, userId } = this.props;
-        let alreadyFavorited = -1;
-        let favorites = this.state.favorites
+        // let alreadyFavorited = -1;
+        // let favorites = this.state.favorites
         // if (!currentUser) {
         //     this.props.openModal('LOG IN')
         //     window.scrollTo(0, 0);
         // } else {
-            for (let i = 0; i < favorites.length; i++) {
-                if (favorites[i].petId == pet.id) {
-                    alreadyFavorited = i;
-                }
-            }
+        // for (let i = 0; i < favorites.length; i++) {
+        //     if (favorites[i].petId == pet.id) {
+        //         alreadyFavorited = i;
+        //     }
+        // }
         // }
 
-        if ((alreadyFavorited !== -1) || this.state.createdFav) {
+        if (this.state.createdFav) {
             deleteFavorite(userId, pet.id)
-            favorites = favorites.splice(alreadyFavorited, alreadyFavorited)
+            // favorites = favorites.splice(alreadyFavorited, alreadyFavorited)
 
-            this.setState({ favorites: favorites })
-            this.state.createdFav = false
+            // this.setState({ favorites: favorites })
+            this.setState({createdFav: false})
         } else {
             createFavorite({ pet_id: pet.id }, userId)
-            this.state.createdFav = true
+            this.setState({ createdFav: true })
         }
     }
     

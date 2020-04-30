@@ -10,3 +10,4 @@
 
 json.extract! @pet, :id, :name, :breed, :age, :sex, :size, :about, :adopted_by
 json.photoUrls @pet.photos.map { |file| url_for(file) }
+json.favorited @favorites.include?(@pet)
