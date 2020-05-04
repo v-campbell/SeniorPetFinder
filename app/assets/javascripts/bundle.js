@@ -2275,9 +2275,19 @@ var Splash = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "splash-text splash-text-logged-out"
       }, "Find your new", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(old) best friend.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "button_base demo-button",
+        className: "cta-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cta",
         onClick: this.handleDemo
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "DEMO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "DEMO"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Try a demo account!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+        width: "13px",
+        height: "10px",
+        viewBox: "0 0 13 10"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+        d: "M1,5 L11,5"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+        points: "8 1 12 5 8 9"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "gray",
         src: window.grayURL
       }));
