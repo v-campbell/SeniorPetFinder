@@ -183,10 +183,11 @@
     stroke-width: 2;
     transform: translateX(-5px);
     transition: all .3s ease;
+    vertical-align: super;
 }
 
 .cta:hover:before {
-    width: 100%;
+    width: 105%;
     background: rgb(203, 137, 125);
 }
 

@@ -62,19 +62,19 @@ class Splash extends React.Component {
                 {/* <button onClick={this.handleDemo} className='splash-demo'> 
                     DEMO
                 </button> */}
-                    {/* <div className="button_base demo-button" onClick={this.handleDemo}>
-                        <div>DEMO</div>
-                        <div>DEMO</div>
-                    </div> */}
-                    <div className="cta-body">
+                    <div className="button_base demo-button" onClick={this.handleDemo}>
+                        <div>TRY A DEMO</div>
+                        <div>TRY A DEMO</div>
+                    </div>
+                    {/* <div className="cta-body">
                         <div className="cta" onClick={this.handleDemo}>
-                            <span>Try a demo account!</span>
+                            <span>DEMO ACCOUNT</span>
                             <svg width="13px" height="10px" viewBox="0 0 13 10">
                                 <path d="M1,5 L11,5"></path>
                                 <polyline points="8 1 12 5 8 9"></polyline>
                             </svg>
                         </div>
-                    </div>
+                    </div> */}
                 </h1>
                 <img className='gray' src={window.grayURL} />
             </div>
